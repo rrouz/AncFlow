@@ -1,0 +1,149 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                    count
+-------------------  -------
+asr                        1
+autophy                    1
+convert_to_nwk             1
+header_standardizer        1
+iqtree                     1
+msa                        1
+msa_prep                   1
+rename_tree_file           1
+seq_prep                   1
+subtree_extractor          1
+subtree_msa                1
+subtree_seq_prep           1
+total                     12
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb 21 00:22:34 2024]
+localrule seq_prep:
+    input: protein_sequences.fasta
+    output: logs/seq_prep_complete.txt
+    jobid: 11
+    reason: Missing output files: logs/seq_prep_complete.txt; Code has changed since last execution
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Feb 21 00:22:34 2024]
+Finished job 11.
+1 of 12 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb 21 00:22:34 2024]
+localrule msa:
+    input: logs/seq_prep_complete.txt
+    output: logs/msa_complete.txt
+    jobid: 10
+    reason: Missing output files: logs/msa_complete.txt; Input files updated by another job: logs/seq_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Feb 21 00:23:02 2024]
+Finished job 10.
+2 of 12 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb 21 00:23:02 2024]
+localrule msa_prep:
+    input: logs/msa_complete.txt
+    output: logs/msa_prep_complete.txt
+    jobid: 9
+    reason: Missing output files: logs/msa_prep_complete.txt; Input files updated by another job: logs/msa_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Feb 21 00:23:02 2024]
+Finished job 9.
+3 of 12 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb 21 00:23:02 2024]
+localrule iqtree:
+    input: logs/msa_prep_complete.txt
+    output: iqtree/IQ-TREE_output.treefile
+    jobid: 8
+    reason: Missing output files: iqtree/IQ-TREE_output.treefile; Input files updated by another job: logs/msa_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Feb 21 00:53:53 2024]
+Finished job 8.
+4 of 12 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb 21 00:53:53 2024]
+localrule convert_to_nwk:
+    input: iqtree/IQ-TREE_output.treefile
+    output: iqtree/IQ-TREE_output.nwk
+    jobid: 7
+    reason: Missing output files: iqtree/IQ-TREE_output.nwk; Input files updated by another job: iqtree/IQ-TREE_output.treefile
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Feb 21 00:53:53 2024]
+Finished job 7.
+5 of 12 steps (42%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb 21 00:53:53 2024]
+localrule autophy:
+    input: iqtree/IQ-TREE_output.nwk
+    output: logs/autophy_success.txt
+    jobid: 6
+    reason: Missing output files: logs/autophy_success.txt; Input files updated by another job: iqtree/IQ-TREE_output.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Feb 21 00:54:16 2024]
+Finished job 6.
+6 of 12 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb 21 00:54:16 2024]
+localrule rename_tree_file:
+    input: logs/autophy_success.txt
+    output: output/autophy_tree.nwk
+    jobid: 5
+    reason: Missing output files: output/autophy_tree.nwk; Input files updated by another job: logs/autophy_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Feb 21 00:54:18 2024]
+Finished job 5.
+7 of 12 steps (58%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Feb 21 00:54:18 2024]
+localrule subtree_extractor:
+    input: output/autophy_tree.nwk
+    output: logs/extraction_success.txt
+    jobid: 4
+    reason: Missing output files: logs/extraction_success.txt; Input files updated by another job: output/autophy_tree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Feb 21 00:54:18 2024]
+Error in rule subtree_extractor:
+    jobid: 4
+    input: output/autophy_tree.nwk
+    output: logs/extraction_success.txt
+    shell:
+        
+    python scripts/subtree_extractor4.py
+    touch logs/extraction_success.txt
+    
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-21T002234.432756.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.
