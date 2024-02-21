@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                               count
+------------------------------  -------
+replace_underscores_in_headers        1
+total                                 1
+
+Select jobs to execute...
+
+[Mon Aug 28 00:57:55 2023]
+rule replace_underscores_in_headers:
+    input: protein_sequences.fasta
+    output: modified_protein_sequences.fasta
+    jobid: 0
+    reason: Missing output files: modified_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Aug 28 00:57:56 2023]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2023-08-28T005755.563285.snakemake.log

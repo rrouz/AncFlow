@@ -1,0 +1,21 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+convert_to_nwk        1
+iqtree                1
+total                 2
+
+Select jobs to execute...
+
+[Sat Sep  2 10:46:58 2023]
+rule iqtree:
+    input: aligned_protein_sequences.fasta
+    output: IQ-TREE_output.treefile
+    jobid: 1
+    reason: Missing output files: IQ-TREE_output.treefile
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+

@@ -1,0 +1,3 @@
+CreateRuleException in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 84:
+The name autophy is already used by another rule
+  File "/Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile", line 84, in <module>

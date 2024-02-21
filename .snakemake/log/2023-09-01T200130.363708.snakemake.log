@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job           count
+----------  -------
+iqtree_asr        1
+total             1
+
+Select jobs to execute...
+
+[Fri Sep  1 20:01:30 2023]
+rule iqtree_asr:
+    input: output/autophy_tree.newick, autophy_msa.fasta
+    output: ancestral_sequences.fasta
+    jobid: 0
+    reason: Missing output files: ancestral_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Fri Sep  1 20:01:30 2023]
+Error in rule iqtree_asr:
+    jobid: 0
+    input: output/autophy_tree.newick, autophy_msa.fasta
+    output: ancestral_sequences.fasta
+    shell:
+        
+        iqtree -s autophy_msa.fasta -t output/autophy_tree.newick -m MFP+MERGE -asr -o <outgroup_taxa> -pre ASR_IQTree
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-09-01T200130.363708.snakemake.log

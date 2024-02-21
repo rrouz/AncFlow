@@ -1,0 +1,192 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                    count
+-------------------  -------
+asr                        1
+autophy                    1
+convert_to_nwk             1
+header_standardizer        1
+iqtree                     1
+msa                        1
+msa_prep                   1
+rename_tree_file           1
+seq_prep                   1
+subtree_extractor          1
+subtree_msa                1
+subtree_seq_prep           1
+total                     12
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:16:58 2024]
+localrule seq_prep:
+    input: protein_sequences.fasta
+    output: modified_protein_sequences.fasta
+    jobid: 11
+    reason: Missing output files: modified_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:16:59 2024]
+Finished job 11.
+1 of 12 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:16:59 2024]
+localrule msa:
+    input: modified_protein_sequences.fasta
+    output: aligned_protein_sequences.fasta
+    jobid: 10
+    reason: Missing output files: aligned_protein_sequences.fasta; Input files updated by another job: modified_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:17:44 2024]
+Finished job 10.
+2 of 12 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:17:44 2024]
+localrule msa_prep:
+    input: aligned_protein_sequences.fasta
+    output: aligned_protein_sequences2.fasta
+    jobid: 9
+    reason: Missing output files: aligned_protein_sequences2.fasta; Input files updated by another job: aligned_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:17:44 2024]
+Finished job 9.
+3 of 12 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:17:44 2024]
+localrule iqtree:
+    input: aligned_protein_sequences2.fasta
+    output: IQ-TREE_output.treefile
+    jobid: 8
+    reason: Missing output files: IQ-TREE_output.treefile; Input files updated by another job: aligned_protein_sequences2.fasta; Set of input files has changed since last execution
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:28:37 2024]
+Finished job 8.
+4 of 12 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:28:37 2024]
+localrule convert_to_nwk:
+    input: IQ-TREE_output.treefile
+    output: IQ-TREE_output.nwk
+    jobid: 7
+    reason: Missing output files: IQ-TREE_output.nwk; Input files updated by another job: IQ-TREE_output.treefile
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:28:37 2024]
+Finished job 7.
+5 of 12 steps (42%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:28:37 2024]
+localrule autophy:
+    input: IQ-TREE_output.nwk
+    output: autophy_success.txt
+    jobid: 6
+    reason: Missing output files: autophy_success.txt; Input files updated by another job: IQ-TREE_output.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:28:49 2024]
+Finished job 6.
+6 of 12 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:28:49 2024]
+localrule rename_tree_file:
+    input: autophy_success.txt
+    output: output/autophy_tree.nwk
+    jobid: 5
+    reason: Input files updated by another job: autophy_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:29:57 2024]
+Finished job 5.
+7 of 12 steps (58%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:29:57 2024]
+localrule subtree_extractor:
+    input: output/autophy_tree.nwk
+    output: extraction_success.txt
+    jobid: 4
+    reason: Missing output files: extraction_success.txt; Input files updated by another job: output/autophy_tree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:31:57 2024]
+Finished job 4.
+8 of 12 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:31:57 2024]
+localrule subtree_seq_prep:
+    input: extraction_success.txt
+    output: subtree_seq_prep_success.txt
+    jobid: 3
+    reason: Missing output files: subtree_seq_prep_success.txt; Input files updated by another job: extraction_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:31:57 2024]
+Finished job 3.
+9 of 12 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:31:57 2024]
+localrule subtree_msa:
+    input: subtree_seq_prep_success.txt
+    output: aligned_autophy_subtree_sequences_success.txt
+    jobid: 2
+    reason: Missing output files: aligned_autophy_subtree_sequences_success.txt; Input files updated by another job: subtree_seq_prep_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:32:05 2024]
+Finished job 2.
+10 of 12 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:32:05 2024]
+localrule header_standardizer:
+    input: aligned_autophy_subtree_sequences_success.txt
+    output: completed_aligned_autophy_subtree_sequences_success.txt
+    jobid: 1
+    reason: Missing output files: completed_aligned_autophy_subtree_sequences_success.txt; Input files updated by another job: aligned_autophy_subtree_sequences_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:32:05 2024]
+Finished job 1.
+11 of 12 steps (92%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Feb 11 02:32:05 2024]
+localrule asr:
+    input: completed_aligned_autophy_subtree_sequences_success.txt
+    output: asr_complete.txt
+    jobid: 0
+    reason: Input files updated by another job: completed_aligned_autophy_subtree_sequences_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Feb 11 02:32:15 2024]
+Finished job 0.
+12 of 12 steps (100%) done
+Complete log: .snakemake/log/2024-02-11T021658.797263.snakemake.log

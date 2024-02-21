@@ -1,0 +1,76 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                    count
+-------------------  -------
+asr                        1
+autophy                    1
+convert_to_nwk             1
+header_standardizer        1
+iqtree                     1
+msa                        1
+msa_prep                   1
+rename_tree_file           1
+seq_prep                   1
+subtree_extractor          1
+subtree_msa                1
+subtree_seq_prep           1
+total                     12
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 17 18:55:33 2024]
+localrule seq_prep:
+    input: protein_sequences.fasta
+    output: logs/seq_prep_complete.txt
+    jobid: 11
+    reason: Missing output files: logs/seq_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 17 18:55:33 2024]
+Finished job 11.
+1 of 12 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 17 18:55:33 2024]
+localrule msa:
+    input: logs/seq_prep_complete.txt
+    output: logs/msa_complete.txt
+    jobid: 10
+    reason: Missing output files: logs/msa_complete.txt; Input files updated by another job: logs/seq_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 17 18:56:01 2024]
+Finished job 10.
+2 of 12 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 17 18:56:01 2024]
+localrule msa_prep:
+    input: logs/msa_complete.txt
+    output: logs/msa_prep_complete.txt
+    jobid: 9
+    reason: Missing output files: logs/msa_prep_complete.txt; Input files updated by another job: logs/msa_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 17 18:56:01 2024]
+Finished job 9.
+3 of 12 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 17 18:56:01 2024]
+localrule iqtree:
+    input: logs/msa_prep_complete.txt
+    output: iqtree/IQ-TREE_output.treefile
+    jobid: 8
+    reason: Missing output files: iqtree/IQ-TREE_output.treefile; Input files updated by another job: logs/msa_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+

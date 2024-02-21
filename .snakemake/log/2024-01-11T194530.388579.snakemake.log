@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job         count
+--------  -------
+seq_prep        1
+total           1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Thu Jan 11 19:45:30 2024]
+localrule seq_prep:
+    input: protein_sequences.fasta
+    output: modified_protein_sequences.fasta
+    jobid: 0
+    reason: Code has changed since last execution
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+RuleException:
+CalledProcessError in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 9:
+Command 'set -euo pipefail;  /usr/local/Cellar/snakemake/8.0.1/libexec/bin/python /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/.snakemake/scripts/tmprb3xxdzq.seq_prep.py' returned non-zero exit status 1.
+[Thu Jan 11 19:45:31 2024]
+Error in rule seq_prep:
+    jobid: 0
+    input: protein_sequences.fasta
+    output: modified_protein_sequences.fasta
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-11T194530.388579.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

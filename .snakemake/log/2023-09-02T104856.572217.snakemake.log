@@ -1,0 +1,42 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                               count
+------------------------------  -------
+align_protein_sequences               1
+all                                   1
+autophy_msa                           1
+iqtree_asr                            1
+rename_tree_file                      1
+replace_underscores_in_headers        1
+total                                 6
+
+Select jobs to execute...
+
+[Sat Sep  2 10:48:56 2023]
+rule replace_underscores_in_headers:
+    input: protein_sequences.fasta
+    output: modified_protein_sequences.fasta
+    jobid: 5
+    reason: Missing output files: modified_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Sep  2 10:48:56 2023]
+rule rename_tree_file:
+    output: output/autophy_tree.nwk
+    jobid: 2
+    reason: Missing output files: output/autophy_tree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule rename_tree_file in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 96:
+Job 2  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+output/autophy_tree.nwk
+[Sat Sep  2 10:49:01 2023]
+Finished job 5.
+1 of 6 steps (17%) done
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-09-02T104856.572217.snakemake.log

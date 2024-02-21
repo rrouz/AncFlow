@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+activate_autophy               1
+align_protein_sequences        1
+arpip                          1
+autophy_msa                    1
+convert_auto_to_nwk            1
+infer_protein_tree             1
+setup_autophy                  1
+total                          7
+
+Select jobs to execute...
+
+[Mon Aug 28 01:00:19 2023]
+rule setup_autophy:
+    output: autophy_env_created.txt
+    jobid: 6
+    reason: Forced execution
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule setup_autophy in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 47:
+Job 6  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+autophy_env_created.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-08-28T010013.527291.snakemake.log

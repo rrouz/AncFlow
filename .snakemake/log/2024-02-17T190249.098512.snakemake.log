@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 12
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job         count
+--------  -------
+seq_prep        1
+total           1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 17 19:02:49 2024]
+localrule seq_prep:
+    input: protein_sequences.fasta
+    output: your_run_name/logs/seq_prep_complete.txt
+    jobid: 0
+    reason: Missing output files: your_run_name/logs/seq_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+ImproperOutputException in rule seq_prep in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 12:
+Outputs of incorrect type (directories when expecting files or vice versa). Output directories must be flagged with directory(). for rule seq_prep:
+    output: your_run_name/logs/seq_prep_complete.txt
+    affected files:
+        your_run_name/logs/seq_prep_complete.txt
+Removing output files of failed job seq_prep since they might be corrupted:
+your_run_name/logs/seq_prep_complete.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-02-17T190249.098512.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

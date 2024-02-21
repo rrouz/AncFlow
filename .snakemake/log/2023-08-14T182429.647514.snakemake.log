@@ -1,0 +1,13 @@
+Building DAG of jobs...
+AmbiguousRuleException:
+Rules fasta_to_nexus and infer_protein_tree are ambiguous for the file beast_phylogenetic_tree.nexus.
+Consider starting rule output with a unique prefix, constrain your wildcards, or use the ruleorder directive.
+Wildcards:
+	fasta_to_nexus: 
+	infer_protein_tree: 
+Expected input files:
+	fasta_to_nexus: aligned_protein_sequences.fasta
+	infer_protein_tree: aligned_protein_sequences.fasta
+Expected output files:
+	fasta_to_nexus: beast_phylogenetic_tree.nexus
+	infer_protein_tree: beast_phylogenetic_tree.nexus

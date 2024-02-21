@@ -1,0 +1,50 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                    count
+-------------------  -------
+asr                        1
+header_standardizer        1
+total                      2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Jan 24 01:30:06 2024]
+localrule header_standardizer:
+    input: output/autophy_tree.nwk, aligned_protein_sequences.fasta
+    output: modified_aligned_autophy_sequences.fasta
+    jobid: 1
+    reason: Missing output files: modified_aligned_autophy_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Jan 24 01:30:06 2024]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Jan 24 01:30:06 2024]
+localrule asr:
+    input: modified_aligned_autophy_sequences.fasta, output/autophy_tree.nwk
+    jobid: 0
+    reason: Rules with a run or shell declaration but no output are always executed.
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Jan 24 01:30:06 2024]
+Error in rule asr:
+    jobid: 0
+    input: modified_aligned_autophy_sequences.fasta, output/autophy_tree.nwk
+    shell:
+        java -jar bnkit.jar --aln modified_aligned_autophy_sequences.fasta --nwk output/autophy_tree.nwk
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-24T013005.064198.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

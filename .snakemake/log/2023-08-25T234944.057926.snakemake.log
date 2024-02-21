@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+tree_to_fasta        1
+total                1
+
+Select jobs to execute...
+
+[Fri Aug 25 23:49:44 2023]
+rule tree_to_fasta:
+    input: output/2023-08-25_treeOMPuniprotumapgmmemm.tree
+    output: arpip_seq.fasta
+    jobid: 0
+    reason: Missing output files: arpip_seq.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+RuleException in rule tree_to_fasta in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 87:
+NameError: The name 'leaf' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}, when formatting the following:
+
+        input_tree_file="{input.tree_file}"
+        output_fasta_file="{output.fasta_file}"
+        with open(input_tree_file, "r") as tree_file:
+            tree_data = tree_file.read().strip()
+
+        leaves = [leaf.strip(",;") for leaf in tree_data.split() if leaf.endswith(":")]
+
+        with open(output_fasta_file, "w") as fasta_file:
+            for leaf in leaves:
+                fasta_file.write(f">{leaf}
+{leaf}
+")
+        

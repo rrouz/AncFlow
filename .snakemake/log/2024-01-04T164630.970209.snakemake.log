@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+subtree_extractor        1
+subtree_seq_prep         1
+total                    2
+
+Select jobs to execute...
+
+[Thu Jan  4 16:46:31 2024]
+rule subtree_extractor:
+    input: output/autophy_tree.nwk
+    output: subtree_sequences.fasta
+    jobid: 1
+    reason: Missing output files: subtree_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Thu Jan  4 16:46:36 2024]
+Error in rule subtree_extractor:
+    jobid: 1
+    input: output/autophy_tree.nwk
+    output: subtree_sequences.fasta
+    shell:
+        
+        python scripts/subtree_extractor.py
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-04T164630.970209.snakemake.log

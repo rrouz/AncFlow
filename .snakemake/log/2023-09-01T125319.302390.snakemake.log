@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job       count
+------  -------
+iqtree        1
+total         1
+
+Select jobs to execute...
+
+[Fri Sep  1 12:53:19 2023]
+rule iqtree:
+    input: aligned_protein_sequences.fasta
+    output: IQ-TREE_output.treefile
+    jobid: 0
+    reason: Missing output files: IQ-TREE_output.treefile
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Fri Sep  1 13:52:04 2023]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2023-09-01T125319.302390.snakemake.log

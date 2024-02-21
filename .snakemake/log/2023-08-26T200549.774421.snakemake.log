@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+arpip        1
+total        1
+
+Select jobs to execute...
+
+[Sat Aug 26 20:05:49 2023]
+rule arpip:
+    jobid: 0
+    reason: Rules with neither input nor output files are always executed.
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Aug 26 20:05:54 2023]
+Error in rule arpip:
+    jobid: 0
+    shell:
+        
+        ./../bpp-arpip/ARPIP params="conf.txt"
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-08-26T200549.774421.snakemake.log

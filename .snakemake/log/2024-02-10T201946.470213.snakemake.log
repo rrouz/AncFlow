@@ -1,0 +1,177 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                    count
+-------------------  -------
+asr                        1
+autophy                    1
+convert_to_nwk             1
+header_standardizer        1
+iqtree                     1
+msa                        1
+rename_tree_file           1
+seq_prep                   1
+subtree_extractor          1
+subtree_msa                1
+subtree_seq_prep           1
+total                     11
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:19:48 2024]
+localrule seq_prep:
+    input: protein_sequences.fasta
+    output: modified_protein_sequences.fasta
+    jobid: 10
+    reason: Missing output files: modified_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:19:48 2024]
+Finished job 10.
+1 of 11 steps (9%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:19:48 2024]
+localrule msa:
+    input: modified_protein_sequences.fasta
+    output: aligned_protein_sequences.fasta
+    jobid: 9
+    reason: Missing output files: aligned_protein_sequences.fasta; Input files updated by another job: modified_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:20:34 2024]
+Finished job 9.
+2 of 11 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:20:34 2024]
+localrule iqtree:
+    input: aligned_protein_sequences.fasta
+    output: IQ-TREE_output.treefile
+    jobid: 8
+    reason: Missing output files: IQ-TREE_output.treefile; Input files updated by another job: aligned_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:29:13 2024]
+Finished job 8.
+3 of 11 steps (27%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:29:13 2024]
+localrule convert_to_nwk:
+    input: IQ-TREE_output.treefile
+    output: IQ-TREE_output.nwk
+    jobid: 7
+    reason: Missing output files: IQ-TREE_output.nwk; Input files updated by another job: IQ-TREE_output.treefile
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:29:13 2024]
+Finished job 7.
+4 of 11 steps (36%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:29:13 2024]
+localrule autophy:
+    input: IQ-TREE_output.nwk
+    output: autophy_success.txt
+    jobid: 6
+    reason: Missing output files: autophy_success.txt; Input files updated by another job: IQ-TREE_output.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:29:49 2024]
+Finished job 6.
+5 of 11 steps (45%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:29:49 2024]
+localrule rename_tree_file:
+    input: autophy_success.txt
+    output: output/autophy_tree.nwk
+    jobid: 5
+    reason: Missing output files: output/autophy_tree.nwk; Input files updated by another job: autophy_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:30:54 2024]
+Finished job 5.
+6 of 11 steps (55%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:30:54 2024]
+localrule subtree_extractor:
+    input: output/autophy_tree.nwk
+    output: extraction_success.txt
+    jobid: 4
+    reason: Missing output files: extraction_success.txt; Input files updated by another job: output/autophy_tree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:32:41 2024]
+Finished job 4.
+7 of 11 steps (64%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:32:41 2024]
+localrule subtree_seq_prep:
+    input: extraction_success.txt
+    output: subtree_seq_prep_success.txt
+    jobid: 3
+    reason: Missing output files: subtree_seq_prep_success.txt; Input files updated by another job: extraction_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:32:41 2024]
+Finished job 3.
+8 of 11 steps (73%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:32:41 2024]
+localrule subtree_msa:
+    input: subtree_seq_prep_success.txt
+    output: aligned_autophy_subtree_sequences_success.txt
+    jobid: 2
+    reason: Missing output files: aligned_autophy_subtree_sequences_success.txt; Input files updated by another job: subtree_seq_prep_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:32:49 2024]
+Finished job 2.
+9 of 11 steps (82%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:32:49 2024]
+localrule header_standardizer:
+    input: aligned_autophy_subtree_sequences_success.txt
+    output: completed_aligned_autophy_subtree_sequences_success.txt
+    jobid: 1
+    reason: Missing output files: completed_aligned_autophy_subtree_sequences_success.txt; Input files updated by another job: aligned_autophy_subtree_sequences_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:32:49 2024]
+Finished job 1.
+10 of 11 steps (91%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sat Feb 10 20:32:49 2024]
+localrule asr:
+    input: completed_aligned_autophy_subtree_sequences_success.txt
+    output: asr_complete.txt
+    jobid: 0
+    reason: Missing output files: asr_complete.txt; Input files updated by another job: completed_aligned_autophy_subtree_sequences_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Feb 10 20:32:59 2024]
+Finished job 0.
+11 of 11 steps (100%) done
+Complete log: .snakemake/log/2024-02-10T201946.470213.snakemake.log

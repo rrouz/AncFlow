@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job      count
+-----  -------
+asr          1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Wed Jan 24 22:06:36 2024]
+localrule asr:
+    input: modified_aligned_autophy_sequences.fasta, output/autophy_tree.nwk
+    jobid: 0
+    reason: Rules with a run or shell declaration but no output are always executed.
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Wed Jan 24 22:06:36 2024]
+Error in rule asr:
+    jobid: 0
+    input: modified_aligned_autophy_sequences.fasta, output/autophy_tree.nwk
+    shell:
+        java -jar bnkit.jar --aln modified_aligned_autophy_sequences.fasta --nwk output/autophy_tree.nwk
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-24T220634.687977.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

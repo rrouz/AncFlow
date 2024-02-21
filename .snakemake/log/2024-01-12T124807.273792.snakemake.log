@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                        count
+-----------------------  -------
+asr                            1
+rename_tree_file               1
+subtree_fasta_extractor        1
+subtree_msa                    1
+subtree_nwk_extractor          1
+subtree_seq_prep               1
+total                          6
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Jan 12 12:48:07 2024]
+localrule rename_tree_file:
+    output: output/autophy_tree.nwk
+    jobid: 4
+    reason: Missing output files: output/autophy_tree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule rename_tree_file in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 65:
+Job 4  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+output/autophy_tree.nwk
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-12T124807.273792.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

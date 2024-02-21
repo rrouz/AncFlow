@@ -1,0 +1,192 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                    count
+-------------------  -------
+asr                        1
+autophy                    1
+convert_to_nwk             1
+header_standardizer        1
+iqtree                     1
+msa                        1
+msa_prep                   1
+rename_tree_file           1
+seq_prep                   1
+subtree_extractor          1
+subtree_msa                1
+subtree_seq_prep           1
+total                     12
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:32:43 2024]
+localrule seq_prep:
+    input: protein_sequences.fasta
+    output: logs/seq_prep_complete.txt
+    jobid: 11
+    reason: Missing output files: logs/seq_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:32:43 2024]
+Finished job 11.
+1 of 12 steps (8%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:32:43 2024]
+localrule msa:
+    input: logs/seq_prep_complete.txt
+    output: logs/msa_complete.txt
+    jobid: 10
+    reason: Missing output files: logs/msa_complete.txt; Input files updated by another job: logs/seq_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:33:11 2024]
+Finished job 10.
+2 of 12 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:33:11 2024]
+localrule msa_prep:
+    input: logs/msa_complete.txt
+    output: logs/msa_prep_complete.txt
+    jobid: 9
+    reason: Missing output files: logs/msa_prep_complete.txt; Input files updated by another job: logs/msa_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:33:11 2024]
+Finished job 9.
+3 of 12 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:33:11 2024]
+localrule iqtree:
+    input: logs/msa_prep_complete.txt
+    output: iqtree/IQ-TREE_output.treefile
+    jobid: 8
+    reason: Missing output files: iqtree/IQ-TREE_output.treefile; Input files updated by another job: logs/msa_prep_complete.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:54:36 2024]
+Finished job 8.
+4 of 12 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:54:36 2024]
+localrule convert_to_nwk:
+    input: iqtree/IQ-TREE_output.treefile
+    output: iqtree/IQ-TREE_output.nwk
+    jobid: 7
+    reason: Missing output files: iqtree/IQ-TREE_output.nwk; Input files updated by another job: iqtree/IQ-TREE_output.treefile
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:54:36 2024]
+Finished job 7.
+5 of 12 steps (42%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:54:36 2024]
+localrule autophy:
+    input: iqtree/IQ-TREE_output.nwk
+    output: logs/autophy_success.txt
+    jobid: 6
+    reason: Missing output files: logs/autophy_success.txt; Input files updated by another job: iqtree/IQ-TREE_output.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:54:48 2024]
+Finished job 6.
+6 of 12 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:54:48 2024]
+localrule rename_tree_file:
+    input: logs/autophy_success.txt
+    output: output/autophy_tree.nwk
+    jobid: 5
+    reason: Missing output files: output/autophy_tree.nwk; Input files updated by another job: logs/autophy_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:54:48 2024]
+Finished job 5.
+7 of 12 steps (58%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:54:48 2024]
+localrule subtree_extractor:
+    input: output/autophy_tree.nwk
+    output: logs/extraction_success.txt
+    jobid: 4
+    reason: Missing output files: logs/extraction_success.txt; Input files updated by another job: output/autophy_tree.nwk; Code has changed since last execution
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:56:16 2024]
+Finished job 4.
+8 of 12 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:56:16 2024]
+localrule subtree_seq_prep:
+    input: logs/extraction_success.txt
+    output: logs/subtree_seq_prep_success.txt
+    jobid: 3
+    reason: Missing output files: logs/subtree_seq_prep_success.txt; Input files updated by another job: logs/extraction_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:56:16 2024]
+Finished job 3.
+9 of 12 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:56:16 2024]
+localrule subtree_msa:
+    input: logs/subtree_seq_prep_success.txt
+    output: logs/aligned_autophy_subtree_sequences_success.txt
+    jobid: 2
+    reason: Missing output files: logs/aligned_autophy_subtree_sequences_success.txt; Input files updated by another job: logs/subtree_seq_prep_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:56:17 2024]
+Finished job 2.
+10 of 12 steps (83%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:56:17 2024]
+localrule header_standardizer:
+    input: logs/aligned_autophy_subtree_sequences_success.txt
+    output: logs/completed_aligned_autophy_subtree_sequences_success.txt
+    jobid: 1
+    reason: Missing output files: logs/completed_aligned_autophy_subtree_sequences_success.txt; Input files updated by another job: logs/aligned_autophy_subtree_sequences_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:56:17 2024]
+Finished job 1.
+11 of 12 steps (92%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Feb 19 18:56:17 2024]
+localrule asr:
+    input: logs/completed_aligned_autophy_subtree_sequences_success.txt
+    output: logs/asr_complete.txt
+    jobid: 0
+    reason: Input files updated by another job: logs/completed_aligned_autophy_subtree_sequences_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Feb 19 18:56:19 2024]
+Finished job 0.
+12 of 12 steps (100%) done
+Complete log: .snakemake/log/2024-02-19T183241.691937.snakemake.log

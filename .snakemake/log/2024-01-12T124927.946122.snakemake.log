@@ -1,0 +1,6 @@
+Building DAG of jobs...
+MissingInputException in rule subtree_fasta_extractor in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 69:
+Missing input files for rule subtree_fasta_extractor:
+    output: subtree_sequences.fasta
+    affected files:
+        output/autophy_tree.nwk

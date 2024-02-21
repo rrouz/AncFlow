@@ -1,0 +1,393 @@
+IQ-TREE multicore version 1.6.12 for Mac OS X 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    users-MacBook-Pro.local (AVX2, FMA3, 32 GB RAM)
+Command: iqtree -s alignments/aligned_protein_sequences.fasta -m LG+G+F -bb 1000 -nt AUTO -pre iqtree/IQ-TREE_output
+Seed:    13392 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Feb 17 19:14:54 2024
+Kernel:  AVX+FMA - auto-detect threads (12 CPU cores detected)
+
+Reading alignment file alignments/aligned_protein_sequences.fasta ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 121 sequences with 2943 columns, 2540 distinct patterns
+1592 parsimony-informative, 700 singleton sites, 651 constant sites
+WARNING: Some sequence names are changed as follows:
+sp|P45996.1|OMP53.HAEIF -> sp_P45996.1_OMP53.HAEIF
+sp|P02935.1|OMPA.SHIDY -> sp_P02935.1_OMPA.SHIDY
+sp|O31101.1|SRPC.PSEPU -> sp_O31101.1_SRPC.PSEPU
+sp|O84879.1|PMPG.CHLTR -> sp_O84879.1_PMPG.CHLTR
+sp|P59570.1|OMPK.VIBPA -> sp_P59570.1_OMPK.VIBPA
+sp|P02930.3|TOLC.ECOLI -> sp_P02930.3_TOLC.ECOLI
+sp|Q9PL47.1|PMPE.CHLMU -> sp_Q9PL47.1_PMPE.CHLMU
+sp|P24754.1|OMPA.ATLHE -> sp_P24754.1_OMPA.ATLHE
+sp|P57414.1|OMPA.BUCAI -> sp_P57414.1_OMPA.BUCAI
+sp|Q9Z896.1|PMP13.CHLPN -> sp_Q9Z896.1_PMP13.CHLPN
+sp|P43840.1|OMP5.HAEIN -> sp_P43840.1_OMP5.HAEIN
+sp|P75733.1|CHIP.ECOLI -> sp_P75733.1_CHIP.ECOLI
+sp|Q8G0Y6.1|BEPC.BRUSU -> sp_Q8G0Y6.1_BEPC.BRUSU
+sp|Q47706.3|UIDC.ECOLI -> sp_Q47706.3_UIDC.ECOLI
+sp|Q9WWZ8.1|TTGC.PSEPT -> sp_Q9WWZ8.1_TTGC.PSEPT
+sp|Q7CQY4.1|CHIP.SALTY -> sp_Q7CQY4.1_CHIP.SALTY
+sp|Q9Z880.2|PMP18.CHLPN -> sp_Q9Z880.2_PMP18.CHLPN
+sp|Q9K2Y1.1|TOLC.VIBCH -> sp_Q9K2Y1.1_TOLC.VIBCH
+sp|P33369.2|MDTQ.ECOLI -> sp_P33369.2_MDTQ.ECOLI
+sp|A0A2S4N3N0.1|OMPA.SHIFL -> sp_A0A2S4N3N0.1_OMPA.SHIFL
+sp|Q9Z3D6.1|PMP12.CHLPN -> sp_Q9Z3D6.1_PMP12.CHLPN
+sp|Q9RB65.2|PMP10.CHLPN -> sp_Q9RB65.2_PMP10.CHLPN
+sp|P38369.1|TPN50.TREPA -> sp_P38369.1_TPN50.TREPA
+sp|Q9Z398.1|PMP9.CHLPN -> sp_Q9Z398.1_PMP9.CHLPN
+sp|O84419.1|PMPC.CHLTR -> sp_O84419.1_PMPC.CHLTR
+sp|Q9PLB0.1|PMPD.CHLMU -> sp_Q9PLB0.1_PMPD.CHLMU
+sp|A3M8K2.2|OMP38.ACIBT -> sp_A3M8K2.2_OMP38.ACIBT
+sp|P77211.1|CUSC.ECOLI -> sp_P77211.1_CUSC.ECOLI
+sp|I2BAK7.1|OMPA.SHIBC -> sp_I2BAK7.1_OMPA.SHIBC
+sp|P25253.1|OMPX.ENTCL -> sp_P25253.1_OMPX.ENTCL
+sp|P24017.2|OMPA.KLEPN -> sp_P24017.2_OMPA.KLEPN
+sp|Q8FFV6.2|MDTQ.ECOL6 -> sp_Q8FFV6.2_MDTQ.ECOL6
+sp|P02936.2|OMPA.SALTY -> sp_P02936.2_OMPA.SALTY
+sp|Q9Z6U5.1|PMP21.CHLPN -> sp_Q9Z6U5.1_PMP21.CHLPN
+sp|P65594.1|ARFA.MYCBO -> sp_P65594.1_ARFA.MYCBO
+sp|A1KH31.1|ARFA.MYCBP -> sp_A1KH31.1_ARFA.MYCBP
+sp|P0A910.1|OMPA.ECOLI -> sp_P0A910.1_OMPA.ECOLI
+sp|Q9Z883.1|PMP15.CHLPN -> sp_Q9Z883.1_PMP15.CHLPN
+sp|P23988.2|PAGC.SALTY -> sp_P23988.2_PAGC.SALTY
+sp|Q9S3R9.2|OMP41.PORGI -> sp_Q9S3R9.2_OMP41.PORGI
+sp|P38399.2|OMPA.YERPS -> sp_P38399.2_OMPA.YERPS
+sp|P22263.1|PORF.PSESY -> sp_P22263.1_PORF.PSESY
+sp|O84818.1|PMPD.CHLTR -> sp_O84818.1_PMPD.CHLTR
+sp|B7LNW7.2|OMPA.ESCF3 -> sp_B7LNW7.2_OMPA.ESCF3
+sp|P80444.1|OMPA.ACTLI -> sp_P80444.1_OMPA.ACTLI
+sp|P24016.1|OMPA.CITFR -> sp_P24016.1_OMPA.CITFR
+sp|Q9Z3A1.1|PMP2.CHLPN -> sp_Q9Z3A1.1_PMP2.CHLPN
+sp|Q2EHL7.1|TDEA.AGGAC -> sp_Q2EHL7.1_TDEA.AGGAC
+sp|P0A0V3.1|OMP4.NEIMB -> sp_P0A0V3.1_OMP4.NEIMB
+sp|Q9S3R8.1|OMP40.PORGI -> sp_Q9S3R8.1_OMP40.PORGI
+sp|P0C8Z2.1|OMPA.ESCFE -> sp_P0C8Z2.1_OMPA.ESCFE
+sp|Q8Z7S0.1|OMPA.SALTI -> sp_Q8Z7S0.1_OMPA.SALTI
+sp|Q9PL46.1|PMPF.CHLMU -> sp_Q9PL46.1_PMPF.CHLMU
+sp|O84880.1|PMPH.CHLTR -> sp_O84880.1_PMPH.CHLTR
+sp|P0A0V2.1|OMP4.NEIMA -> sp_P0A0V2.1_OMP4.NEIMA
+sp|P0A261.1|TSX.SALTY -> sp_P0A261.1_TSX.SALTY
+sp|P0DJO6.1|OMPA.SHIBL -> sp_P0DJO6.1_OMPA.SHIBL
+sp|P32714.2|MDTP.ECOLI -> sp_P32714.2_MDTP.ECOLI
+sp|Q6RYW5.1|OMP38.ACIB2 -> sp_Q6RYW5.1_OMP38.ACIB2
+sp|Q9PJY1.1|PMPC.CHLMU -> sp_Q9PJY1.1_PMPC.CHLMU
+sp|Q9Z9G5.1|PMP1.CHLPN -> sp_Q9Z9G5.1_PMP1.CHLPN
+sp|O84417.1|PMPA.CHLTR -> sp_O84417.1_PMPA.CHLTR
+sp|P0A919.1|OMPX.ECO57 -> sp_P0A919.1_OMPX.ECO57
+sp|P0A917.1|OMPX.ECOLI -> sp_P0A917.1_OMPX.ECOLI
+sp|P0A918.1|OMPX.ECOL6 -> sp_P0A918.1_OMPX.ECOL6
+sp|P0A911.1|OMPA.ECO57 -> sp_P0A911.1_OMPA.ECO57
+sp|P0A928.1|TSX.ECO57 -> sp_P0A928.1_TSX.ECO57
+sp|O84882.1|PMPI.CHLTR -> sp_O84882.1_PMPI.CHLTR
+sp|P0A262.1|TSX.SALTI -> sp_P0A262.1_TSX.SALTI
+sp|Q9PJY2.1|PMPB.CHLMU -> sp_Q9PJY2.1_PMPB.CHLMU
+sp|Q9KWV3.2|TTGF.PSEPT -> sp_Q9KWV3.2_TTGF.PSEPT
+sp|P0C071.1|MEPC.PSEPU -> sp_P0C071.1_MEPC.PSEPU
+sp|Q8K9L4.1|OMPA.BUCAP -> sp_Q8K9L4.1_OMPA.BUCAP
+sp|P09146.1|OMPA.KLEAE -> sp_P09146.1_OMPA.KLEAE
+sp|Q9Z898.2|PMP7.CHLPN -> sp_Q9Z898.2_PMP7.CHLPN
+sp|P40786.1|TSX.KLEPN -> sp_P40786.1_TSX.KLEPN
+sp|Q8CWA4.1|CUSC.ECOL6 -> sp_Q8CWA4.1_CUSC.ECOL6
+sp|P13509.4|CZCC.CUPMC -> sp_P13509.4_CZCC.CUPMC
+sp|P07050.1|OMP3.NEIGO -> sp_P07050.1_OMP3.NEIGO
+sp|P0A920.1|OMPX.SHIFL -> sp_P0A920.1_OMPX.SHIFL
+sp|P0A927.1|TSX.ECOLI -> sp_P0A927.1_TSX.ECOLI
+sp|Q83P87.1|MDTP.SHIFL -> sp_Q83P87.1_MDTP.SHIFL
+sp|Q88N32.1|TTGC.PSEPK -> sp_Q88N32.1_TTGC.PSEPK
+sp|P51002.1|OMPK.VIBPH -> sp_P51002.1_OMPK.VIBPH
+sp|Q9Z882.2|PMP16.CHLPN -> sp_Q9Z882.2_PMP16.CHLPN
+sp|Q9PL41.1|PMPI.CHLMU -> sp_Q9PL41.1_PMPI.CHLMU
+sp|Q9PJY3.2|PMPA.CHLMU -> sp_Q9PJY3.2_PMPA.CHLMU
+sp|Q05146.1|OMPA.BORAV -> sp_Q05146.1_OMPA.BORAV
+sp|Q8ZG77.1|OMPA.YERPE -> sp_Q8ZG77.1_OMPA.YERPE
+sp|Q9Z899.2|PMP6.CHLPN -> sp_Q9Z899.2_PMP6.CHLPN
+sp|Q83KF5.3|MDTQ.SHIFL -> sp_Q83KF5.3_MDTQ.SHIFL
+sp|O86164.1|PMP11.CHLPN -> sp_O86164.1_PMP11.CHLPN
+sp|Q93PU3.2|TTGI.PSEPT -> sp_Q93PU3.2_TTGI.PSEPT
+sp|P24755.1|OMPA.SEROD -> sp_P24755.1_OMPA.SEROD
+sp|P13794.1|PORF.PSEAE -> sp_P13794.1_PORF.PSEAE
+sp|P37726.1|PORF.PSEFL -> sp_P37726.1_PORF.PSEFL
+sp|Q51397.2|OPRJ.PSEAE -> sp_Q51397.2_OPRJ.PSEAE
+sp|P38008.2|PMPF.CHLTR -> sp_P38008.2_PMPF.CHLTR
+sp|Q9PL45.1|PMPG.CHLMU -> sp_Q9PL45.1_PMPG.CHLMU
+sp|O84877.1|PMPE.CHLTR -> sp_O84877.1_PMPE.CHLTR
+sp|Q9PL44.2|PMPH.CHLMU -> sp_Q9PL44.2_PMPH.CHLMU
+sp|P85410.1|OMP5.GLAPU -> sp_P85410.1_OMP5.GLAPU
+sp|P38368.1|OMP52.HAEIF -> sp_P38368.1_OMP52.HAEIF
+sp|Q9KJC1.1|ARPC.PSEPU -> sp_Q9KJC1.1_ARPC.PSEPU
+sp|A0A160PAH3.1|OMP38.ACIS5 -> sp_A0A160PAH3.1_OMP38.ACIS5
+sp|P40785.2|TSX.KLEAK -> sp_P40785.2_TSX.KLEAK
+sp|Q849R1.2|SEPC.PSEP1 -> sp_Q849R1.2_SEPC.PSEP1
+sp|Q8CVH8.1|MDTP.ECOL6 -> sp_Q8CVH8.1_MDTP.ECOL6
+sp|O84418.2|PMPB.CHLTR -> sp_O84418.2_PMPB.CHLTR
+sp|Q8XBY3.1|CUSC.ECO57 -> sp_Q8XBY3.1_CUSC.ECO57
+sp|Q8X5R9.1|MDTP.ECO57 -> sp_Q8X5R9.1_MDTP.ECO57
+sp|Q9Z813.1|PMP19.CHLPN -> sp_Q9Z813.1_PMP19.CHLPN
+sp|Q54001.1|TOLC.SALEN -> sp_Q54001.1_TOLC.SALEN
+sp|Q8X659.3|MDTQ.ECO57 -> sp_Q8X659.3_MDTQ.ECO57
+sp|P9WIU5.1|ARFA.MYCTU -> sp_P9WIU5.1_ARFA.MYCTU
+sp|P04845.1|OMPA.SERMA -> sp_P04845.1_OMPA.SERMA
+sp|P9WIU4.1|ARFA.MYCTO -> sp_P9WIU4.1_ARFA.MYCTO
+sp|P0A929.1|TSX.SHIFL -> sp_P0A929.1_TSX.SHIFL
+sp|Q9Z393.1|PMP8.CHLPN -> sp_Q9Z393.1_PMP8.CHLPN
+sp|Q9Z895.2|PMP14.CHLPN -> sp_Q9Z895.2_PMP14.CHLPN
+sp|Q9Z812.2|PMP20.CHLPN -> sp_Q9Z812.2_PMP20.CHLPN
+
+                             Gap/Ambiguity  Composition  p-value
+   1  sp_P45996.1_OMP53.HAEIF       87.80%    failed      0.01%
+   2  sp_P02935.1_OMPA.SHIDY        88.07%    passed     12.20%
+   3  sp_O31101.1_SRPC.PSEPU        84.03%    failed      0.00%
+   4  sp_O84879.1_PMPG.CHLTR        65.58%    failed      0.42%
+   5  sp_P59570.1_OMPK.VIBPA        90.96%    failed      0.00%
+   6  sp_P02930.3_TOLC.ECOLI        83.25%    failed      0.00%
+   7  sp_Q9PL47.1_PMPE.CHLMU        66.84%    failed      0.00%
+   8  sp_P24754.1_OMPA.ATLHE        91.74%    passed     41.74%
+   9  sp_P57414.1_OMPA.BUCAI        88.14%    failed      0.01%
+  10  sp_Q9Z896.1_PMP13.CHLPN       66.94%    failed      0.00%
+  11  sp_P43840.1_OMP5.HAEIN        88.01%    failed      0.00%
+  12  sp_P75733.1_CHIP.ECOLI        84.10%    failed      0.00%
+  13  sp_Q8G0Y6.1_BEPC.BRUSU        84.51%    failed      0.00%
+  14  sp_Q47706.3_UIDC.ECOLI        85.69%    failed      0.14%
+  15  sp_Q9WWZ8.1_TTGC.PSEPT        83.55%    failed      0.00%
+  16  sp_Q7CQY4.1_CHIP.SALTY        84.10%    failed      0.00%
+  17  sp_Q9Z880.2_PMP18.CHLPN       67.86%    failed      0.00%
+  18  sp_Q9K2Y1.1_TOLC.VIBCH        85.12%    failed      0.00%
+  19  sp_P33369.2_MDTQ.ECOLI        83.79%    failed      0.00%
+  20  sp_A0A2S4N3N0.1_OMPA.SHIFL    88.18%    passed      5.08%
+  21  sp_Q9Z3D6.1_PMP12.CHLPN       82.53%    passed     17.14%
+  22  sp_Q9RB65.2_PMP10.CHLPN       68.47%    failed      0.00%
+  23  sp_P38369.1_TPN50.TREPA       85.83%    failed      0.00%
+  24  sp_Q9Z398.1_PMP9.CHLPN        68.47%    failed      0.00%
+  25  sp_O84419.1_PMPC.CHLTR        39.86%    failed      0.00%
+  26  sp_Q9PLB0.1_PMPD.CHLMU        48.35%    failed      0.00%
+  27  sp_A3M8K2.2_OMP38.ACIBT       87.90%    failed      0.87%
+  28  sp_P77211.1_CUSC.ECOLI        84.47%    failed      0.00%
+  29  sp_I2BAK7.1_OMPA.SHIBC        87.94%    failed      0.16%
+  30  sp_P25253.1_OMPX.ENTCL        94.16%    passed     10.29%
+  31  sp_P24017.2_OMPA.KLEPN        88.31%    failed      3.01%
+  32  sp_Q8FFV6.2_MDTQ.ECOL6        83.76%    failed      0.00%
+  33  sp_P02936.2_OMPA.SALTY        88.11%    failed      4.75%
+  34  sp_Q9Z6U5.1_PMP21.CHLPN       45.33%    failed      0.00%
+  35  sp_P65594.1_ARFA.MYCBO        88.92%    failed      0.00%
+  36  sp_A1KH31.1_ARFA.MYCBP        88.92%    failed      0.00%
+  37  sp_P0A910.1_OMPA.ECOLI        88.24%    passed     10.77%
+  38  sp_Q9Z883.1_PMP15.CHLPN       68.13%    failed      0.00%
+  39  sp_P23988.2_PAGC.SALTY        93.71%    failed      4.93%
+  40  sp_Q9S3R9.2_OMP41.PORGI       86.71%    failed      1.77%
+  41  sp_P38399.2_OMPA.YERPS        88.01%    failed      0.13%
+  42  sp_P22263.1_PORF.PSESY        88.31%    failed      0.00%
+  43  sp_O84818.1_PMPD.CHLTR        47.98%    failed      0.00%
+  44  sp_B7LNW7.2_OMPA.ESCF3        88.07%    passed     13.21%
+  45  sp_P80444.1_OMPA.ACTLI        99.29%    passed     22.45%
+  46  sp_P24016.1_OMPA.CITFR        91.91%    passed     35.70%
+  47  sp_Q9Z3A1.1_PMP2.CHLPN        71.42%    failed      0.11%
+  48  sp_Q2EHL7.1_TDEA.AGGAC        84.47%    failed      0.00%
+  49  sp_P0A0V3.1_OMP4.NEIMB        91.78%    failed      0.01%
+  50  sp_Q9S3R8.1_OMP40.PORGI       87.09%    passed      8.59%
+  51  sp_P0C8Z2.1_OMPA.ESCFE        91.74%    passed     48.88%
+  52  sp_Q8Z7S0.1_OMPA.SALTI        88.11%    passed      5.41%
+  53  sp_Q9PL46.1_PMPF.CHLMU        65.17%    failed      0.00%
+  54  sp_O84880.1_PMPH.CHLTR        65.48%    failed      0.00%
+  55  sp_P0A0V2.1_OMP4.NEIMA        91.78%    failed      0.03%
+  56  sp_P0A261.1_TSX.SALTY         90.25%    failed      0.00%
+  57  sp_P0DJO6.1_OMPA.SHIBL        91.81%    passed      7.33%
+  58  sp_P32714.2_MDTP.ECOLI        83.42%    failed      0.00%
+  59  sp_Q6RYW5.1_OMP38.ACIB2       87.90%    failed      0.70%
+  60  sp_Q9PJY1.1_PMPC.CHLMU        50.39%    failed      0.00%
+  61  sp_Q9Z9G5.1_PMP1.CHLPN        68.67%    passed      7.03%
+  62  sp_O84417.1_PMPA.CHLTR        66.87%    failed      0.00%
+  63  sp_P0A919.1_OMPX.ECO57        94.19%    passed      9.91%
+  64  sp_P0A917.1_OMPX.ECOLI        94.19%    passed      9.91%
+  65  sp_P0A918.1_OMPX.ECOL6        94.19%    passed      9.91%
+  66  sp_P0A911.1_OMPA.ECO57        88.24%    passed     10.77%
+  67  sp_P0A928.1_TSX.ECO57         90.01%    failed      0.01%
+  68  sp_O84882.1_PMPI.CHLTR        70.17%    failed      0.00%
+  69  sp_P0A262.1_TSX.SALTI         90.25%    failed      0.00%
+  70  sp_Q9PJY2.1_PMPB.CHLMU        43.19%    failed      0.00%
+  71  sp_Q9KWV3.2_TTGF.PSEPT        83.69%    failed      0.00%
+  72  sp_P0C071.1_MEPC.PSEPU        83.55%    failed      0.00%
+  73  sp_Q8K9L4.1_OMPA.BUCAP        88.21%    failed      0.00%
+  74  sp_P09146.1_OMPA.KLEAE        88.11%    failed      4.20%
+  75  sp_Q9Z898.2_PMP7.CHLPN        68.20%    failed      0.00%
+  76  sp_P40786.1_TSX.KLEPN         90.01%    failed      0.03%
+  77  sp_Q8CWA4.1_CUSC.ECOL6        84.37%    failed      0.00%
+  78  sp_P13509.4_CZCC.CUPMC        85.80%    failed      0.00%
+  79  sp_P07050.1_OMP3.NEIGO        91.98%    failed      0.02%
+  80  sp_P0A920.1_OMPX.SHIFL        94.19%    passed      9.91%
+  81  sp_P0A927.1_TSX.ECOLI         90.01%    failed      0.01%
+  82  sp_Q83P87.1_MDTP.SHIFL        83.42%    failed      0.00%
+  83  sp_Q88N32.1_TTGC.PSEPK        83.55%    failed      0.00%
+  84  sp_P51002.1_OMPK.VIBPH        91.06%    failed      0.00%
+  85  sp_Q9Z882.2_PMP16.CHLPN       67.65%    failed      0.00%
+  86  sp_Q9PL41.1_PMPI.CHLMU        70.54%    failed      0.00%
+  87  sp_Q9PJY3.2_PMPA.CHLMU        66.84%    failed      0.00%
+  88  sp_Q05146.1_OMPA.BORAV        93.41%    passed     12.97%
+  89  sp_Q8ZG77.1_OMPA.YERPE        88.01%    failed      0.13%
+  90  sp_Q9Z899.2_PMP6.CHLPN        56.64%    failed      0.00%
+  91  sp_Q83KF5.3_MDTQ.SHIFL        83.76%    failed      0.00%
+  92  sp_O86164.1_PMP11.CHLPN       68.47%    failed      0.00%
+  93  sp_Q93PU3.2_TTGI.PSEPT        84.03%    failed      0.00%
+  94  sp_P24755.1_OMPA.SEROD        91.74%    failed      4.51%
+  95  sp_P13794.1_PORF.PSEAE        88.11%    failed      0.13%
+  96  sp_P37726.1_PORF.PSEFL        88.92%    failed      0.09%
+  97  sp_Q51397.2_OPRJ.PSEAE        83.72%    failed      0.00%
+  98  sp_P38008.2_PMPF.CHLTR        64.87%    failed      0.00%
+  99  sp_Q9PL45.1_PMPG.CHLMU        66.46%    passed      5.47%
+ 100  sp_O84877.1_PMPE.CHLTR        67.24%    failed      0.59%
+ 101  sp_Q9PL44.2_PMPH.CHLMU        66.70%    failed      0.29%
+ 102  sp_P85410.1_OMP5.GLAPU        99.49%    passed     86.72%
+ 103  sp_P38368.1_OMP52.HAEIF       88.01%    failed      0.00%
+ 104  sp_Q9KJC1.1_ARPC.PSEPU        83.55%    failed      0.00%
+ 105  sp_A0A160PAH3.1_OMP38.ACIS5   88.35%    failed      2.15%
+ 106  sp_P40785.2_TSX.KLEAK         90.01%    failed      0.04%
+ 107  sp_Q849R1.2_SEPC.PSEP1        83.69%    failed      0.00%
+ 108  sp_Q8CVH8.1_MDTP.ECOL6        83.42%    failed      0.00%
+ 109  sp_O84418.2_PMPB.CHLTR        40.40%    failed      0.00%
+ 110  sp_Q8XBY3.1_CUSC.ECO57        84.37%    failed      0.00%
+ 111  sp_Q8X5R9.1_MDTP.ECO57        83.42%    failed      0.00%
+ 112  sp_Q9Z813.1_PMP19.CHLPN       67.82%    failed      0.04%
+ 113  sp_Q54001.1_TOLC.SALEN        83.32%    failed      0.00%
+ 114  sp_Q8X659.3_MDTQ.ECO57        83.76%    failed      0.00%
+ 115  sp_P9WIU5.1_ARFA.MYCTU        88.92%    failed      0.00%
+ 116  sp_P04845.1_OMPA.SERMA        87.80%    failed      0.13%
+ 117  sp_P9WIU4.1_ARFA.MYCTO        88.92%    failed      0.00%
+ 118  sp_P0A929.1_TSX.SHIFL         90.01%    failed      0.01%
+ 119  sp_Q9Z393.1_PMP8.CHLPN        68.40%    failed      0.00%
+ 120  sp_Q9Z895.2_PMP14.CHLPN       66.77%    failed      0.00%
+ 121  sp_Q9Z812.2_PMP20.CHLPN       41.45%    failed      0.00%
+WARNING: 114 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                         80.63%  99 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: sp_Q93PU3.2_TTGI.PSEPT is identical to sp_O31101.1_SRPC.PSEPU but kept for subsequent analysis
+NOTE: sp_A1KH31.1_ARFA.MYCBP is identical to sp_P65594.1_ARFA.MYCBO but kept for subsequent analysis
+NOTE: sp_P0A911.1_OMPA.ECO57 is identical to sp_P0A910.1_OMPA.ECOLI but kept for subsequent analysis
+NOTE: sp_Q8ZG77.1_OMPA.YERPE is identical to sp_P38399.2_OMPA.YERPS but kept for subsequent analysis
+NOTE: sp_P0A262.1_TSX.SALTI is identical to sp_P0A261.1_TSX.SALTY but kept for subsequent analysis
+NOTE: sp_P0A917.1_OMPX.ECOLI is identical to sp_P0A919.1_OMPX.ECO57 but kept for subsequent analysis
+NOTE: sp_P0A927.1_TSX.ECOLI is identical to sp_P0A928.1_TSX.ECO57 but kept for subsequent analysis
+NOTE: sp_Q849R1.2_SEPC.PSEP1 is identical to sp_Q9KWV3.2_TTGF.PSEPT but kept for subsequent analysis
+NOTE: sp_Q88N32.1_TTGC.PSEPK is identical to sp_P0C071.1_MEPC.PSEPU but kept for subsequent analysis
+NOTE: 5 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: sp_P9WIU5.1_ARFA.MYCTU (identical to sp_P65594.1_ARFA.MYCBO) is ignored but added at the end
+NOTE: sp_P9WIU4.1_ARFA.MYCTO (identical to sp_P65594.1_ARFA.MYCBO) is ignored but added at the end
+NOTE: sp_P0A918.1_OMPX.ECOL6 (identical to sp_P0A919.1_OMPX.ECO57) is ignored but added at the end
+NOTE: sp_P0A920.1_OMPX.SHIFL (identical to sp_P0A919.1_OMPX.ECO57) is ignored but added at the end
+NOTE: sp_P0A929.1_TSX.SHIFL (identical to sp_P0A928.1_TSX.ECO57) is ignored but added at the end
+
+For your convenience alignment with unique sequences printed to iqtree/IQ-TREE_output.uniqueseq.phy
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.097 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 13392)...
+
+NOTE: 193 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 12 CPU cores
+Increase to 10 rounds for branch lengths
+2 trees examined
+Threads: 1 / Time: 16.483 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -154894
+Threads: 2 / Time: 9.043 sec / Speedup: 1.823 / Efficiency: 91% / LogL: -154894
+Threads: 3 / Time: 6.463 sec / Speedup: 2.550 / Efficiency: 85% / LogL: -154894
+Threads: 4 / Time: 5.060 sec / Speedup: 3.257 / Efficiency: 81% / LogL: -154894
+Threads: 5 / Time: 4.375 sec / Speedup: 3.768 / Efficiency: 75% / LogL: -154894
+Threads: 6 / Time: 4.395 sec / Speedup: 3.750 / Efficiency: 63% / LogL: -154894
+Threads: 7 / Time: 4.785 sec / Speedup: 3.445 / Efficiency: 49% / LogL: -154894
+BEST NUMBER OF THREADS: 5
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -111240.362
+2. Current log-likelihood: -105705.668
+3. Current log-likelihood: -105248.523
+4. Current log-likelihood: -105241.811
+5. Current log-likelihood: -105241.226
+Optimal log-likelihood: -105241.200
+Gamma shape alpha: 2.954
+Parameters optimization took 5 rounds (5.928 sec)
+Computing ML distances based on estimated model parameters... 4.430 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.008 seconds
+Log-likelihood of BIONJ tree: -105310.214
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 12.285 second
+Computing log-likelihood of 98 initial trees ... 50.490 seconds
+Current best score: -105208.578
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -105058.163
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 5: -105055.552
+Iteration 10 / LogL: -105059.248 / Time: 0h:3m:5s
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 20: -105050.925
+Iteration 20 / LogL: -105050.925 / Time: 0h:4m:11s
+Finish initializing candidate tree set (20)
+Current best tree score: -105050.925 / CPU time: 190.386
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 23: -105048.396
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 29: -105047.907
+Iteration 30 / LogL: -105103.187 / Time: 0h:5m:34s (0h:19m:0s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 36: -105047.660
+Iteration 40 / LogL: -105048.544 / Time: 0h:6m:54s (0h:16m:59s left)
+Iteration 50 / LogL: -105089.103 / Time: 0h:8m:25s (0h:14m:47s left)
+Log-likelihood cutoff on original alignment: -105106.812
+Iteration 60 / LogL: -105088.353 / Time: 0h:9m:53s (0h:12m:44s left)
+Iteration 70 / LogL: -105049.827 / Time: 0h:11m:18s (0h:10m:49s left)
+Iteration 80 / LogL: -105048.347 / Time: 0h:12m:40s (0h:8m:59s left)
+Iteration 90 / LogL: -105048.556 / Time: 0h:14m:3s (0h:7m:16s left)
+Iteration 100 / LogL: -105048.560 / Time: 0h:15m:26s (0h:5m:36s left)
+Log-likelihood cutoff on original alignment: -105106.812
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Iteration 110 / LogL: -105047.716 / Time: 0h:16m:48s (0h:13m:52s left)
+Iteration 120 / LogL: -105048.217 / Time: 0h:18m:14s (0h:12m:15s left)
+Iteration 130 / LogL: -105095.104 / Time: 0h:19m:43s (0h:10m:42s left)
+TREE SEARCH COMPLETED AFTER 137 ITERATIONS / Time: 0h:20m:40s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -105047.660
+2. Current log-likelihood: -105047.616
+3. Current log-likelihood: -105047.579
+Optimal log-likelihood: -105047.560
+Gamma shape alpha: 2.988
+Parameters optimization took 3 rounds (2.357 sec)
+BEST SCORE FOUND : -105047.560
+Creating bootstrap support values...
+Split supports printed to NEXUS file iqtree/IQ-TREE_output.splits.nex
+Total tree length: 74.222
+
+Total number of iterations: 137
+CPU time used for tree search: 5032.071 sec (1h:23m:52s)
+Wall-clock time used for tree search: 1179.115 sec (0h:19m:39s)
+Total CPU time used: 5223.276 sec (1h:27m:3s)
+Total wall-clock time used: 1242.942 sec (0h:20m:42s)
+
+Computing bootstrap consensus tree...
+Reading input file iqtree/IQ-TREE_output.splits.nex...
+116 taxa and 571 splits.
+Consensus tree written to iqtree/IQ-TREE_output.contree
+Reading input trees file iqtree/IQ-TREE_output.contree
+Log-likelihood of consensus tree: -105047.547
+
+Analysis results written to: 
+  IQ-TREE report:                iqtree/IQ-TREE_output.iqtree
+  Maximum-likelihood tree:       iqtree/IQ-TREE_output.treefile
+  Likelihood distances:          iqtree/IQ-TREE_output.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iqtree/IQ-TREE_output.splits.nex
+  Consensus tree:                iqtree/IQ-TREE_output.contree
+  Screen log file:               iqtree/IQ-TREE_output.log
+
+Date and Time: Sat Feb 17 19:35:41 2024

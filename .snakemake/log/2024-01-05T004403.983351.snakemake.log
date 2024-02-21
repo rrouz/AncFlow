@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+subtree_extractor        1
+total                    1
+
+Select jobs to execute...
+
+[Fri Jan  5 00:44:04 2024]
+rule subtree_extractor:
+    input: output/autophy_tree.nwk
+    output: subtree.nwk
+    jobid: 0
+    reason: Missing output files: subtree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Fri Jan  5 00:44:04 2024]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2024-01-05T004403.983351.snakemake.log

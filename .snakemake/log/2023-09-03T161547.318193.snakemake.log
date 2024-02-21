@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job          count
+---------  -------
+anc_fasta        1
+total            1
+
+Select jobs to execute...
+
+[Sun Sep  3 16:15:47 2023]
+rule anc_fasta:
+    input: autophy_msa.fasta.state
+    output: ancestral_node_sequences.fasta
+    jobid: 0
+    reason: Missing output files: ancestral_node_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Sep  3 16:15:47 2023]
+Error in rule anc_fasta:
+    jobid: 0
+    input: autophy_msa.fasta.state
+    output: ancestral_node_sequences.fasta
+
+RuleException:
+CalledProcessError in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 148:
+Command 'set -euo pipefail;  /usr/local/Cellar/snakemake/7.32.3/libexec/bin/python /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/.snakemake/scripts/tmpkalkohqp.tsv_fasta.py' returned non-zero exit status 1.
+  File "/Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile", line 148, in __rule_anc_fasta
+  File "/usr/local/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-09-03T161547.318193.snakemake.log

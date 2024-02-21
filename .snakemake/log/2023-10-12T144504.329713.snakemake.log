@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                 count
+----------------  -------
+subtree_seq_prep        1
+total                   1
+
+Select jobs to execute...
+
+[Thu Oct 12 14:45:04 2023]
+rule subtree_seq_prep:
+    input: subtree_sequences.fasta
+    output: modified_subtree_protein_sequences.fasta
+    jobid: 0
+    reason: Code has changed since last execution
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Thu Oct 12 14:45:04 2023]
+Finished job 0.
+1 of 1 steps (100%) done
+Complete log: .snakemake/log/2023-10-12T144504.329713.snakemake.log

@@ -1,0 +1,686 @@
+IQ-TREE multicore version 1.6.12 for Mac OS X 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    users-MacBook-Pro.local (AVX2, FMA3, 32 GB RAM)
+Command: iqtree -s alignments/aligned_protein_sequences.fasta -m LG+G+F -bb 1000 -nt AUTO -pre iqtree/IQ-TREE_output
+Seed:    780978 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Feb 16 22:47:28 2024
+Kernel:  AVX+FMA - auto-detect threads (12 CPU cores detected)
+
+Reading alignment file alignments/aligned_protein_sequences.fasta ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 157 sequences with 3138 columns, 3060 distinct patterns
+1798 parsimony-informative, 978 singleton sites, 362 constant sites
+WARNING: Some sequence names are changed as follows:
+sp|Q9BQE3.1|TBA1C.HUMAN -> sp_Q9BQE3.1_TBA1C.HUMAN
+sp|Q9Y5X4.1|NR2E3.HUMAN -> sp_Q9Y5X4.1_NR2E3.HUMAN
+sp|P05177.4|CP1A2.HUMAN -> sp_P05177.4_CP1A2.HUMAN
+sp|P56705.4|WNT4.HUMAN -> sp_P56705.4_WNT4.HUMAN
+sp|P41235.3|HNF4A.HUMAN -> sp_P41235.3_HNF4A.HUMAN
+sp|Q13573.1|SNW1.HUMAN -> sp_Q13573.1_SNW1.HUMAN
+sp|P22309.1|UD11.HUMAN -> sp_P22309.1_UD11.HUMAN
+sp|Q9UHB6.1|LIMA1.HUMAN -> sp_Q9UHB6.1_LIMA1.HUMAN
+sp|P22307.2|SCP2.HUMAN -> sp_P22307.2_SCP2.HUMAN
+sp|P28300.2|LYOX.HUMAN -> sp_P28300.2_LYOX.HUMAN
+sp|P48443.1|RXRG.HUMAN -> sp_P48443.1_RXRG.HUMAN
+sp|P43686.2|PRS6B.HUMAN -> sp_P43686.2_PRS6B.HUMAN
+sp|Q92731.2|ESR2.HUMAN -> sp_Q92731.2_ESR2.HUMAN
+sp|Q9NZV8.2|KCND2.HUMAN -> sp_Q9NZV8.2_KCND2.HUMAN
+sp|P08910.1|ABHD2.HUMAN -> sp_P08910.1_ABHD2.HUMAN
+sp|Q6TCH4.2|PAQR6.HUMAN -> sp_Q6TCH4.2_PAQR6.HUMAN
+sp|Q86UW1.1|OSTA.HUMAN -> sp_Q86UW1.1_OSTA.HUMAN
+sp|Q13561.4|DCTN2.HUMAN -> sp_Q13561.4_DCTN2.HUMAN
+sp|P04062.3|GBA1.HUMAN -> sp_P04062.3_GBA1.HUMAN
+sp|Q8TEZ7.1|PAQR8.HUMAN -> sp_Q8TEZ7.1_PAQR8.HUMAN
+sp|O14576.2|DC1I1.HUMAN -> sp_O14576.2_DC1I1.HUMAN
+sp|Q9HCD5.2|NCOA5.HUMAN -> sp_Q9HCD5.2_NCOA5.HUMAN
+sp|P16662.2|UD2B7.HUMAN -> sp_P16662.2_UD2B7.HUMAN
+sp|Q14994.2|NR1I3.HUMAN -> sp_Q14994.2_NR1I3.HUMAN
+sp|Q5SW96.3|ARH.HUMAN -> sp_Q5SW96.3_ARH.HUMAN
+sp|P35398.2|RORA.HUMAN -> sp_P35398.2_RORA.HUMAN
+sp|Q13509.2|TBB3.HUMAN -> sp_Q13509.2_TBB3.HUMAN
+sp|P08238.4|HS90B.HUMAN -> sp_P08238.4_HS90B.HUMAN
+sp|P51843.2|NR0B1.HUMAN -> sp_P51843.2_NR0B1.HUMAN
+sp|Q00403.1|TF2B.HUMAN -> sp_Q00403.1_TF2B.HUMAN
+sp|P14060.2|3BHS1.HUMAN -> sp_P14060.2_3BHS1.HUMAN
+sp|P51692.2|STA5B.HUMAN -> sp_P51692.2_STA5B.HUMAN
+sp|O75881.2|CP7B1.HUMAN -> sp_O75881.2_CP7B1.HUMAN
+sp|P11142.1|HSP7C.HUMAN -> sp_P11142.1_HSP7C.HUMAN
+sp|Q13885.1|TBB2A.HUMAN -> sp_Q13885.1_TBB2A.HUMAN
+sp|P49918.1|CDN1C.HUMAN -> sp_P49918.1_CDN1C.HUMAN
+sp|Q9Y466.1|NR2E1.HUMAN -> sp_Q9Y466.1_NR2E1.HUMAN
+sp|P10589.1|COT1.HUMAN -> sp_P10589.1_COT1.HUMAN
+sp|O60884.1|DNJA2.HUMAN -> sp_O60884.1_DNJA2.HUMAN
+sp|Q13133.2|NR1H3.HUMAN -> sp_Q13133.2_NR1H3.HUMAN
+sp|P37173.2|TGFR2.HUMAN -> sp_P37173.2_TGFR2.HUMAN
+sp|P43354.1|NR4A2.HUMAN -> sp_P43354.1_NR4A2.HUMAN
+sp|Q8NG98.1|OR7D4.HUMAN -> sp_Q8NG98.1_OR7D4.HUMAN
+sp|P52895.3|AK1C2.HUMAN -> sp_P52895.3_AK1C2.HUMAN
+sp|P37231.3|PPARG.HUMAN -> sp_P37231.3_PPARG.HUMAN
+sp|P80365.2|DHI2.HUMAN -> sp_P80365.2_DHI2.HUMAN
+sp|Q9NXK6.2|PAQR5.HUMAN -> sp_Q9NXK6.2_PAQR5.HUMAN
+sp|Q9Y6G9.3|DC1L1.HUMAN -> sp_Q9Y6G9.3_DC1L1.HUMAN
+sp|P40424.1|PBX1.HUMAN -> sp_P40424.1_PBX1.HUMAN
+sp|Q99972.2|MYOC.HUMAN -> sp_Q99972.2_MYOC.HUMAN
+sp|O95470.3|SGPL1.HUMAN -> sp_O95470.3_SGPL1.HUMAN
+sp|Q9Y606.3|PUS1.HUMAN -> sp_Q9Y606.3_PUS1.HUMAN
+sp|P12643.1|BMP2.HUMAN -> sp_P12643.1_BMP2.HUMAN
+sp|Q13510.5|ASAH1.HUMAN -> sp_Q13510.5_ASAH1.HUMAN
+sp|P20813.1|CP2B6.HUMAN -> sp_P20813.1_CP2B6.HUMAN
+sp|Q99623.2|PHB2.HUMAN -> sp_Q99623.2_PHB2.HUMAN
+sp|Q7Z449.1|CP2U1.HUMAN -> sp_Q7Z449.1_CP2U1.HUMAN
+sp|P08684.4|CP3A4.HUMAN -> sp_P08684.4_CP3A4.HUMAN
+sp|P31948.1|STIP1.HUMAN -> sp_P31948.1_STIP1.HUMAN
+sp|O43323.1|DHH.HUMAN -> sp_O43323.1_DHH.HUMAN
+sp|P04798.1|CP1A1.HUMAN -> sp_P04798.1_CP1A1.HUMAN
+sp|P20393.1|NR1D1.HUMAN -> sp_P20393.1_NR1D1.HUMAN
+sp|O00204.2|ST2B1.HUMAN -> sp_O00204.2_ST2B1.HUMAN
+sp|Q99527.1|GPER1.HUMAN -> sp_Q99527.1_GPER1.HUMAN
+sp|O95718.3|ERR2.HUMAN -> sp_O95718.3_ERR2.HUMAN
+sp|Q92570.3|NR4A3.HUMAN -> sp_Q92570.3_NR4A3.HUMAN
+sp|Q96GM5.2|SMRD1.HUMAN -> sp_Q96GM5.2_SMRD1.HUMAN
+sp|P22003.1|BMP5.HUMAN -> sp_P22003.1_BMP5.HUMAN
+sp|P13807.2|GYS1.HUMAN -> sp_P13807.2_GYS1.HUMAN
+sp|P15121.3|ALDR.HUMAN -> sp_P15121.3_ALDR.HUMAN
+sp|P04150.1|GCR.HUMAN -> sp_P04150.1_GCR.HUMAN
+sp|Q9UBM7.1|DHCR7.HUMAN -> sp_Q9UBM7.1_DHCR7.HUMAN
+sp|Q13485.1|SMAD4.HUMAN -> sp_Q13485.1_SMAD4.HUMAN
+sp|P13056.2|NR2C1.HUMAN -> sp_P13056.2_NR2C1.HUMAN
+sp|Q9Y5K6.1|CD2AP.HUMAN -> sp_Q9Y5K6.1_CD2AP.HUMAN
+sp|Q13285.2|STF1.HUMAN -> sp_Q13285.2_STF1.HUMAN
+sp|Q9UJM3.1|ERRFI.HUMAN -> sp_Q9UJM3.1_ERRFI.HUMAN
+sp|P55345.1|ANM2.HUMAN -> sp_P55345.1_ANM2.HUMAN
+sp|Q8WXW3.2|PIBF1.HUMAN -> sp_Q8WXW3.2_PIBF1.HUMAN
+sp|O75928.3|PIAS2.HUMAN -> sp_O75928.3_PIAS2.HUMAN
+sp|O94763.3|RMP.HUMAN -> sp_O94763.3_RMP.HUMAN
+sp|Q9H2F3.2|3BHS7.HUMAN -> sp_Q9H2F3.2_3BHS7.HUMAN
+sp|Q99615.2|DNJC7.HUMAN -> sp_Q99615.2_DNJC7.HUMAN
+sp|P04278.2|SHBG.HUMAN -> sp_P04278.2_SHBG.HUMAN
+sp|O75477.2|ERLN1.HUMAN -> sp_O75477.2_ERLN1.HUMAN
+sp|P11474.3|ERR1.HUMAN -> sp_P11474.3_ERR1.HUMAN
+sp|Q16678.2|CP1B1.HUMAN -> sp_Q16678.2_CP1B1.HUMAN
+sp|Q86U06.1|RBM23.HUMAN -> sp_Q86U06.1_RBM23.HUMAN
+sp|P12644.1|BMP4.HUMAN -> sp_P12644.1_BMP4.HUMAN
+sp|Q9H3P7.4|GCP60.HUMAN -> sp_Q9H3P7.4_GCP60.HUMAN
+sp|P51449.2|RORG.HUMAN -> sp_P51449.2_RORG.HUMAN
+sp|P31689.2|DNJA1.HUMAN -> sp_P31689.2_DNJA1.HUMAN
+sp|Q9NXF8.2|ZDHC7.HUMAN -> sp_Q9NXF8.2_ZDHC7.HUMAN
+sp|P10828.2|THB.HUMAN -> sp_P10828.2_THB.HUMAN
+sp|P22736.1|NR4A1.HUMAN -> sp_P22736.1_NR4A1.HUMAN
+sp|Q08752.3|PPID.HUMAN -> sp_Q08752.3_PPID.HUMAN
+sp|P07900.5|HS90A.HUMAN -> sp_P07900.5_HS90A.HUMAN
+sp|P28702.2|RXRB.HUMAN -> sp_P28702.2_RXRB.HUMAN
+sp|P10276.2|RARA.HUMAN -> sp_P10276.2_RARA.HUMAN
+sp|P61158.3|ARP3.HUMAN -> sp_P61158.3_ARP3.HUMAN
+sp|Q86WK9.1|PAQR7.HUMAN -> sp_Q86WK9.1_PAQR7.HUMAN
+sp|P18075.1|BMP7.HUMAN -> sp_P18075.1_BMP7.HUMAN
+sp|Q9Y6X2.2|PIAS3.HUMAN -> sp_Q9Y6X2.2_PIAS3.HUMAN
+sp|P49116.1|NR2C2.HUMAN -> sp_P49116.1_NR2C2.HUMAN
+sp|P55055.2|NR1H2.HUMAN -> sp_P55055.2_NR1H2.HUMAN
+sp|P10826.2|RARB.HUMAN -> sp_P10826.2_RARB.HUMAN
+sp|Q01581.2|HMCS1.HUMAN -> sp_Q01581.2_HMCS1.HUMAN
+sp|P56937.1|DHB7.HUMAN -> sp_P56937.1_DHB7.HUMAN
+sp|Q9GZP0.1|PDGFD.HUMAN -> sp_Q9GZP0.1_PDGFD.HUMAN
+sp|Q03181.1|PPARD.HUMAN -> sp_Q03181.1_PPARD.HUMAN
+sp|P27797.1|CALR.HUMAN -> sp_P27797.1_CALR.HUMAN
+sp|O76062.3|ERG24.HUMAN -> sp_O76062.3_ERG24.HUMAN
+sp|Q92841.2|DDX17.HUMAN -> sp_Q92841.2_DDX17.HUMAN
+sp|Q96EB6.2|SIR1.HUMAN -> sp_Q96EB6.2_SIR1.HUMAN
+sp|Q13451.2|FKBP5.HUMAN -> sp_Q13451.2_FKBP5.HUMAN
+sp|Q6ZVX9.1|PAQR9.HUMAN -> sp_Q6ZVX9.1_PAQR9.HUMAN
+sp|Q8NBP7.3|PCSK9.HUMAN -> sp_Q8NBP7.3_PCSK9.HUMAN
+sp|Q9HAW8.1|UD110.HUMAN -> sp_Q9HAW8.1_UD110.HUMAN
+sp|Q14498.2|RBM39.HUMAN -> sp_Q14498.2_RBM39.HUMAN
+sp|Q02790.3|FKBP4.HUMAN -> sp_Q02790.3_FKBP4.HUMAN
+sp|Q07973.2|CP24A.HUMAN -> sp_Q07973.2_CP24A.HUMAN
+sp|P11473.1|VDR.HUMAN -> sp_P11473.1_VDR.HUMAN
+sp|P23771.1|GATA3.HUMAN -> sp_P23771.1_GATA3.HUMAN
+sp|Q13772.1|NCOA4.HUMAN -> sp_Q13772.1_NCOA4.HUMAN
+sp|Q8TBC4.2|UBA3.HUMAN -> sp_Q8TBC4.2_UBA3.HUMAN
+sp|Q02318.1|CP27A.HUMAN -> sp_Q02318.1_CP27A.HUMAN
+sp|Q02962.4|PAX2.HUMAN -> sp_Q02962.4_PAX2.HUMAN
+sp|Q96RI1.2|NR1H4.HUMAN -> sp_Q96RI1.2_NR1H4.HUMAN
+sp|Q9BUF5.1|TBB6.HUMAN -> sp_Q9BUF5.1_TBB6.HUMAN
+sp|Q9H255.1|O51E2.HUMAN -> sp_Q9H255.1_O51E2.HUMAN
+sp|Q14739.2|LBR.HUMAN -> sp_Q14739.2_LBR.HUMAN
+sp|P0DMV9.1|HS71B.HUMAN -> sp_P0DMV9.1_HS71B.HUMAN
+sp|Q13790.2|APOF.HUMAN -> sp_Q13790.2_APOF.HUMAN
+sp|Q02643.2|GHRHR.HUMAN -> sp_Q02643.2_GHRHR.HUMAN
+sp|Q9HAW9.1|UD18.HUMAN -> sp_Q9HAW9.1_UD18.HUMAN
+sp|P42330.4|AK1C3.HUMAN -> sp_P42330.4_AK1C3.HUMAN
+sp|O14791.5|APOL1.HUMAN -> sp_O14791.5_APOL1.HUMAN
+sp|P54646.2|AAPK2.HUMAN -> sp_P54646.2_AAPK2.HUMAN
+sp|Q13409.3|DC1I2.HUMAN -> sp_Q13409.3_DC1I2.HUMAN
+sp|P02649.1|APOE.HUMAN -> sp_P02649.1_APOE.HUMAN
+sp|O94905.1|ERLN2.HUMAN -> sp_O94905.1_ERLN2.HUMAN
+sp|P11597.2|CETP.HUMAN -> sp_P11597.2_CETP.HUMAN
+sp|Q13131.4|AAPK1.HUMAN -> sp_Q13131.4_AAPK1.HUMAN
+sp|O75469.1|NR1I2.HUMAN -> sp_O75469.1_NR1I2.HUMAN
+sp|P62508.1|ERR3.HUMAN -> sp_P62508.1_ERR3.HUMAN
+sp|P03372.2|ESR1.HUMAN -> sp_P03372.2_ESR1.HUMAN
+sp|P34931.2|HS71L.HUMAN -> sp_P34931.2_HS71L.HUMAN
+sp|P0DMV8.1|HS71A.HUMAN -> sp_P0DMV8.1_HS71A.HUMAN
+sp|P0DMM9.1|ST1A3.HUMAN -> sp_P0DMM9.1_ST1A3.HUMAN
+sp|P16471.1|PRLR.HUMAN -> sp_P16471.1_PRLR.HUMAN
+sp|P53041.1|PPP5.HUMAN -> sp_P53041.1_PPP5.HUMAN
+sp|P24468.1|COT2.HUMAN -> sp_P24468.1_COT2.HUMAN
+sp|P19793.1|RXRA.HUMAN -> sp_P19793.1_RXRA.HUMAN
+sp|Q14995.4|NR1D2.HUMAN -> sp_Q14995.4_NR1D2.HUMAN
+sp|Q9P1Z2.2|CACO1.HUMAN -> sp_Q9P1Z2.2_CACO1.HUMAN
+sp|O75925.2|PIAS1.HUMAN -> sp_O75925.2_PIAS1.HUMAN
+sp|Q07869.2|PPARA.HUMAN -> sp_Q07869.2_PPARA.HUMAN
+
+                         Gap/Ambiguity  Composition  p-value
+   1  sp_Q9BQE3.1_TBA1C.HUMAN   85.69%    passed      8.34%
+   2  sp_Q9Y5X4.1_NR2E3.HUMAN   86.93%    failed      0.11%
+   3  sp_P05177.4_CP1A2.HUMAN   83.56%    passed      6.86%
+   4  sp_P56705.4_WNT4.HUMAN    88.81%    failed      0.00%
+   5  sp_P41235.3_HNF4A.HUMAN   84.89%    passed     57.61%
+   6  sp_Q13573.1_SNW1.HUMAN    82.92%    failed      0.00%
+   7  sp_P22309.1_UD11.HUMAN    83.01%    failed      4.77%
+   8  sp_Q9UHB6.1_LIMA1.HUMAN   75.81%    failed      0.00%
+   9  sp_P22307.2_SCP2.HUMAN    82.57%    failed      0.00%
+  10  sp_P28300.2_LYOX.HUMAN    86.71%    failed      0.00%
+  11  sp_P48443.1_RXRG.HUMAN    85.25%    passed     33.36%
+  12  sp_P43686.2_PRS6B.HUMAN   86.68%    failed      0.04%
+  13  sp_Q92731.2_ESR2.HUMAN    83.11%    failed      0.43%
+  14  sp_Q9NZV8.2_KCND2.HUMAN   79.92%    failed      0.15%
+  15  sp_P08910.1_ABHD2.HUMAN   86.46%    passed     81.04%
+  16  sp_Q6TCH4.2_PAQR6.HUMAN   89.04%    failed      0.00%
+  17  sp_Q86UW1.1_OSTA.HUMAN    89.17%    failed      0.00%
+  18  sp_Q13561.4_DCTN2.HUMAN   87.22%    failed      0.00%
+  19  sp_P04062.3_GBA1.HUMAN    82.92%    passed     15.65%
+  20  sp_Q8TEZ7.1_PAQR8.HUMAN   88.72%    failed      0.00%
+  21  sp_O14576.2_DC1I1.HUMAN   79.45%    failed      0.04%
+  22  sp_Q9HCD5.2_NCOA5.HUMAN   81.55%    failed      0.00%
+  23  sp_P16662.2_UD2B7.HUMAN   83.14%    failed      0.19%
+  24  sp_Q14994.2_NR1I3.HUMAN   88.78%    failed      0.05%
+  25  sp_Q5SW96.3_ARH.HUMAN     90.18%    failed      4.86%
+  26  sp_P35398.2_RORA.HUMAN    83.33%    passed      6.23%
+  27  sp_Q13509.2_TBB3.HUMAN    85.66%    passed     32.50%
+  28  sp_P08238.4_HS90B.HUMAN   76.93%    failed      0.00%
+  29  sp_P51843.2_NR0B1.HUMAN   85.02%    failed      0.09%
+  30  sp_Q00403.1_TF2B.HUMAN    89.93%    failed      1.85%
+  31  sp_P14060.2_3BHS1.HUMAN   88.11%    passed     17.28%
+  32  sp_P51692.2_STA5B.HUMAN   74.92%    failed      0.00%
+  33  sp_O75881.2_CP7B1.HUMAN   83.88%    failed      0.00%
+  34  sp_P11142.1_HSP7C.HUMAN   79.41%    failed      0.00%
+  35  sp_Q13885.1_TBB2A.HUMAN   85.82%    passed     13.93%
+  36  sp_P49918.1_CDN1C.HUMAN   89.93%    failed      0.00%
+  37  sp_Q9Y466.1_NR2E1.HUMAN   87.73%    passed     35.80%
+  38  sp_P10589.1_COT1.HUMAN    86.52%    failed      0.71%
+  39  sp_O60884.1_DNJA2.HUMAN   86.87%    failed      0.00%
+  40  sp_Q13133.2_NR1H3.HUMAN   85.76%    failed      0.90%
+  41  sp_P37173.2_TGFR2.HUMAN   81.93%    failed      2.25%
+  42  sp_P43354.1_NR4A2.HUMAN   80.94%    failed      0.18%
+  43  sp_Q8NG98.1_OR7D4.HUMAN   90.06%    failed      0.00%
+  44  sp_P52895.3_AK1C2.HUMAN   89.71%    passed     13.40%
+  45  sp_P37231.3_PPARG.HUMAN   83.91%    failed      0.96%
+  46  sp_P80365.2_DHI2.HUMAN    87.09%    failed      0.00%
+  47  sp_Q9NXK6.2_PAQR5.HUMAN   89.48%    failed      0.00%
+  48  sp_Q9Y6G9.3_DC1L1.HUMAN   83.33%    failed      0.00%
+  49  sp_P40424.1_PBX1.HUMAN    86.30%    failed      0.01%
+  50  sp_Q99972.2_MYOC.HUMAN    83.94%    failed      0.03%
+  51  sp_O95470.3_SGPL1.HUMAN   81.90%    failed      4.59%
+  52  sp_Q9Y606.3_PUS1.HUMAN    86.39%    passed     20.80%
+  53  sp_P12643.1_BMP2.HUMAN    87.38%    passed     10.99%
+  54  sp_Q13510.5_ASAH1.HUMAN   87.41%    failed      2.81%
+  55  sp_P20813.1_CP2B6.HUMAN   84.35%    failed      0.01%
+  56  sp_Q99623.2_PHB2.HUMAN    90.47%    failed      0.02%
+  57  sp_Q7Z449.1_CP2U1.HUMAN   82.66%    failed      0.86%
+  58  sp_P08684.4_CP3A4.HUMAN   83.97%    failed      0.09%
+  59  sp_P31948.1_STIP1.HUMAN   82.70%    failed      0.00%
+  60  sp_O43323.1_DHH.HUMAN     87.38%    failed      0.00%
+  61  sp_P04798.1_CP1A1.HUMAN   83.68%    passed     19.08%
+  62  sp_P20393.1_NR1D1.HUMAN   80.43%    failed      0.00%
+  63  sp_O00204.2_ST2B1.HUMAN   88.37%    failed      0.80%
+  64  sp_Q99527.1_GPER1.HUMAN   88.05%    failed      0.01%
+  65  sp_O95718.3_ERR2.HUMAN    86.20%    failed      0.13%
+  66  sp_Q92570.3_NR4A3.HUMAN   80.05%    failed      0.00%
+  67  sp_Q96GM5.2_SMRD1.HUMAN   83.59%    failed      0.02%
+  68  sp_P22003.1_BMP5.HUMAN    85.53%    passed     46.05%
+  69  sp_P13807.2_GYS1.HUMAN    76.51%    passed      6.45%
+  70  sp_P15121.3_ALDR.HUMAN    89.93%    passed     65.53%
+  71  sp_P04150.1_GCR.HUMAN     75.24%    failed      0.00%
+  72  sp_Q9UBM7.1_DHCR7.HUMAN   84.86%    failed      0.00%
+  73  sp_Q13485.1_SMAD4.HUMAN   82.41%    failed      0.19%
+  74  sp_P13056.2_NR2C1.HUMAN   80.78%    failed      1.86%
+  75  sp_Q9Y5K6.1_CD2AP.HUMAN   79.64%    failed      0.00%
+  76  sp_Q13285.2_STF1.HUMAN    85.31%    failed      0.02%
+  77  sp_Q9UJM3.1_ERRFI.HUMAN   85.28%    failed      0.00%
+  78  sp_P55345.1_ANM2.HUMAN    86.20%    passed     32.00%
+  79  sp_Q8WXW3.2_PIBF1.HUMAN   75.88%    failed      0.00%
+  80  sp_O75928.3_PIAS2.HUMAN   80.21%    failed      0.00%
+  81  sp_O94763.3_RMP.HUMAN     82.95%    failed      0.00%
+  82  sp_Q9H2F3.2_3BHS7.HUMAN   88.24%    failed      0.00%
+  83  sp_Q99615.2_DNJC7.HUMAN   84.26%    failed      0.00%
+  84  sp_P04278.2_SHBG.HUMAN    87.19%    failed      0.00%
+  85  sp_O75477.2_ERLN1.HUMAN   88.91%    failed      0.01%
+  86  sp_P11474.3_ERR1.HUMAN    86.52%    failed      0.00%
+  87  sp_Q16678.2_CP1B1.HUMAN   82.70%    failed      0.01%
+  88  sp_Q86U06.1_RBM23.HUMAN   86.01%    failed      0.00%
+  89  sp_P12644.1_BMP4.HUMAN    87.00%    failed      2.89%
+  90  sp_Q9H3P7.4_GCP60.HUMAN   83.17%    failed      0.00%
+  91  sp_P51449.2_RORG.HUMAN    83.49%    failed      0.04%
+  92  sp_P31689.2_DNJA1.HUMAN   87.35%    failed      0.00%
+  93  sp_Q9NXF8.2_ZDHC7.HUMAN   90.18%    passed     11.18%
+  94  sp_P10828.2_THB.HUMAN     85.31%    passed     17.22%
+  95  sp_P22736.1_NR4A1.HUMAN   80.94%    failed      0.00%
+  96  sp_Q08752.3_PPID.HUMAN    88.21%    failed      0.01%
+  97  sp_P07900.5_HS90A.HUMAN   76.67%    failed      0.00%
+  98  sp_P28702.2_RXRB.HUMAN    83.01%    failed      0.00%
+  99  sp_P10276.2_RARA.HUMAN    85.28%    failed      0.20%
+ 100  sp_P61158.3_ARP3.HUMAN    86.68%    failed      3.00%
+ 101  sp_Q86WK9.1_PAQR7.HUMAN   88.97%    failed      0.00%
+ 102  sp_P18075.1_BMP7.HUMAN    86.27%    passed     24.93%
+ 103  sp_Q9Y6X2.2_PIAS3.HUMAN   79.99%    failed      0.00%
+ 104  sp_P49116.1_NR2C2.HUMAN   81.01%    failed      0.01%
+ 105  sp_P55055.2_NR1H2.HUMAN   85.34%    failed      0.02%
+ 106  sp_P10826.2_RARB.HUMAN    85.50%    failed      0.30%
+ 107  sp_Q01581.2_HMCS1.HUMAN   83.43%    failed      3.70%
+ 108  sp_P56937.1_DHB7.HUMAN    89.13%    failed      3.66%
+ 109  sp_Q9GZP0.1_PDGFD.HUMAN   88.21%    failed      1.64%
+ 110  sp_Q03181.1_PPARD.HUMAN   85.95%    passed     37.69%
+ 111  sp_P27797.1_CALR.HUMAN    86.71%    failed      0.00%
+ 112  sp_O76062.3_ERG24.HUMAN   86.68%    failed      0.00%
+ 113  sp_Q92841.2_DDX17.HUMAN   76.77%    failed      0.00%
+ 114  sp_Q96EB6.2_SIR1.HUMAN    76.20%    failed      0.00%
+ 115  sp_Q13451.2_FKBP5.HUMAN   85.44%    failed      0.00%
+ 116  sp_Q6ZVX9.1_PAQR9.HUMAN   87.99%    failed      0.00%
+ 117  sp_Q8NBP7.3_PCSK9.HUMAN   77.95%    failed      0.00%
+ 118  sp_Q9HAW8.1_UD110.HUMAN   83.11%    passed     16.44%
+ 119  sp_Q14498.2_RBM39.HUMAN   83.11%    failed      0.00%
+ 120  sp_Q02790.3_FKBP4.HUMAN   85.37%    failed      0.00%
+ 121  sp_Q07973.2_CP24A.HUMAN   83.62%    passed     17.67%
+ 122  sp_P11473.1_VDR.HUMAN     86.39%    failed      1.04%
+ 123  sp_P23771.1_GATA3.HUMAN   85.88%    failed      0.00%
+ 124  sp_Q13772.1_NCOA4.HUMAN   80.43%    failed      0.00%
+ 125  sp_Q8TBC4.2_UBA3.HUMAN    85.25%    passed     36.45%
+ 126  sp_Q02318.1_CP27A.HUMAN   83.08%    failed      0.11%
+ 127  sp_Q02962.4_PAX2.HUMAN    86.71%    failed      0.00%
+ 128  sp_Q96RI1.2_NR1H4.HUMAN   84.51%    passed      6.17%
+ 129  sp_Q9BUF5.1_TBB6.HUMAN    85.79%    passed     16.32%
+ 130  sp_Q9H255.1_O51E2.HUMAN   89.80%    failed      0.00%
+ 131  sp_Q14739.2_LBR.HUMAN     80.40%    failed      0.01%
+ 132  sp_P0DMV9.1_HS71B.HUMAN   79.57%    failed      0.00%
+ 133  sp_Q13790.2_APOF.HUMAN    89.61%    failed      0.23%
+ 134  sp_Q02643.2_GHRHR.HUMAN   86.52%    failed      0.00%
+ 135  sp_Q9HAW9.1_UD18.HUMAN    83.11%    passed     16.90%
+ 136  sp_P42330.4_AK1C3.HUMAN   89.71%    passed     45.44%
+ 137  sp_O14791.5_APOL1.HUMAN   87.32%    failed      0.19%
+ 138  sp_P54646.2_AAPK2.HUMAN   82.41%    passed     23.04%
+ 139  sp_Q13409.3_DC1I2.HUMAN   79.67%    failed      0.07%
+ 140  sp_P02649.1_APOE.HUMAN    89.90%    failed      0.00%
+ 141  sp_O94905.1_ERLN2.HUMAN   89.20%    failed      0.00%
+ 142  sp_P11597.2_CETP.HUMAN    84.29%    failed      0.00%
+ 143  sp_Q13131.4_AAPK1.HUMAN   82.19%    passed      9.01%
+ 144  sp_O75469.1_NR1I2.HUMAN   86.17%    passed      9.07%
+ 145  sp_P62508.1_ERR3.HUMAN    85.40%    failed      4.96%
+ 146  sp_P03372.2_ESR1.HUMAN    81.04%    failed      0.71%
+ 147  sp_P34931.2_HS71L.HUMAN   79.57%    failed      0.00%
+ 148  sp_P0DMV8.1_HS71A.HUMAN   79.57%    failed      0.00%
+ 149  sp_P0DMM9.1_ST1A3.HUMAN   90.60%    passed     41.69%
+ 150  sp_P16471.1_PRLR.HUMAN    80.18%    failed      0.45%
+ 151  sp_P53041.1_PPP5.HUMAN    84.10%    passed     11.16%
+ 152  sp_P24468.1_COT2.HUMAN    86.81%    failed      1.92%
+ 153  sp_P19793.1_RXRA.HUMAN    85.28%    passed     20.05%
+ 154  sp_Q14995.4_NR1D2.HUMAN   81.55%    failed      0.00%
+ 155  sp_Q9P1Z2.2_CACO1.HUMAN   77.98%    failed      0.00%
+ 156  sp_O75925.2_PIAS1.HUMAN   79.25%    failed      0.00%
+ 157  sp_Q07869.2_PPARA.HUMAN   85.09%    passed     14.77%
+WARNING: 157 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                     84.50%  120 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: sp_P0DMV8.1_HS71A.HUMAN is identical to sp_P0DMV9.1_HS71B.HUMAN but kept for subsequent analysis
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.173 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 780978)...
+
+NOTE: 310 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 12 CPU cores
+7 trees examined
+Threads: 1 / Time: 12.472 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -199465
+Threads: 2 / Time: 6.602 sec / Speedup: 1.889 / Efficiency: 94% / LogL: -199465
+Threads: 3 / Time: 4.721 sec / Speedup: 2.642 / Efficiency: 88% / LogL: -199465
+Threads: 4 / Time: 3.785 sec / Speedup: 3.295 / Efficiency: 82% / LogL: -199465
+Threads: 5 / Time: 3.259 sec / Speedup: 3.827 / Efficiency: 77% / LogL: -199465
+Threads: 6 / Time: 3.043 sec / Speedup: 4.098 / Efficiency: 68% / LogL: -199465
+Threads: 7 / Time: 3.612 sec / Speedup: 3.453 / Efficiency: 49% / LogL: -199465
+BEST NUMBER OF THREADS: 6
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -186910.327
+2. Current log-likelihood: -172242.352
+3. Current log-likelihood: -171814.014
+4. Current log-likelihood: -171802.268
+5. Current log-likelihood: -171800.927
+6. Current log-likelihood: -171800.760
+Optimal log-likelihood: -171800.709
+Gamma shape alpha: 1.608
+Parameters optimization took 6 rounds (9.068 sec)
+Computing ML distances based on estimated model parameters... 10.203 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.014 seconds
+Log-likelihood of BIONJ tree: -171703.754
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 26.241 second
+Computing log-likelihood of 98 initial trees ... 75.342 seconds
+Current best score: -171703.754
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -171520.738
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 6: -171516.085
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 8: -171514.518
+Iteration 10 / LogL: -171542.901 / Time: 0h:7m:4s
+Iteration 20 / LogL: -171556.681 / Time: 0h:11m:15s
+Finish initializing candidate tree set (20)
+Current best tree score: -171514.518 / CPU time: 620.437
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 22: -171496.135
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 25: -171492.335
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 28: -171485.568
+Iteration 30 / LogL: -171494.471 / Time: 0h:14m:28s (0h:48m:55s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -171481.576
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 35: -171479.106
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 38: -171475.622
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 39: -171472.796
+Iteration 40 / LogL: -171480.699 / Time: 0h:17m:13s (0h:43m:42s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 44: -171468.505
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 50: -171467.328
+Iteration 50 / LogL: -171467.328 / Time: 0h:19m:44s (0h:40m:17s left)
+Log-likelihood cutoff on original alignment: -171574.465
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 55: -171461.517
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 59: -171461.307
+Iteration 60 / LogL: -171464.777 / Time: 0h:22m:30s (0h:37m:46s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 65: -171453.319
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 69: -171452.444
+Iteration 70 / LogL: -171458.465 / Time: 0h:25m:5s (0h:35m:59s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 71: -171451.331
+Iteration 80 / LogL: -171455.548 / Time: 0h:27m:32s (0h:31m:42s left)
+Iteration 90 / LogL: -171454.656 / Time: 0h:29m:53s (0h:27m:12s left)
+Iteration 100 / LogL: -171461.458 / Time: 0h:32m:27s (0h:23m:16s left)
+Log-likelihood cutoff on original alignment: -171562.499
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.927
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -171452.072 / Time: 0h:34m:56s (0h:28m:50s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 113: -171445.080
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 118: -171438.643
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 119: -171436.288
+Iteration 120 / LogL: -171457.175 / Time: 0h:37m:42s (0h:31m:21s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 126: -171432.215
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 127: -171431.995
+Iteration 130 / LogL: -171440.279 / Time: 0h:40m:13s (0h:30m:14s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 139: -171431.905
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 140: -171431.563
+Iteration 140 / LogL: -171431.563 / Time: 0h:42m:45s (0h:30m:45s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 142: -171426.170
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 144: -171423.473
+Iteration 150 / LogL: -171431.948 / Time: 0h:45m:26s (0h:28m:39s left)
+Log-likelihood cutoff on original alignment: -171553.484
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 157: -171420.732
+Iteration 160 / LogL: -171427.061 / Time: 0h:48m:24s (0h:29m:31s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 164: -171420.301
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 167: -171419.484
+Iteration 170 / LogL: -171421.901 / Time: 0h:51m:24s (0h:29m:30s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 176: -171419.336
+Iteration 180 / LogL: -171433.948 / Time: 0h:54m:26s (0h:29m:11s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 181: -171417.678
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 186: -171416.493
+Iteration 190 / LogL: -171418.073 / Time: 0h:57m:42s (0h:29m:18s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 192: -171414.885
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 195: -171412.068
+Iteration 200 / LogL: -171415.059 / Time: 1h:0m:56s (0h:29m:5s left)
+Log-likelihood cutoff on original alignment: -171538.362
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.863
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 201: -171411.171
+Iteration 210 / LogL: -171416.023 / Time: 1h:3m:50s (0h:27m:47s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 220: -171411.023
+Iteration 220 / LogL: -171411.023 / Time: 1h:6m:29s (0h:30m:21s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 228: -171410.764
+Iteration 230 / LogL: -171411.208 / Time: 1h:9m:21s (0h:29m:40s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 234: -171409.467
+Iteration 240 / LogL: -171411.131 / Time: 1h:12m:4s (0h:28m:20s left)
+Iteration 250 / LogL: -171412.280 / Time: 1h:14m:48s (0h:25m:14s left)
+Log-likelihood cutoff on original alignment: -171538.362
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 251: -171409.268
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 256: -171408.805
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 259: -171407.293
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 260: -171398.261
+Iteration 260 / LogL: -171398.261 / Time: 1h:17m:59s (0h:30m:6s left)
+Iteration 270 / LogL: -171403.287 / Time: 1h:21m:3s (0h:27m:7s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 279: -171396.864
+Iteration 280 / LogL: -171399.403 / Time: 1h:23m:55s (0h:29m:46s left)
+Iteration 290 / LogL: -171400.575 / Time: 1h:26m:30s (0h:26m:38s left)
+Iteration 300 / LogL: -171400.703 / Time: 1h:28m:50s (0h:23m:28s left)
+Log-likelihood cutoff on original alignment: -171538.362
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.862
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 305: -171395.068
+Iteration 310 / LogL: -171396.869 / Time: 1h:31m:4s (0h:27m:59s left)
+Iteration 320 / LogL: -171402.435 / Time: 1h:33m:9s (0h:24m:49s left)
+Iteration 330 / LogL: -171401.146 / Time: 1h:35m:22s (0h:21m:44s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 338: -171394.378
+Iteration 340 / LogL: -171398.041 / Time: 1h:37m:44s (0h:28m:15s left)
+Iteration 350 / LogL: -171396.396 / Time: 1h:39m:53s (0h:25m:11s left)
+Log-likelihood cutoff on original alignment: -171538.362
+Iteration 360 / LogL: -171397.892 / Time: 1h:42m:12s (0h:22m:12s left)
+Iteration 370 / LogL: -171395.060 / Time: 1h:44m:47s (0h:19m:18s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 378: -171392.561
+Iteration 380 / LogL: -171396.003 / Time: 1h:47m:29s (0h:27m:47s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 390: -171391.534
+Iteration 390 / LogL: -171391.534 / Time: 1h:50m:15s (0h:28m:20s left)
+Iteration 400 / LogL: -171394.439 / Time: 1h:53m:13s (0h:25m:32s left)
+Log-likelihood cutoff on original alignment: -171515.717
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.888
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 410 / LogL: -171392.788 / Time: 1h:56m:3s (0h:25m:32s left)
+Iteration 420 / LogL: -171392.430 / Time: 1h:58m:54s (0h:22m:42s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 421: -171391.018
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 429: -171389.822
+Iteration 430 / LogL: -171395.544 / Time: 2h:1m:53s (0h:28m:7s left)
+Iteration 440 / LogL: -171394.297 / Time: 2h:5m:1s (0h:25m:20s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 450: -171389.326
+Iteration 450 / LogL: -171389.326 / Time: 2h:8m:19s (0h:28m:34s left)
+Log-likelihood cutoff on original alignment: -171515.717
+Iteration 460 / LogL: -171398.933 / Time: 2h:11m:26s (0h:25m:46s left)
+Iteration 470 / LogL: -171391.495 / Time: 2h:14m:26s (0h:22m:55s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 472: -171389.165
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 478: -171388.532
+Iteration 480 / LogL: -171390.069 / Time: 2h:17m:26s (0h:28m:7s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 489: -171387.686
+Iteration 490 / LogL: -171388.688 / Time: 2h:20m:46s (0h:28m:29s left)
+Iteration 500 / LogL: -171390.957 / Time: 2h:26m:5s (0h:26m:3s left)
+Log-likelihood cutoff on original alignment: -171515.717
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.901
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 510 / LogL: -171389.243 / Time: 2h:32m:6s (0h:26m:53s left)
+Iteration 520 / LogL: -171391.662 / Time: 2h:37m:53s (0h:24m:20s left)
+Iteration 530 / LogL: -171388.552 / Time: 2h:43m:41s (0h:21m:39s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 535: -171387.576
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 536: -171387.284
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 538: -171387.248
+Iteration 540 / LogL: -171387.699 / Time: 2h:49m:25s (0h:30m:48s left)
+Iteration 550 / LogL: -171390.793 / Time: 2h:52m:53s (0h:27m:42s left)
+Log-likelihood cutoff on original alignment: -171515.717
+Iteration 560 / LogL: -171387.962 / Time: 2h:56m:1s (0h:24m:33s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 561: -171386.970
+Iteration 570 / LogL: -171389.852 / Time: 3h:0m:4s (0h:28m:47s left)
+Iteration 580 / LogL: -171387.861 / Time: 3h:4m:51s (0h:25m:51s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 585: -171386.882
+Iteration 590 / LogL: -171387.436 / Time: 3h:9m:19s (0h:30m:32s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 598: -171386.720
+Iteration 600 / LogL: -171400.580 / Time: 3h:13m:45s (0h:31m:41s left)
+Log-likelihood cutoff on original alignment: -171515.717
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.935
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 610 / LogL: -171405.403 / Time: 3h:18m:7s (0h:29m:16s left)
+Iteration 620 / LogL: -171388.289 / Time: 3h:22m:28s (0h:26m:10s left)
+Iteration 630 / LogL: -171389.787 / Time: 3h:25m:50s (0h:22m:54s left)
+Iteration 640 / LogL: -171387.112 / Time: 3h:28m:25s (0h:19m:34s left)
+Iteration 650 / LogL: -171390.486 / Time: 3h:31m:17s (0h:16m:16s left)
+Log-likelihood cutoff on original alignment: -171515.717
+Iteration 660 / LogL: -171395.395 / Time: 3h:34m:46s (0h:13m:2s left)
+Iteration 670 / LogL: -171396.278 / Time: 3h:37m:55s (0h:9m:46s left)
+Iteration 680 / LogL: -171395.754 / Time: 3h:40m:54s (0h:6m:30s left)
+Iteration 690 / LogL: -171387.854 / Time: 3h:44m:8s (0h:3m:15s left)
+Iteration 700 / LogL: -171388.781 / Time: 3h:47m:14s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -171515.717
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.948
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 710 / LogL: -171389.675 / Time: 3h:50m:20s (0h:29m:14s left)
+Iteration 720 / LogL: -171394.711 / Time: 3h:53m:35s (0h:25m:59s left)
+Iteration 730 / LogL: -171387.685 / Time: 3h:56m:50s (0h:22m:44s left)
+Iteration 740 / LogL: -171387.443 / Time: 3h:59m:56s (0h:19m:28s left)
+Iteration 750 / LogL: -171386.839 / Time: 4h:2m:18s (0h:16m:10s left)
+Log-likelihood cutoff on original alignment: -171515.717
+Iteration 760 / LogL: -171387.946 / Time: 4h:4m:45s (0h:12m:53s left)
+Iteration 770 / LogL: -171387.765 / Time: 4h:7m:10s (0h:9m:38s left)
+Iteration 780 / LogL: -171390.362 / Time: 4h:10m:6s (0h:6m:25s left)
+Iteration 790 / LogL: -171389.938 / Time: 4h:13m:12s (0h:3m:12s left)
+Iteration 800 / LogL: -171394.554 / Time: 4h:16m:13s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -171515.717
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.966
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 804: -171386.314
+UPDATE BEST LOG-LIKELIHOOD: -171386.314
+Iteration 810 / LogL: -171386.314 / Time: 4h:19m:30s (0h:30m:9s left)
+Iteration 820 / LogL: -171390.686 / Time: 4h:22m:42s (0h:26m:56s left)
+Iteration 830 / LogL: -171390.173 / Time: 4h:25m:53s (0h:23m:44s left)
+Iteration 840 / LogL: -171390.408 / Time: 4h:29m:4s (0h:20m:31s left)
+UPDATE BEST LOG-LIKELIHOOD: -171386.312
+Iteration 850 / LogL: -171393.837 / Time: 4h:32m:12s (0h:17m:18s left)
+Log-likelihood cutoff on original alignment: -171515.717
+Iteration 860 / LogL: -171396.034 / Time: 4h:35m:3s (0h:14m:5s left)
+BETTER TREE FOUND at iteration 862: -171386.303
+Iteration 870 / LogL: -171387.745 / Time: 4h:37m:22s (0h:29m:21s left)
+Iteration 880 / LogL: -171388.303 / Time: 4h:39m:41s (0h:26m:5s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 887: -171386.157
+Iteration 890 / LogL: -171392.066 / Time: 4h:42m:7s (0h:30m:47s left)
+Iteration 900 / LogL: -171426.602 / Time: 4h:45m:6s (0h:27m:35s left)
+Log-likelihood cutoff on original alignment: -171515.717
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.978
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 910 / LogL: -171387.428 / Time: 4h:48m:7s (0h:28m:31s left)
+Iteration 920 / LogL: -171396.196 / Time: 4h:51m:21s (0h:25m:21s left)
+Iteration 930 / LogL: -171390.359 / Time: 4h:54m:31s (0h:22m:11s left)
+Iteration 940 / LogL: -171388.563 / Time: 4h:57m:33s (0h:19m:0s left)
+Iteration 950 / LogL: -171389.414 / Time: 5h:0m:44s (0h:15m:50s left)
+Log-likelihood cutoff on original alignment: -171515.717
+Iteration 960 / LogL: -171388.047 / Time: 5h:3m:39s (0h:12m:39s left)
+Iteration 970 / LogL: -171387.476 / Time: 5h:6m:46s (0h:9m:29s left)
+Iteration 980 / LogL: -171388.804 / Time: 5h:9m:49s (0h:6m:19s left)
+UPDATE BEST LOG-LIKELIHOOD: -171386.157
+Iteration 990 / LogL: -171390.418 / Time: 5h:12m:7s (0h:3m:9s left)
+Iteration 1000 / LogL: -171390.793 / Time: 5h:14m:24s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -171515.717
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.989
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+WARNING: bootstrap analysis did not converge. You should rerun with higher number of iterations (-nm option)
+TREE SEARCH COMPLETED AFTER 1001 ITERATIONS / Time: 5h:14m:35s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -171386.157
+Optimal log-likelihood: -171386.154
+Gamma shape alpha: 1.626
+Parameters optimization took 1 rounds (1.059 sec)
+BEST SCORE FOUND : -171386.154
+Creating bootstrap support values...
+Split supports printed to NEXUS file iqtree/IQ-TREE_output.splits.nex
+Total tree length: 241.688
+
+Total number of iterations: 1001
+CPU time used for tree search: 88829.815 sec (24h:40m:29s)
+Wall-clock time used for tree search: 18820.217 sec (5h:13m:40s)
+Total CPU time used: 89022.389 sec (24h:43m:42s)
+Total wall-clock time used: 18876.775 sec (5h:14m:36s)
+
+Computing bootstrap consensus tree...
+Reading input file iqtree/IQ-TREE_output.splits.nex...
+157 taxa and 2611 splits.
+Consensus tree written to iqtree/IQ-TREE_output.contree
+Reading input trees file iqtree/IQ-TREE_output.contree
+Log-likelihood of consensus tree: -171386.981
+
+Analysis results written to: 
+  IQ-TREE report:                iqtree/IQ-TREE_output.iqtree
+  Maximum-likelihood tree:       iqtree/IQ-TREE_output.treefile
+  Likelihood distances:          iqtree/IQ-TREE_output.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iqtree/IQ-TREE_output.splits.nex
+  Consensus tree:                iqtree/IQ-TREE_output.contree
+  Screen log file:               iqtree/IQ-TREE_output.log
+
+Date and Time: Sat Feb 17 04:02:12 2024

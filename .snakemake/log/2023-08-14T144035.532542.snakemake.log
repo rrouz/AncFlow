@@ -1,0 +1,3 @@
+ModuleNotFoundError in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 2:
+No module named 'Bio'
+  File "/Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile", line 2, in <module>

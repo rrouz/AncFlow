@@ -1,0 +1,34 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+tree_to_fasta        1
+total                1
+
+Select jobs to execute...
+
+[Fri Aug 25 23:36:33 2023]
+rule tree_to_fasta:
+    input: output/2023-08-25_treeOMPuniprotumapgmmemm.tree
+    output: arpip_seq.fasta
+    jobid: 0
+    reason: Missing output files: arpip_seq.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Fri Aug 25 23:36:33 2023]
+Error in rule tree_to_fasta:
+    jobid: 0
+    input: output/2023-08-25_treeOMPuniprotumapgmmemm.tree
+    output: arpip_seq.fasta
+
+RuleException:
+CalledProcessError in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 93:
+Command 'set -euo pipefail;  /usr/local/Cellar/snakemake/7.32.3/libexec/bin/python /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/.snakemake/scripts/tmpl9q_ay06.convert_tree_to_fasta.py' returned non-zero exit status 1.
+  File "/Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile", line 93, in __rule_tree_to_fasta
+  File "/usr/local/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-08-25T233633.654442.snakemake.log

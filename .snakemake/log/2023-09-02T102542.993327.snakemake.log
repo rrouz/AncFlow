@@ -1,0 +1,27 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+setup_autophy        1
+total                1
+
+Select jobs to execute...
+
+[Sat Sep  2 10:25:43 2023]
+rule setup_autophy:
+    input: IQ-TREE_output.nwk
+    output: autophy_env_created.txt
+    jobid: 0
+    reason: Missing output files: autophy_env_created.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule setup_autophy in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 73:
+Job 0 completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+autophy_env_created.txt
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-09-02T102542.993327.snakemake.log

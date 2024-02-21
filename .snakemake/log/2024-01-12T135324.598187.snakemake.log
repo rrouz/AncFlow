@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job            count
+-----------  -------
+autophy_env        1
+total              1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Fri Jan 12 13:53:24 2024]
+localrule autophy_env:
+    jobid: 0
+    reason: Rules with neither input nor output files are always executed.
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Fri Jan 12 13:53:32 2024]
+Error in rule autophy_env:
+    jobid: 0
+    shell:
+        
+        echo "Setting up Autophy..."
+        conda create -y -n autophy python=3.8
+        conda activate autophy
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-12T135324.598187.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

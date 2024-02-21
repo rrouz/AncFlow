@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+fasta_to_nexus        1
+total                 1
+
+Select jobs to execute...
+
+[Tue Aug 15 00:42:58 2023]
+rule fasta_to_nexus:
+    input: aligned_protein_sequences.fasta
+    output: aligned_protein_sequences.nexus
+    jobid: 0
+    reason: Missing output files: aligned_protein_sequences.nexus
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+/usr/local/Cellar/snakemake/7.32.2/libexec/bin/python /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/.snakemake/scripts/tmpsln61gle.convert_fasta_to_nexus.py
+[Tue Aug 15 00:42:58 2023]
+Error in rule fasta_to_nexus:
+    jobid: 0
+    input: aligned_protein_sequences.fasta
+    output: aligned_protein_sequences.nexus
+
+RuleException:
+CalledProcessError in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 31:
+Command 'set -euo pipefail;  /usr/local/Cellar/snakemake/7.32.2/libexec/bin/python /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/.snakemake/scripts/tmpsln61gle.convert_fasta_to_nexus.py' returned non-zero exit status 1.
+  File "/Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile", line 31, in __rule_fasta_to_nexus
+  File "/usr/local/Cellar/python@3.11/3.11.4_1/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-08-15T004258.418709.snakemake.log

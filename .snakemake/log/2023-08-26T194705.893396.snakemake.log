@@ -1,0 +1,36 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+install_dependencies        1
+total                       1
+
+Select jobs to execute...
+
+[Sat Aug 26 19:47:06 2023]
+rule install_dependencies:
+    output: installed_dependencies.txt
+    jobid: 0
+    reason: Missing output files: installed_dependencies.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sat Aug 26 19:47:06 2023]
+Error in rule install_dependencies:
+    jobid: 0
+    output: installed_dependencies.txt
+
+RuleException:
+WorkflowError in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 50:
+Failed to open source file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/
+        pip install ete3
+        touch installed_dependencies.txt
+        
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/ryinrouzbehani/Documents/SDSU/Research/WF1/\n        pip install ete3\n        touch installed_dependencies.txt\n        '
+  File "/Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile", line 50, in __rule_install_dependencies
+  File "/usr/local/Cellar/python@3.11/3.11.5/Frameworks/Python.framework/Versions/3.11/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-08-26T194705.893396.snakemake.log

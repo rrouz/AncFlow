@@ -1,0 +1,48 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                    count
+-------------------  -------
+asr                        1
+header_standardizer        1
+seq_prep2                  1
+total                      3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Jan 23 22:42:06 2024]
+localrule seq_prep2:
+    input: aligned_protein_sequences.fasta
+    output: aligned_autophy_sequences.fasta
+    jobid: 8
+    reason: Missing output files: aligned_autophy_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Tue Jan 23 22:42:06 2024]
+Finished job 8.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Jan 23 22:42:06 2024]
+localrule header_standardizer:
+    input: output/autophy_tree.nwk, aligned_autophy_sequences.fasta
+    output: modified_aligned_autophy_sequences.fasta
+    jobid: 1
+    reason: Missing output files: modified_aligned_autophy_sequences.fasta; Input files updated by another job: aligned_autophy_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule header_standardizer in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 76:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+modified_aligned_autophy_sequences.fasta
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-23T224204.874719.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

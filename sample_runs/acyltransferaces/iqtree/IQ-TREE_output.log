@@ -1,0 +1,593 @@
+IQ-TREE multicore version 1.6.12 for Mac OS X 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    users-MacBook-Pro.local (AVX2, FMA3, 32 GB RAM)
+Command: iqtree -s alignments/aligned_protein_sequences.fasta -m LG+G+F -bb 1000 -nt AUTO -pre iqtree/IQ-TREE_output
+Seed:    865057 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Feb 15 22:22:19 2024
+Kernel:  AVX+FMA - auto-detect threads (12 CPU cores detected)
+
+Reading alignment file alignments/aligned_protein_sequences.fasta ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 172 sequences with 2852 columns, 2820 distinct patterns
+1855 parsimony-informative, 783 singleton sites, 214 constant sites
+WARNING: Some sequence names are changed as follows:
+sp|Q8WU03.1|GLYL2.HUMAN -> sp_Q8WU03.1_GLYL2.HUMAN
+sp|P10515.3|ODP2.HUMAN -> sp_P10515.3_ODP2.HUMAN
+sp|Q14032.1|BAAT.HUMAN -> sp_Q14032.1_BAAT.HUMAN
+sp|P25445.1|TNR6.HUMAN -> sp_P25445.1_TNR6.HUMAN
+sp|P21980.2|TGM2.HUMAN -> sp_P21980.2_TGM2.HUMAN
+sp|Q8ND83.3|SLAI1.HUMAN -> sp_Q8ND83.3_SLAI1.HUMAN
+sp|Q96PD7.2|DGAT2.HUMAN -> sp_Q96PD7.2_DGAT2.HUMAN
+sp|Q6P531.2|GGT6.HUMAN -> sp_Q6P531.2_GGT6.HUMAN
+sp|Q147X3.1|NAA30.HUMAN -> sp_Q147X3.1_NAA30.HUMAN
+sp|Q96GR4.2|ZDH12.HUMAN -> sp_Q96GR4.2_ZDH12.HUMAN
+sp|P06239.6|LCK.HUMAN -> sp_P06239.6_LCK.HUMAN
+sp|Q9H9T3.2|ELP3.HUMAN -> sp_Q9H9T3.2_ELP3.HUMAN
+sp|P11245.2|ARY2.HUMAN -> sp_P11245.2_ARY2.HUMAN
+sp|P35610.3|SOAT1.HUMAN -> sp_P35610.3_SOAT1.HUMAN
+sp|Q7L5N7.1|PCAT2.HUMAN -> sp_Q7L5N7.1_PCAT2.HUMAN
+sp|Q9H7X0.1|NAA60.HUMAN -> sp_Q9H7X0.1_NAA60.HUMAN
+sp|Q9NST1.2|PLPL3.HUMAN -> sp_Q9NST1.2_PLPL3.HUMAN
+sp|Q9H6R6.1|ZDHC6.HUMAN -> sp_Q9H6R6.1_ZDHC6.HUMAN
+sp|Q8TB40.1|ABHD4.HUMAN -> sp_Q8TB40.1_ABHD4.HUMAN
+sp|A6NGU5.2|GGT3.HUMAN -> sp_A6NGU5.2_GGT3.HUMAN
+sp|P24752.1|THIL.HUMAN -> sp_P24752.1_THIL.HUMAN
+sp|P12694.2|ODBA.HUMAN -> sp_P12694.2_ODBA.HUMAN
+sp|Q9UP65.2|PA24C.HUMAN -> sp_Q9UP65.2_PA24C.HUMAN
+sp|Q9Y234.1|LIPT.HUMAN -> sp_Q9Y234.1_LIPT.HUMAN
+sp|P11182.3|ODB2.HUMAN -> sp_P11182.3_ODB2.HUMAN
+sp|Q9NXS2.2|QPCTL.HUMAN -> sp_Q9NXS2.2_QPCTL.HUMAN
+sp|O15269.1|SPTC1.HUMAN -> sp_O15269.1_SPTC1.HUMAN
+sp|Q96MV8.1|ZDH15.HUMAN -> sp_Q96MV8.1_ZDH15.HUMAN
+sp|P36269.2|GGT5.HUMAN -> sp_P36269.2_GGT5.HUMAN
+sp|Q8N159.1|NAGS.HUMAN -> sp_Q8N159.1_NAGS.HUMAN
+sp|O75907.2|DGAT1.HUMAN -> sp_O75907.2_DGAT1.HUMAN
+sp|Q5W0Z9.1|ZDH20.HUMAN -> sp_Q5W0Z9.1_ZDH20.HUMAN
+sp|P22557.2|HEM0.HUMAN -> sp_P22557.2_HEM0.HUMAN
+sp|P23786.2|CPT2.HUMAN -> sp_P23786.2_CPT2.HUMAN
+sp|Q86U10.3|LPP60.HUMAN -> sp_Q86U10.3_LPP60.HUMAN
+sp|Q8WTX9.1|ZDHC1.HUMAN -> sp_Q8WTX9.1_ZDHC1.HUMAN
+sp|P02649.1|APOE.HUMAN -> sp_P02649.1_APOE.HUMAN
+sp|Q9NUE0.2|ZDH18.HUMAN -> sp_Q9NUE0.2_ZDH18.HUMAN
+sp|Q8NC51.2|SERB1.HUMAN -> sp_Q8NC51.2_SERB1.HUMAN
+sp|Q96CV9.3|OPTN.HUMAN -> sp_Q96CV9.3_OPTN.HUMAN
+sp|O15270.1|SPTC2.HUMAN -> sp_O15270.1_SPTC2.HUMAN
+sp|Q8IVS2.2|FABD.HUMAN -> sp_Q8IVS2.2_FABD.HUMAN
+sp|O15228.1|GNPAT.HUMAN -> sp_O15228.1_GNPAT.HUMAN
+sp|Q6UX98.1|ZDH24.HUMAN -> sp_Q6UX98.1_ZDH24.HUMAN
+sp|P09110.2|THIK.HUMAN -> sp_P09110.2_THIK.HUMAN
+sp|Q3SYC2.2|MOGT2.HUMAN -> sp_Q3SYC2.2_MOGT2.HUMAN
+sp|Q8IUH4.3|ZDH13.HUMAN -> sp_Q8IUH4.3_ZDH13.HUMAN
+sp|Q9UIJ5.1|ZDHC2.HUMAN -> sp_Q9UIJ5.1_ZDHC2.HUMAN
+sp|O15120.1|PLCB.HUMAN -> sp_O15120.1_PLCB.HUMAN
+sp|Q9NYG2.2|ZDHC3.HUMAN -> sp_Q9NYG2.2_ZDHC3.HUMAN
+sp|Q9NPF4.1|OSGEP.HUMAN -> sp_Q9NPF4.1_OSGEP.HUMAN
+sp|Q6E213.1|AWAT2.HUMAN -> sp_Q6E213.1_AWAT2.HUMAN
+sp|Q96KN8.2|PLAT5.HUMAN -> sp_Q96KN8.2_PLAT5.HUMAN
+sp|Q58HT5.1|AWAT1.HUMAN -> sp_Q58HT5.1_AWAT1.HUMAN
+sp|Q6IB77.3|GLYAT.HUMAN -> sp_Q6IB77.3_GLYAT.HUMAN
+sp|Q12983.4|BNIP3.HUMAN -> sp_Q12983.4_BNIP3.HUMAN
+sp|Q99943.2|PLCA.HUMAN -> sp_Q99943.2_PLCA.HUMAN
+sp|Q9H7Z6.2|KAT8.HUMAN -> sp_Q9H7Z6.2_KAT8.HUMAN
+sp|Q9BWD1.2|THIC.HUMAN -> sp_Q9BWD1.2_THIC.HUMAN
+sp|Q8N8M0.2|NAT16.HUMAN -> sp_Q8N8M0.2_NAT16.HUMAN
+sp|Q9NPG8.1|ZDHC4.HUMAN -> sp_Q9NPG8.1_ZDHC4.HUMAN
+sp|P06727.4|APOA4.HUMAN -> sp_P06727.4_APOA4.HUMAN
+sp|Q6P1A2.1|MBOA5.HUMAN -> sp_Q6P1A2.1_MBOA5.HUMAN
+sp|Q92993.2|KAT5.HUMAN -> sp_Q92993.2_KAT5.HUMAN
+sp|Q86UL3.1|GPAT4.HUMAN -> sp_Q86UL3.1_GPAT4.HUMAN
+sp|P30101.4|PDIA3.HUMAN -> sp_P30101.4_PDIA3.HUMAN
+sp|Q9UHE5.2|NAT8.HUMAN -> sp_Q9UHE5.2_NAT8.HUMAN
+sp|Q9Y371.1|SHLB1.HUMAN -> sp_Q9Y371.1_SHLB1.HUMAN
+sp|P41227.1|NAA10.HUMAN -> sp_P41227.1_NAA10.HUMAN
+sp|O60551.1|NMT2.HUMAN -> sp_O60551.1_NMT2.HUMAN
+sp|P19440.2|GGT1.HUMAN -> sp_P19440.2_GGT1.HUMAN
+sp|Q96DZ5.3|CLIP3.HUMAN -> sp_Q96DZ5.3_CLIP3.HUMAN
+sp|O95237.2|LRAT.HUMAN -> sp_O95237.2_LRAT.HUMAN
+sp|Q9UHF3.1|NAT8B.HUMAN -> sp_Q9UHF3.1_NAT8B.HUMAN
+sp|Q86VE3.4|SATL1.HUMAN -> sp_Q86VE3.4_SATL1.HUMAN
+sp|A6NK58.1|LIPT2.HUMAN -> sp_A6NK58.1_LIPT2.HUMAN
+sp|Q6ZNC8.1|MBOA1.HUMAN -> sp_Q6ZNC8.1_MBOA1.HUMAN
+sp|P56704.2|WNT3A.HUMAN -> sp_P56704.2_WNT3A.HUMAN
+sp|Q08188.4|TGM3.HUMAN -> sp_Q08188.4_TGM3.HUMAN
+sp|P21953.2|ODBB.HUMAN -> sp_P21953.2_ODBB.HUMAN
+sp|Q9H4B0.2|OSGL1.HUMAN -> sp_Q9H4B0.2_OSGL1.HUMAN
+sp|Q5VTY9.1|HHAT.HUMAN -> sp_Q5VTY9.1_HHAT.HUMAN
+sp|Q96I13.1|ABHD8.HUMAN -> sp_Q96I13.1_ABHD8.HUMAN
+sp|Q96G23.1|CERS2.HUMAN -> sp_Q96G23.1_CERS2.HUMAN
+sp|P23141.2|EST1.HUMAN -> sp_P23141.2_EST1.HUMAN
+sp|Q56NI9.1|ESCO2.HUMAN -> sp_Q56NI9.1_ESCO2.HUMAN
+sp|Q9NXF8.2|ZDHC7.HUMAN -> sp_Q9NXF8.2_ZDHC7.HUMAN
+sp|P27544.1|CERS1.HUMAN -> sp_P27544.1_CERS1.HUMAN
+sp|P51674.2|GPM6A.HUMAN -> sp_P51674.2_GPM6A.HUMAN
+sp|Q8IVQ6.1|ZDH21.HUMAN -> sp_Q8IVQ6.1_ZDH21.HUMAN
+sp|Q96N66.2|MBOA7.HUMAN -> sp_Q96N66.2_MBOA7.HUMAN
+sp|Q9UMX2.2|OAZ3.HUMAN -> sp_Q9UMX2.2_OAZ3.HUMAN
+sp|Q6ZPD8.1|DG2L6.HUMAN -> sp_Q6ZPD8.1_DG2L6.HUMAN
+sp|P0C7U3.1|ZH11B.HUMAN -> sp_P0C7U3.1_ZH11B.HUMAN
+sp|Q9H8X9.1|ZDH11.HUMAN -> sp_Q9H8X9.1_ZDH11.HUMAN
+sp|Q5SZD4.3|GLYL3.HUMAN -> sp_Q5SZD4.3_GLYL3.HUMAN
+sp|O14929.2|HAT1.HUMAN -> sp_O14929.2_HAT1.HUMAN
+sp|Q68CP4.2|HGNAT.HUMAN -> sp_Q68CP4.2_HGNAT.HUMAN
+sp|Q9NWU1.1|OXSM.HUMAN -> sp_Q9NWU1.1_OXSM.HUMAN
+sp|Q9HCP6.1|HHATL.HUMAN -> sp_Q9HCP6.1_HHATL.HUMAN
+sp|Q86VF5.1|MOGT3.HUMAN -> sp_Q86VF5.1_MOGT3.HUMAN
+sp|Q16635.2|TAZ.HUMAN -> sp_Q16635.2_TAZ.HUMAN
+sp|Q96MH6.2|DIESL.HUMAN -> sp_Q96MH6.2_DIESL.HUMAN
+sp|Q6ZWT7.2|MBOA2.HUMAN -> sp_Q6ZWT7.2_MBOA2.HUMAN
+sp|Q9NUV7.3|SPTC3.HUMAN -> sp_Q9NUV7.3_SPTC3.HUMAN
+sp|Q9BSU3.3|NAA11.HUMAN -> sp_Q9BSU3.3_NAA11.HUMAN
+sp|P42765.2|THIM.HUMAN -> sp_P42765.2_THIM.HUMAN
+sp|Q8N9F0.3|NAT8L.HUMAN -> sp_Q8N9F0.3_NAT8L.HUMAN
+sp|Q9UJ14.2|GGT7.HUMAN -> sp_Q9UJ14.2_GGT7.HUMAN
+sp|Q96T53.2|MBOA4.HUMAN -> sp_Q96T53.2_MBOA4.HUMAN
+sp|P15104.4|GLNA.HUMAN -> sp_P15104.4_GLNA.HUMAN
+sp|P54368.3|OAZ1.HUMAN -> sp_P54368.3_OAZ1.HUMAN
+sp|Q9Y397.2|ZDHC9.HUMAN -> sp_Q9Y397.2_ZDHC9.HUMAN
+sp|P02647.1|APOA1.HUMAN -> sp_P02647.1_APOA1.HUMAN
+sp|Q92604.1|LGAT1.HUMAN -> sp_Q92604.1_LGAT1.HUMAN
+sp|P18440.2|ARY1.HUMAN -> sp_P18440.2_ARY1.HUMAN
+sp|Q7Z699.2|SPRE1.HUMAN -> sp_Q7Z699.2_SPRE1.HUMAN
+sp|Q6UWP7.1|LCLT1.HUMAN -> sp_Q6UWP7.1_LCLT1.HUMAN
+sp|Q8WTS1.1|ABHD5.HUMAN -> sp_Q8WTS1.1_ABHD5.HUMAN
+sp|Q8N5B7.1|CERS5.HUMAN -> sp_Q8N5B7.1_CERS5.HUMAN
+sp|P13196.2|HEM1.HUMAN -> sp_P13196.2_HEM1.HUMAN
+sp|Q86UY6.1|NAA40.HUMAN -> sp_Q86UY6.1_NAA40.HUMAN
+sp|Q6ZMG9.1|CERS6.HUMAN -> sp_Q6ZMG9.1_CERS6.HUMAN
+sp|P24588.3|AKAP5.HUMAN -> sp_P24588.3_AKAP5.HUMAN
+sp|O75908.1|SOAT2.HUMAN -> sp_O75908.1_SOAT2.HUMAN
+sp|P36957.4|ODO2.HUMAN -> sp_P36957.4_ODO2.HUMAN
+sp|P22307.2|SCP2.HUMAN -> sp_P22307.2_SCP2.HUMAN
+sp|Q2MJR0.1|SPRE3.HUMAN -> sp_Q2MJR0.1_SPRE3.HUMAN
+sp|O95251.1|KAT7.HUMAN -> sp_O95251.1_KAT7.HUMAN
+sp|Q96PF1.1|TGM7.HUMAN -> sp_Q96PF1.1_TGM7.HUMAN
+sp|Q8NCC3.2|PAG15.HUMAN -> sp_Q8NCC3.2_PAG15.HUMAN
+sp|Q9HA82.2|CERS4.HUMAN -> sp_Q9HA82.2_CERS4.HUMAN
+sp|Q8IYP9.3|ZDH23.HUMAN -> sp_Q8IYP9.3_ZDH23.HUMAN
+sp|Q6Q788.1|APOA5.HUMAN -> sp_Q6Q788.1_APOA5.HUMAN
+sp|Q9UKG9.2|OCTC.HUMAN -> sp_Q9UKG9.2_OCTC.HUMAN
+sp|O14734.1|ACOT8.HUMAN -> sp_O14734.1_ACOT8.HUMAN
+sp|P43155.5|CACP.HUMAN -> sp_P43155.5_CACP.HUMAN
+sp|Q02083.3|NAAA.HUMAN -> sp_Q02083.3_NAAA.HUMAN
+sp|Q9H237.2|PORCN.HUMAN -> sp_Q9H237.2_PORCN.HUMAN
+sp|Q8N966.2|ZDH22.HUMAN -> sp_Q8N966.2_ZDH22.HUMAN
+sp|P55084.3|ECHB.HUMAN -> sp_P55084.3_ECHB.HUMAN
+sp|Q07065.2|CKAP4.HUMAN -> sp_Q07065.2_CKAP4.HUMAN
+sp|Q969W1.1|ZDH16.HUMAN -> sp_Q969W1.1_ZDH16.HUMAN
+sp|Q16769.1|QPCT.HUMAN -> sp_Q16769.1_QPCT.HUMAN
+sp|O95260.2|ATE1.HUMAN -> sp_O95260.2_ATE1.HUMAN
+sp|Q9Y6F7.1|CDY2.HUMAN -> sp_Q9Y6F7.1_CDY2.HUMAN
+sp|Q9Y6F8.1|CDY1.HUMAN -> sp_Q9Y6F8.1_CDY1.HUMAN
+sp|O95932.3|TGM3L.HUMAN -> sp_O95932.3_TGM3L.HUMAN
+sp|Q00403.1|TF2B.HUMAN -> sp_Q00403.1_TF2B.HUMAN
+sp|Q7Z7B1.1|PIGW.HUMAN -> sp_Q7Z7B1.1_PIGW.HUMAN
+sp|Q8IUH5.2|ZDH17.HUMAN -> sp_Q8IUH5.2_ZDH17.HUMAN
+sp|Q9NUQ2.3|PLCE.HUMAN -> sp_Q9NUQ2.3_PLCE.HUMAN
+sp|P30419.2|NMT1.HUMAN -> sp_P30419.2_NMT1.HUMAN
+sp|P30041.3|PRDX6.HUMAN -> sp_P30041.3_PRDX6.HUMAN
+sp|Q8NF37.2|PCAT1.HUMAN -> sp_Q8NF37.2_PCAT1.HUMAN
+sp|Q8IZN3.1|ZDH14.HUMAN -> sp_Q8IZN3.1_ZDH14.HUMAN
+sp|P49221.2|TGM4.HUMAN -> sp_P49221.2_TGM4.HUMAN
+sp|Q8WVZ1.2|ZDH19.HUMAN -> sp_Q8WVZ1.2_ZDH19.HUMAN
+sp|Q6IED9.2|DG2L7.HUMAN -> sp_Q6IED9.2_DG2L7.HUMAN
+sp|Q96PD6.2|MOGT1.HUMAN -> sp_Q96PD6.2_MOGT1.HUMAN
+sp|Q9UI08.2|EVL.HUMAN -> sp_Q9UI08.2_EVL.HUMAN
+sp|Q643R3.1|LPCT4.HUMAN -> sp_Q643R3.1_LPCT4.HUMAN
+sp|Q9NRZ5.1|PLCD.HUMAN -> sp_Q9NRZ5.1_PLCD.HUMAN
+sp|A0A0U1RQE8.1|GLYLB.HUMAN -> sp_A0A0U1RQE8.1_GLYLB.HUMAN
+sp|Q9NRZ7.1|PLCC.HUMAN -> sp_Q9NRZ7.1_PLCC.HUMAN
+sp|O75600.1|KBL.HUMAN -> sp_O75600.1_KBL.HUMAN
+sp|Q5SQI0.1|ATAT.HUMAN -> sp_Q5SQI0.1_ATAT.HUMAN
+sp|Q969I3.1|GLYL1.HUMAN -> sp_Q969I3.1_GLYL1.HUMAN
+sp|Q71RH2.1|TLC3B.HUMAN -> sp_Q71RH2.1_TLC3B.HUMAN
+sp|Q8IU89.2|CERS3.HUMAN -> sp_Q8IU89.2_CERS3.HUMAN
+sp|Q93015.2|NAA80.HUMAN -> sp_Q93015.2_NAA80.HUMAN
+sp|P04180.1|LCAT.HUMAN -> sp_P04180.1_LCAT.HUMAN
+
+                             Gap/Ambiguity  Composition  p-value
+   1  sp_Q8WU03.1_GLYL2.HUMAN       89.69%    failed      0.89%
+   2  sp_P10515.3_ODP2.HUMAN        77.31%    failed      0.00%
+   3  sp_Q14032.1_BAAT.HUMAN        85.34%    failed      3.03%
+   4  sp_P25445.1_TNR6.HUMAN        88.25%    failed      0.00%
+   5  sp_P21980.2_TGM2.HUMAN        75.91%    failed      0.79%
+   6  sp_Q8ND83.3_SLAI1.HUMAN       80.08%    failed      0.00%
+   7  sp_Q96PD7.2_DGAT2.HUMAN       86.40%    passed     44.69%
+   8  sp_Q6P531.2_GGT6.HUMAN        82.71%    failed      0.00%
+   9  sp_Q147X3.1_NAA30.HUMAN       87.31%    failed      0.00%
+  10  sp_Q96GR4.2_ZDH12.HUMAN       90.64%    failed      0.00%
+  11  sp_P06239.6_LCK.HUMAN         82.15%    passed     32.38%
+  12  sp_Q9H9T3.2_ELP3.HUMAN        80.82%    failed      0.17%
+  13  sp_P11245.2_ARY2.HUMAN        89.83%    failed      2.69%
+  14  sp_P35610.3_SOAT1.HUMAN       80.72%    failed      0.00%
+  15  sp_Q7L5N7.1_PCAT2.HUMAN       80.93%    failed      0.53%
+  16  sp_Q9H7X0.1_NAA60.HUMAN       91.51%    failed      2.70%
+  17  sp_Q9NST1.2_PLPL3.HUMAN       83.13%    failed      0.10%
+  18  sp_Q9H6R6.1_ZDHC6.HUMAN       85.52%    passed     51.65%
+  19  sp_Q8TB40.1_ABHD4.HUMAN       88.01%    passed     53.81%
+  20  sp_A6NGU5.2_GGT3.HUMAN        80.08%    failed      0.05%
+  21  sp_P24752.1_THIL.HUMAN        85.03%    failed      0.00%
+  22  sp_P12694.2_ODBA.HUMAN        84.40%    failed      0.59%
+  23  sp_Q9UP65.2_PA24C.HUMAN       81.03%    failed      2.38%
+  24  sp_Q9Y234.1_LIPT.HUMAN        86.92%    failed      0.13%
+  25  sp_P11182.3_ODB2.HUMAN        83.10%    failed      0.46%
+  26  sp_Q9NXS2.2_QPCTL.HUMAN       86.61%    failed      0.00%
+  27  sp_O15269.1_SPTC1.HUMAN       83.42%    failed      0.15%
+  28  sp_Q96MV8.1_ZDH15.HUMAN       88.18%    passed     16.52%
+  29  sp_P36269.2_GGT5.HUMAN        79.45%    failed      0.00%
+  30  sp_Q8N159.1_NAGS.HUMAN        81.28%    failed      0.00%
+  31  sp_O75907.2_DGAT1.HUMAN       82.89%    failed      0.13%
+  32  sp_Q5W0Z9.1_ZDH20.HUMAN       87.20%    failed      0.77%
+  33  sp_P22557.2_HEM0.HUMAN        79.42%    passed     36.14%
+  34  sp_P23786.2_CPT2.HUMAN        76.93%    passed      6.62%
+  35  sp_Q86U10.3_LPP60.HUMAN       79.91%    failed      0.00%
+  36  sp_Q8WTX9.1_ZDHC1.HUMAN       82.99%    failed      0.00%
+  37  sp_P02649.1_APOE.HUMAN        88.88%    failed      0.00%
+  38  sp_Q9NUE0.2_ZDH18.HUMAN       86.40%    failed      0.00%
+  39  sp_Q8NC51.2_SERB1.HUMAN       85.69%    failed      0.00%
+  40  sp_Q96CV9.3_OPTN.HUMAN        79.77%    failed      0.00%
+  41  sp_O15270.1_SPTC2.HUMAN       80.29%    failed      0.20%
+  42  sp_Q8IVS2.2_FABD.HUMAN        86.33%    failed      0.01%
+  43  sp_O15228.1_GNPAT.HUMAN       76.16%    failed      0.00%
+  44  sp_Q6UX98.1_ZDH24.HUMAN       90.04%    failed      0.00%
+  45  sp_P09110.2_THIK.HUMAN        85.13%    failed      0.00%
+  46  sp_Q3SYC2.2_MOGT2.HUMAN       88.29%    passed     11.15%
+  47  sp_Q8IUH4.3_ZDH13.HUMAN       78.19%    failed      0.36%
+  48  sp_Q9UIJ5.1_ZDHC2.HUMAN       87.13%    passed     46.14%
+  49  sp_O15120.1_PLCB.HUMAN        90.25%    passed     18.11%
+  50  sp_Q9NYG2.2_ZDHC3.HUMAN       89.52%    passed     17.76%
+  51  sp_Q9NPF4.1_OSGEP.HUMAN       88.25%    failed      0.81%
+  52  sp_Q6E213.1_AWAT2.HUMAN       88.32%    passed      5.20%
+  53  sp_Q96KN8.2_PLAT5.HUMAN       90.22%    failed      0.14%
+  54  sp_Q58HT5.1_AWAT1.HUMAN       88.50%    failed      1.41%
+  55  sp_Q6IB77.3_GLYAT.HUMAN       89.62%    passed     26.17%
+  56  sp_Q12983.4_BNIP3.HUMAN       93.20%    failed      0.06%
+  57  sp_Q99943.2_PLCA.HUMAN        90.08%    passed     13.02%
+  58  sp_Q9H7Z6.2_KAT8.HUMAN        83.94%    failed      0.18%
+  59  sp_Q9BWD1.2_THIC.HUMAN        86.08%    failed      0.00%
+  60  sp_Q8N8M0.2_NAT16.HUMAN       87.06%    failed      0.00%
+  61  sp_Q9NPG8.1_ZDHC4.HUMAN       87.94%    failed      0.00%
+  62  sp_P06727.4_APOA4.HUMAN       86.12%    failed      0.00%
+  63  sp_Q6P1A2.1_MBOA5.HUMAN       82.92%    failed      0.00%
+  64  sp_Q92993.2_KAT5.HUMAN        82.01%    failed      0.01%
+  65  sp_Q86UL3.1_GPAT4.HUMAN       84.01%    passed     12.10%
+  66  sp_P30101.4_PDIA3.HUMAN       82.29%    failed      0.00%
+  67  sp_Q9UHE5.2_NAT8.HUMAN        92.04%    passed     15.71%
+  68  sp_Q9Y371.1_SHLB1.HUMAN       87.20%    failed      0.13%
+  69  sp_P41227.1_NAA10.HUMAN       91.76%    failed      0.33%
+  70  sp_O60551.1_NMT2.HUMAN        82.54%    failed      2.81%
+  71  sp_P19440.2_GGT1.HUMAN        80.05%    failed      0.00%
+  72  sp_Q96DZ5.3_CLIP3.HUMAN       80.82%    failed      0.02%
+  73  sp_O95237.2_LRAT.HUMAN        91.94%    passed     50.02%
+  74  sp_Q9UHF3.1_NAT8B.HUMAN       92.04%    passed      5.45%
+  75  sp_Q86VE3.4_SATL1.HUMAN       75.63%    failed      0.00%
+  76  sp_A6NK58.1_LIPT2.HUMAN       91.90%    failed      0.00%
+  77  sp_Q6ZNC8.1_MBOA1.HUMAN       82.64%    failed      0.01%
+  78  sp_P56704.2_WNT3A.HUMAN       87.66%    failed      0.08%
+  79  sp_Q08188.4_TGM3.HUMAN        75.70%    failed      0.00%
+  80  sp_P21953.2_ODBB.HUMAN        86.26%    failed      1.59%
+  81  sp_Q9H4B0.2_OSGL1.HUMAN       85.48%    failed      0.04%
+  82  sp_Q5VTY9.1_HHAT.HUMAN        82.71%    failed      0.00%
+  83  sp_Q96I13.1_ABHD8.HUMAN       84.61%    failed      0.06%
+  84  sp_Q96G23.1_CERS2.HUMAN       86.68%    failed      0.46%
+  85  sp_P23141.2_EST1.HUMAN        80.12%    failed      1.92%
+  86  sp_Q56NI9.1_ESCO2.HUMAN       78.93%    failed      0.00%
+  87  sp_Q9NXF8.2_ZDHC7.HUMAN       89.20%    passed     27.11%
+  88  sp_P27544.1_CERS1.HUMAN       87.73%    failed      0.00%
+  89  sp_P51674.2_GPM6A.HUMAN       90.25%    failed      0.02%
+  90  sp_Q8IVQ6.1_ZDH21.HUMAN       90.71%    failed      0.04%
+  91  sp_Q96N66.2_MBOA7.HUMAN       83.45%    failed      0.00%
+  92  sp_Q9UMX2.2_OAZ3.HUMAN        91.76%    passed      6.37%
+  93  sp_Q6ZPD8.1_DG2L6.HUMAN       88.18%    failed      0.34%
+  94  sp_P0C7U3.1_ZH11B.HUMAN       86.99%    passed     42.91%
+  95  sp_Q9H8X9.1_ZDH11.HUMAN       85.55%    passed     43.55%
+  96  sp_Q5SZD4.3_GLYL3.HUMAN       89.90%    passed     40.87%
+  97  sp_O14929.2_HAT1.HUMAN        85.31%    failed      0.00%
+  98  sp_Q68CP4.2_HGNAT.HUMAN       76.75%    failed      0.00%
+  99  sp_Q9NWU1.1_OXSM.HUMAN        83.91%    failed      0.20%
+ 100  sp_Q9HCP6.1_HHATL.HUMAN       82.33%    failed      0.15%
+ 101  sp_Q86VF5.1_MOGT3.HUMAN       88.04%    failed      3.11%
+ 102  sp_Q16635.2_TAZ.HUMAN         90.81%    passed     44.64%
+ 103  sp_Q96MH6.2_DIESL.HUMAN       88.64%    failed      0.51%
+ 104  sp_Q6ZWT7.2_MBOA2.HUMAN       81.77%    failed      0.00%
+ 105  sp_Q9NUV7.3_SPTC3.HUMAN       80.65%    failed      3.38%
+ 106  sp_Q9BSU3.3_NAA11.HUMAN       91.97%    failed      0.16%
+ 107  sp_P42765.2_THIM.HUMAN        86.08%    failed      0.01%
+ 108  sp_Q8N9F0.3_NAT8L.HUMAN       89.41%    failed      0.00%
+ 109  sp_Q9UJ14.2_GGT7.HUMAN        76.79%    failed      0.00%
+ 110  sp_Q96T53.2_MBOA4.HUMAN       84.75%    failed      0.00%
+ 111  sp_P15104.4_GLNA.HUMAN        86.92%    passed     41.22%
+ 112  sp_P54368.3_OAZ1.HUMAN        92.01%    failed      1.75%
+ 113  sp_Q9Y397.2_ZDHC9.HUMAN       87.24%    failed      4.48%
+ 114  sp_P02647.1_APOA1.HUMAN       90.64%    failed      0.00%
+ 115  sp_Q92604.1_LGAT1.HUMAN       87.03%    passed     33.16%
+ 116  sp_P18440.2_ARY1.HUMAN        89.83%    passed      9.58%
+ 117  sp_Q7Z699.2_SPRE1.HUMAN       84.43%    failed      0.00%
+ 118  sp_Q6UWP7.1_LCLT1.HUMAN       85.48%    failed      4.73%
+ 119  sp_Q8WTS1.1_ABHD5.HUMAN       87.76%    passed     89.48%
+ 120  sp_Q8N5B7.1_CERS5.HUMAN       86.26%    failed      4.85%
+ 121  sp_P13196.2_HEM1.HUMAN        77.56%    failed      2.56%
+ 122  sp_Q86UY6.1_NAA40.HUMAN       91.69%    passed     16.84%
+ 123  sp_Q6ZMG9.1_CERS6.HUMAN       86.54%    passed     13.13%
+ 124  sp_P24588.3_AKAP5.HUMAN       85.03%    failed      0.00%
+ 125  sp_O75908.1_SOAT2.HUMAN       81.70%    failed      0.00%
+ 126  sp_P36957.4_ODO2.HUMAN        84.12%    failed      0.00%
+ 127  sp_P22307.2_SCP2.HUMAN        80.82%    failed      0.00%
+ 128  sp_Q2MJR0.1_SPRE3.HUMAN       85.62%    failed      0.00%
+ 129  sp_O95251.1_KAT7.HUMAN        78.58%    failed      0.00%
+ 130  sp_Q96PF1.1_TGM7.HUMAN        75.11%    passed     15.85%
+ 131  sp_Q8NCC3.2_PAG15.HUMAN       85.55%    failed      3.39%
+ 132  sp_Q9HA82.2_CERS4.HUMAN       86.19%    failed      0.09%
+ 133  sp_Q8IYP9.3_ZDH23.HUMAN       85.66%    passed      8.03%
+ 134  sp_Q6Q788.1_APOA5.HUMAN       87.17%    failed      0.00%
+ 135  sp_Q9UKG9.2_OCTC.HUMAN        78.54%    passed     86.56%
+ 136  sp_O14734.1_ACOT8.HUMAN       88.81%    failed      4.91%
+ 137  sp_P43155.5_CACP.HUMAN        78.05%    passed     19.56%
+ 138  sp_Q02083.3_NAAA.HUMAN        87.41%    passed      9.43%
+ 139  sp_Q9H237.2_PORCN.HUMAN       83.84%    failed      0.00%
+ 140  sp_Q8N966.2_ZDH22.HUMAN       90.78%    failed      0.01%
+ 141  sp_P55084.3_ECHB.HUMAN        83.38%    failed      0.01%
+ 142  sp_Q07065.2_CKAP4.HUMAN       78.89%    failed      0.00%
+ 143  sp_Q969W1.1_ZDH16.HUMAN       86.78%    failed      0.41%
+ 144  sp_Q16769.1_QPCT.HUMAN        87.34%    failed      3.73%
+ 145  sp_O95260.2_ATE1.HUMAN        81.84%    failed      0.00%
+ 146  sp_Q9Y6F7.1_CDY2.HUMAN        81.03%    failed      0.00%
+ 147  sp_Q9Y6F8.1_CDY1.HUMAN        81.07%    failed      0.00%
+ 148  sp_O95932.3_TGM3L.HUMAN       75.25%    failed      0.32%
+ 149  sp_Q00403.1_TF2B.HUMAN        88.92%    failed      0.43%
+ 150  sp_Q7Z7B1.1_PIGW.HUMAN        82.33%    failed      0.00%
+ 151  sp_Q8IUH5.2_ZDH17.HUMAN       77.84%    passed     12.89%
+ 152  sp_Q9NUQ2.3_PLCE.HUMAN        87.24%    passed     30.59%
+ 153  sp_P30419.2_NMT1.HUMAN        82.61%    failed      3.28%
+ 154  sp_P30041.3_PRDX6.HUMAN       92.15%    failed      2.13%
+ 155  sp_Q8NF37.2_PCAT1.HUMAN       81.28%    failed      0.04%
+ 156  sp_Q8IZN3.1_ZDH14.HUMAN       82.89%    failed      2.31%
+ 157  sp_P49221.2_TGM4.HUMAN        76.02%    failed      0.68%
+ 158  sp_Q8WVZ1.2_ZDH19.HUMAN       89.17%    failed      0.03%
+ 159  sp_Q6IED9.2_DG2L7.HUMAN       91.27%    failed      0.00%
+ 160  sp_Q96PD6.2_MOGT1.HUMAN       88.25%    failed      3.70%
+ 161  sp_Q9UI08.2_EVL.HUMAN         85.41%    failed      0.00%
+ 162  sp_Q643R3.1_LPCT4.HUMAN       81.63%    failed      0.00%
+ 163  sp_Q9NRZ5.1_PLCD.HUMAN        86.75%    passed     46.20%
+ 164  sp_A0A0U1RQE8.1_GLYLB.HUMAN   89.41%    passed     28.30%
+ 165  sp_Q9NRZ7.1_PLCC.HUMAN        86.82%    failed      0.22%
+ 166  sp_O75600.1_KBL.HUMAN         85.31%    failed      0.05%
+ 167  sp_Q5SQI0.1_ATAT.HUMAN        85.24%    failed      0.00%
+ 168  sp_Q969I3.1_GLYL1.HUMAN       89.41%    passed     14.60%
+ 169  sp_Q71RH2.1_TLC3B.HUMAN       90.39%    failed      0.42%
+ 170  sp_Q8IU89.2_CERS3.HUMAN       86.57%    failed      0.10%
+ 171  sp_Q93015.2_NAA80.HUMAN       89.97%    failed      0.00%
+ 172  sp_P04180.1_LCAT.HUMAN        84.57%    failed      0.33%
+WARNING: 172 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                         85.11%  132 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.324 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 865057)...
+
+NOTE: 312 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 12 CPU cores
+7 trees examined
+Threads: 1 / Time: 12.385 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -196170
+Threads: 2 / Time: 6.764 sec / Speedup: 1.831 / Efficiency: 92% / LogL: -196170
+Threads: 3 / Time: 4.801 sec / Speedup: 2.580 / Efficiency: 86% / LogL: -196170
+Threads: 4 / Time: 3.842 sec / Speedup: 3.223 / Efficiency: 81% / LogL: -196170
+Threads: 5 / Time: 3.392 sec / Speedup: 3.651 / Efficiency: 73% / LogL: -196170
+Threads: 6 / Time: 3.084 sec / Speedup: 4.016 / Efficiency: 67% / LogL: -196170
+Threads: 7 / Time: 3.675 sec / Speedup: 3.370 / Efficiency: 48% / LogL: -196170
+BEST NUMBER OF THREADS: 6
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -190128.599
+2. Current log-likelihood: -175567.225
+3. Current log-likelihood: -175228.541
+4. Current log-likelihood: -175214.377
+5. Current log-likelihood: -175212.489
+6. Current log-likelihood: -175212.223
+Optimal log-likelihood: -175212.135
+Gamma shape alpha: 2.087
+Parameters optimization took 6 rounds (11.183 sec)
+Computing ML distances based on estimated model parameters... 11.025 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.018 seconds
+Log-likelihood of BIONJ tree: -174901.244
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 32.787 second
+Computing log-likelihood of 98 initial trees ... 77.943 seconds
+Current best score: -174901.244
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -174668.647
+Iteration 10 / LogL: -174760.650 / Time: 0h:7m:39s
+Iteration 20 / LogL: -174793.635 / Time: 0h:13m:8s
+Finish initializing candidate tree set (20)
+Current best tree score: -174668.647 / CPU time: 732.233
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 22: -174661.252
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 24: -174660.402
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 26: -174650.881
+Iteration 30 / LogL: -174655.514 / Time: 0h:16m:52s (0h:55m:52s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 31: -174650.416
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 33: -174649.487
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 35: -174643.201
+Iteration 40 / LogL: -174644.990 / Time: 0h:20m:30s (0h:49m:55s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 41: -174638.649
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 42: -174632.838
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 44: -174626.196
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 50: -174619.181
+Iteration 50 / LogL: -174619.181 / Time: 0h:24m:53s (0h:50m:47s left)
+Log-likelihood cutoff on original alignment: -174790.996
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 56: -174618.113
+Iteration 60 / LogL: -174619.673 / Time: 0h:28m:49s (0h:46m:52s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 63: -174614.690
+Iteration 70 / LogL: -174619.690 / Time: 0h:32m:55s (0h:44m:22s left)
+Iteration 80 / LogL: -174615.046 / Time: 0h:36m:52s (0h:38m:43s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 84: -174614.319
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 85: -174613.136
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 87: -174611.742
+Iteration 90 / LogL: -174621.154 / Time: 0h:40m:11s (0h:43m:48s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 99: -174610.105
+Iteration 100 / LogL: -174614.157 / Time: 0h:42m:52s (0h:42m:52s left)
+Log-likelihood cutoff on original alignment: -174707.590
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.959
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 110 / LogL: -174617.074 / Time: 0h:45m:36s (0h:37m:39s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 114: -174609.837
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 115: -174609.668
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 120: -174608.452
+Iteration 120 / LogL: -174608.452 / Time: 0h:49m:12s (0h:41m:21s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 121: -174607.882
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 124: -174607.760
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 128: -174606.948
+Iteration 130 / LogL: -174610.080 / Time: 0h:52m:58s (0h:40m:14s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 135: -174605.081
+Iteration 140 / LogL: -174611.321 / Time: 0h:56m:39s (0h:38m:43s left)
+Iteration 150 / LogL: -174608.515 / Time: 1h:0m:24s (0h:34m:27s left)
+Log-likelihood cutoff on original alignment: -174707.590
+Iteration 160 / LogL: -174610.908 / Time: 1h:4m:28s (0h:30m:24s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 165: -174604.301
+Iteration 170 / LogL: -174618.702 / Time: 1h:8m:28s (0h:38m:29s left)
+Iteration 180 / LogL: -174611.212 / Time: 1h:12m:23s (0h:34m:22s left)
+Iteration 190 / LogL: -174608.567 / Time: 1h:15m:13s (0h:29m:50s left)
+Iteration 200 / LogL: -174604.431 / Time: 1h:18m:14s (0h:25m:33s left)
+Log-likelihood cutoff on original alignment: -174707.590
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.972
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 209: -174603.591
+Iteration 210 / LogL: -174603.719 / Time: 1h:21m:22s (0h:38m:32s left)
+Iteration 220 / LogL: -174606.885 / Time: 1h:25m:9s (0h:34m:36s left)
+Iteration 230 / LogL: -174605.154 / Time: 1h:29m:0s (0h:30m:42s left)
+Iteration 240 / LogL: -174606.067 / Time: 1h:33m:4s (0h:26m:52s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 246: -174602.843
+Iteration 250 / LogL: -174609.080 / Time: 1h:36m:52s (0h:37m:20s left)
+Log-likelihood cutoff on original alignment: -174707.590
+Iteration 260 / LogL: -174611.200 / Time: 1h:40m:41s (0h:33m:25s left)
+Iteration 270 / LogL: -174609.743 / Time: 1h:44m:32s (0h:29m:31s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 277: -174602.304
+Iteration 280 / LogL: -174609.881 / Time: 1h:48m:15s (0h:37m:38s left)
+Iteration 290 / LogL: -174607.463 / Time: 1h:50m:58s (0h:33m:24s left)
+Iteration 300 / LogL: -174604.478 / Time: 1h:53m:36s (0h:29m:15s left)
+Log-likelihood cutoff on original alignment: -174707.590
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.984
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 310 / LogL: -174609.090 / Time: 1h:56m:44s (0h:34m:0s left)
+Iteration 320 / LogL: -174605.438 / Time: 2h:0m:10s (0h:30m:8s left)
+Iteration 330 / LogL: -174614.115 / Time: 2h:3m:46s (0h:26m:20s left)
+Iteration 340 / LogL: -174633.680 / Time: 2h:7m:16s (0h:22m:31s left)
+Iteration 350 / LogL: -174602.416 / Time: 2h:10m:55s (0h:18m:45s left)
+Log-likelihood cutoff on original alignment: -174707.590
+Iteration 360 / LogL: -174606.002 / Time: 2h:14m:37s (0h:14m:59s left)
+Iteration 370 / LogL: -174606.094 / Time: 2h:18m:19s (0h:11m:14s left)
+Iteration 380 / LogL: -174602.572 / Time: 2h:22m:3s (0h:7m:29s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 384: -174601.700
+Iteration 390 / LogL: -174606.251 / Time: 2h:25m:3s (0h:35m:3s left)
+Iteration 400 / LogL: -174602.253 / Time: 2h:27m:42s (0h:31m:5s left)
+Log-likelihood cutoff on original alignment: -174707.590
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.984
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 408: -174601.517
+Iteration 410 / LogL: -174602.804 / Time: 2h:30m:33s (0h:36m:4s left)
+Iteration 420 / LogL: -174605.090 / Time: 2h:33m:52s (0h:32m:18s left)
+Iteration 430 / LogL: -174609.301 / Time: 2h:37m:29s (0h:28m:37s left)
+Iteration 440 / LogL: -174607.066 / Time: 2h:40m:51s (0h:24m:54s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 443: -174601.463
+Iteration 450 / LogL: -174616.264 / Time: 2h:44m:21s (0h:34m:2s left)
+Log-likelihood cutoff on original alignment: -174707.590
+Iteration 460 / LogL: -174603.596 / Time: 2h:47m:56s (0h:30m:22s left)
+Iteration 470 / LogL: -174603.574 / Time: 2h:51m:37s (0h:26m:42s left)
+Iteration 480 / LogL: -174603.732 / Time: 2h:55m:16s (0h:23m:3s left)
+Iteration 490 / LogL: -174601.954 / Time: 2h:58m:44s (0h:19m:22s left)
+Iteration 500 / LogL: -174602.834 / Time: 3h:1m:16s (0h:15m:37s left)
+Log-likelihood cutoff on original alignment: -174707.590
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.990
+NOTE: UFBoot does not converge, continue at least 100 more iterations
+Iteration 510 / LogL: -174606.178 / Time: 3h:4m:5s (0h:32m:33s left)
+Iteration 520 / LogL: -174602.682 / Time: 3h:6m:58s (0h:28m:49s left)
+Iteration 530 / LogL: -174612.638 / Time: 3h:10m:11s (0h:25m:9s left)
+Iteration 540 / LogL: -174609.867 / Time: 3h:13m:41s (0h:21m:33s left)
+Iteration 550 / LogL: -174604.438 / Time: 3h:17m:16s (0h:17m:57s left)
+Log-likelihood cutoff on original alignment: -174707.590
+Iteration 560 / LogL: -174609.075 / Time: 3h:20m:52s (0h:14m:22s left)
+Iteration 570 / LogL: -174608.324 / Time: 3h:24m:28s (0h:10m:46s left)
+Iteration 580 / LogL: -174604.568 / Time: 3h:28m:1s (0h:7m:11s left)
+Iteration 590 / LogL: -174613.766 / Time: 3h:31m:34s (0h:3m:35s left)
+Iteration 600 / LogL: -174602.602 / Time: 3h:34m:51s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -174707.590
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+TREE SEARCH COMPLETED AFTER 600 ITERATIONS / Time: 3h:34m:52s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -174601.463
+Optimal log-likelihood: -174601.462
+Gamma shape alpha: 2.183
+Parameters optimization took 1 rounds (1.018 sec)
+BEST SCORE FOUND : -174601.462
+Creating bootstrap support values...
+Split supports printed to NEXUS file iqtree/IQ-TREE_output.splits.nex
+Total tree length: 245.878
+
+Total number of iterations: 600
+CPU time used for tree search: 61577.462 sec (17h:6m:17s)
+Wall-clock time used for tree search: 12835.334 sec (3h:33m:55s)
+Total CPU time used: 61778.303 sec (17h:9m:38s)
+Total wall-clock time used: 12893.555 sec (3h:34m:53s)
+
+Computing bootstrap consensus tree...
+Reading input file iqtree/IQ-TREE_output.splits.nex...
+172 taxa and 2154 splits.
+Consensus tree written to iqtree/IQ-TREE_output.contree
+Reading input trees file iqtree/IQ-TREE_output.contree
+Log-likelihood of consensus tree: -174601.971
+
+Analysis results written to: 
+  IQ-TREE report:                iqtree/IQ-TREE_output.iqtree
+  Maximum-likelihood tree:       iqtree/IQ-TREE_output.treefile
+  Likelihood distances:          iqtree/IQ-TREE_output.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iqtree/IQ-TREE_output.splits.nex
+  Consensus tree:                iqtree/IQ-TREE_output.contree
+  Screen log file:               iqtree/IQ-TREE_output.log
+
+Date and Time: Fri Feb 16 01:57:18 2024

@@ -1,0 +1,93 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                                  count
+---------------------------------  -------
+ancestral_sequence_reconstruction        1
+total                                    1
+
+Select jobs to execute...
+
+[Tue Aug  8 08:53:07 2023]
+rule ancestral_sequence_reconstruction:
+    input: RAxML_bestTree.nex, aligned_protein_sequences.fasta
+    output: ancestral_sequences.mlc
+    jobid: 0
+    reason: Missing output files: ancestral_sequences.mlc
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+
+        baseml << EOF
+        seqfile = aligned_protein_sequences.fasta
+        treefile = RAxML_bestTree.nex
+        outfile = ancestral_sequences.mlc
+        noisy = 9   * 0,1,2,3,9: how much rubbish on the screen
+        verbose = 0 * 1: detailed output, 0: concise output
+        runmode = 0 * 0: user tree
+        model = 1   * 0: JC69, 1: K80, 2: F81, 3: F84, 4: HKY85
+        clock = 0   * 0: no clock, 1: clock
+        fix_kappa = 0 * 1: kappa fixed, 0: kappa estimated
+        kappa = 2   * initial or fixed kappa
+        fix_alpha = 1 * 0: alpha fixed, 1: alpha estimated, 2: both estimated
+        alpha = 0.5 * initial or fixed alpha, 0: infinity (constant rate)
+        Mgene = 0   * 0: one rate for all sites, 1: separate rates for some sites
+        ncatG = 4   * number of categories in dG, AdG, or nparK
+        getSE = 0   * 0: don't want them, 1: want S.E.s of estimates
+        RateAncestor = 1 * (0,1,2): rates (alpha>0) or ancestral states (alpha=0)
+        Small_Diff = .5e-6
+        cleandata = 0
+        fix_blength = 2 * 0: ignore, 1: random, 2: initial, 3: fixed
+        method = 0   * 0: simultaneous estimates, 1: one branch at a time
+        ndata = 1
+        icode = 0
+        weights = 1
+        commonf3x4 = 0
+        icode = 0
+        nruns = 1
+        1 2
+        * EOF
+        
+[Tue Aug  8 08:53:07 2023]
+Error in rule ancestral_sequence_reconstruction:
+    jobid: 0
+    input: RAxML_bestTree.nex, aligned_protein_sequences.fasta
+    output: ancestral_sequences.mlc
+    shell:
+        
+        baseml << EOF
+        seqfile = aligned_protein_sequences.fasta
+        treefile = RAxML_bestTree.nex
+        outfile = ancestral_sequences.mlc
+        noisy = 9   * 0,1,2,3,9: how much rubbish on the screen
+        verbose = 0 * 1: detailed output, 0: concise output
+        runmode = 0 * 0: user tree
+        model = 1   * 0: JC69, 1: K80, 2: F81, 3: F84, 4: HKY85
+        clock = 0   * 0: no clock, 1: clock
+        fix_kappa = 0 * 1: kappa fixed, 0: kappa estimated
+        kappa = 2   * initial or fixed kappa
+        fix_alpha = 1 * 0: alpha fixed, 1: alpha estimated, 2: both estimated
+        alpha = 0.5 * initial or fixed alpha, 0: infinity (constant rate)
+        Mgene = 0   * 0: one rate for all sites, 1: separate rates for some sites
+        ncatG = 4   * number of categories in dG, AdG, or nparK
+        getSE = 0   * 0: don't want them, 1: want S.E.s of estimates
+        RateAncestor = 1 * (0,1,2): rates (alpha>0) or ancestral states (alpha=0)
+        Small_Diff = .5e-6
+        cleandata = 0
+        fix_blength = 2 * 0: ignore, 1: random, 2: initial, 3: fixed
+        method = 0   * 0: simultaneous estimates, 1: one branch at a time
+        ndata = 1
+        icode = 0
+        weights = 1
+        commonf3x4 = 0
+        icode = 0
+        nruns = 1
+        1 2
+        * EOF
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-08-08T085307.005276.snakemake.log

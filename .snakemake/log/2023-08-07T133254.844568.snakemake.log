@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+infer_protein_tree        1
+total                     1
+
+Select jobs to execute...
+
+[Mon Aug  7 13:32:54 2023]
+rule infer_protein_tree:
+    input: protein_sequences.fasta
+    output: protein_phylogenetic_tree.nwk
+    jobid: 0
+    reason: Missing output files: protein_phylogenetic_tree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+raxmlHPC-PTHREADS -s protein_sequences.fasta -m PROTGAMMALGF -p 12345 -# 100 -n Tree
+[Mon Aug  7 13:32:54 2023]
+Error in rule infer_protein_tree:
+    jobid: 0
+    input: protein_sequences.fasta
+    output: protein_phylogenetic_tree.nwk
+    shell:
+        raxmlHPC-PTHREADS -s protein_sequences.fasta -m PROTGAMMALGF -p 12345 -# 100 -n Tree
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-08-07T133254.844568.snakemake.log

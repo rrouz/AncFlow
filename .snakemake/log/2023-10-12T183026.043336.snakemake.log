@@ -1,0 +1,33 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count
+------------------------  -------
+activate_autophy_subtree        1
+total                           1
+
+Select jobs to execute...
+
+[Thu Oct 12 18:30:26 2023]
+rule activate_autophy_subtree:
+    input: IQ-TREE_subtree_output.nwk
+    jobid: 0
+    reason: Rules with a run or shell declaration but no output are always executed.
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Thu Oct 12 18:31:06 2023]
+Error in rule activate_autophy_subtree:
+    jobid: 0
+    input: IQ-TREE_subtree_output.nwk
+    shell:
+        
+        echo "Running Autophy..."
+        conda run -n autophy /bin/bash -c 'autophy -t IQ-TREE_subtree_output.nwk -id autophy -d monophyletic  -o clustered'
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-10-12T183026.043336.snakemake.log

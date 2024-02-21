@@ -1,0 +1,140 @@
+Building DAG of jobs...
+Retrieving input from storage.
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Conda environments: ignored
+Job stats:
+job                        count
+-----------------------  -------
+asr                            1
+autophy                        1
+header_standardizer            1
+rename_tree_file               1
+subtree_fasta_extractor        1
+subtree_msa                    1
+subtree_nwk_extractor          1
+subtree_seq_prep               1
+total                          8
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 15 14:19:11 2024]
+localrule autophy:
+    input: IQ-TREE_output.nwk
+    output: autophy_success.txt
+    jobid: 4
+    reason: Missing output files: autophy_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Jan 15 14:19:22 2024]
+Finished job 4.
+1 of 8 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 15 14:19:22 2024]
+localrule rename_tree_file:
+    input: autophy_success.txt
+    output: output/autophy_tree.nwk
+    jobid: 3
+    reason: Missing output files: output/autophy_tree.nwk; Input files updated by another job: autophy_success.txt
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Jan 15 14:19:48 2024]
+Finished job 3.
+2 of 8 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 15 14:19:48 2024]
+localrule subtree_fasta_extractor:
+    input: output/autophy_tree.nwk
+    output: subtree_sequences.fasta
+    jobid: 11
+    reason: Missing output files: subtree_sequences.fasta; Input files updated by another job: output/autophy_tree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Jan 15 14:20:21 2024]
+Finished job 11.
+3 of 8 steps (38%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 15 14:20:21 2024]
+localrule subtree_seq_prep:
+    input: subtree_sequences.fasta
+    output: modified_subtree_sequences.fasta
+    jobid: 10
+    reason: Missing output files: modified_subtree_sequences.fasta; Input files updated by another job: subtree_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Jan 15 14:20:21 2024]
+Finished job 10.
+4 of 8 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 15 14:20:21 2024]
+localrule subtree_msa:
+    input: modified_subtree_sequences.fasta
+    output: aligned_subtree_sequences.fasta
+    jobid: 9
+    reason: Missing output files: aligned_subtree_sequences.fasta; Input files updated by another job: modified_subtree_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Jan 15 14:20:22 2024]
+Finished job 9.
+5 of 8 steps (62%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 15 14:20:22 2024]
+localrule subtree_nwk_extractor:
+    input: output/autophy_tree.nwk
+    output: subtree.nwk
+    jobid: 2
+    reason: Missing output files: subtree.nwk; Input files updated by another job: output/autophy_tree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Jan 15 14:20:26 2024]
+Finished job 2.
+6 of 8 steps (75%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 15 14:20:26 2024]
+localrule header_standardizer:
+    input: subtree.nwk, aligned_subtree_sequences.fasta
+    output: modified_aligned_subtree_sequences.fasta
+    jobid: 1
+    reason: Missing output files: modified_aligned_subtree_sequences.fasta; Input files updated by another job: aligned_subtree_sequences.fasta, subtree.nwk; Code has changed since last execution
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Jan 15 14:20:26 2024]
+Finished job 1.
+7 of 8 steps (88%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Jan 15 14:20:26 2024]
+localrule asr:
+    input: modified_aligned_subtree_sequences.fasta, subtree.nwk
+    jobid: 0
+    reason: Input files updated by another job: modified_aligned_subtree_sequences.fasta, subtree.nwk
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Mon Jan 15 14:20:26 2024]
+Error in rule asr:
+    jobid: 0
+    input: modified_aligned_subtree_sequences.fasta, subtree.nwk
+    shell:
+        java -jar bnkit.jar --aln modified_aligned_subtree_sequences.fasta --nwk subtree.nwk
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-15T141911.321496.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

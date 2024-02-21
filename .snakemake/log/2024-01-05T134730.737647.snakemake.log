@@ -1,0 +1,31 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+asr          1
+total        1
+
+Select jobs to execute...
+
+[Fri Jan  5 13:47:30 2024]
+rule asr:
+    input: aligned_subtree_sequences.fasta, subtree.nwk
+    jobid: 0
+    reason: Rules with a run or shell declaration but no output are always executed.
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+java -jar bnkit.jar --aln aligned_subtree_sequences.fasta --nwk subtree.nwk
+[Fri Jan  5 13:47:31 2024]
+Error in rule asr:
+    jobid: 0
+    input: aligned_subtree_sequences.fasta, subtree.nwk
+    shell:
+        java -jar bnkit.jar --aln aligned_subtree_sequences.fasta --nwk subtree.nwk
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-01-05T134730.737647.snakemake.log

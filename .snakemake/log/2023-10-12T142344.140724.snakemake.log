@@ -1,0 +1,75 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+subtree_extractor        1
+total                    1
+
+Select jobs to execute...
+
+[Thu Oct 12 14:23:44 2023]
+rule subtree_extractor:
+    output: 
+    jobid: 0
+    reason: Missing output files: 
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+RuleException in rule subtree_extractor in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 117:
+IndexError: tuple index out of range, when formatting the following:
+
+        python - <<EOF
+import re
+from Bio import Entrez, SeqIO
+
+newick_tree_file_path = "../SDSU/Research/WF1/output/autophy_tree.nwk"
+
+target_clade_number = "23"
+
+with open(newick_tree_file_path, "r") as file:
+    newick_tree_string = file.read()
+
+taxon_pattern = r"sp_([^|]+)\|{}:".format(target_clade_number)
+
+def extract_and_format_subtree(tree_string, target_number):
+    matches = re.findall(taxon_pattern, tree_string)
+    
+    if matches:
+        formatted_matches = [match.split('_')[0] for match in matches]
+        return formatted_matches
+    else:
+        return None
+
+selected_subtree = extract_and_format_subtree(newick_tree_string, target_clade_number)
+
+if selected_subtree:
+    print(f"Accession numbers extracted from the tree: {', '.join(selected_subtree)}")
+
+Entrez.email = ""
+db = "protein"  #"nucleotide" if you want DNA sequences
+
+def fetch_sequences(accession_numbers):
+    sequences = []
+
+    for accession in accession_numbers:
+        try:
+            handle = Entrez.efetch(db=db, id=accession, rettype="gb", retmode="text")
+            record = SeqIO.read(handle, "genbank")
+            sequences.append(record)
+        except Exception as e:
+            print(f"Failed to retrieve sequence for {accession}: {e}")
+
+    return sequences
+
+sequences = fetch_sequences(selected_subtree)
+
+fasta_filename = f"clade_{target_clade_number}_sequences.fasta"
+
+with open(fasta_filename, "w") as fasta_file:
+    SeqIO.write(sequences, fasta_file, "fasta")
+
+print(f"Sequences saved in '{fasta_filename}'")
+EOF
+            

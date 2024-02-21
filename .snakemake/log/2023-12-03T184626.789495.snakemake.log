@@ -1,0 +1,38 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job         count
+--------  -------
+msa             1
+seq_prep        1
+total           2
+
+Select jobs to execute...
+
+[Sun Dec  3 18:46:26 2023]
+rule seq_prep:
+    input: protein_sequences.fasta
+    output: modified_protein_sequences.fasta
+    jobid: 1
+    reason: Missing output files: modified_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Dec  3 18:46:27 2023]
+Finished job 1.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Sun Dec  3 18:46:27 2023]
+rule msa:
+    input: modified_protein_sequences.fasta
+    output: aligned_protein_sequences.fasta
+    jobid: 0
+    reason: Missing output files: aligned_protein_sequences.fasta; Input files updated by another job: modified_protein_sequences.fasta
+    resources: tmpdir=/var/folders/6w/cbbj2d4d1cs82bbv3lr2jt700000gn/T
+
+[Sun Dec  3 18:46:27 2023]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2023-12-03T184626.789495.snakemake.log
