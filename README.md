@@ -10,23 +10,22 @@ Coming Soon.
 ### Dependencies
 Before running the pipeline, ensure you have the following software installed:
 
+- [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) - Workflow management system.
 - [MAFFT](https://mafft.cbrc.jp/alignment/software/) - Multiple sequence alignment tool.
 - [IQ-TREE](http://www.iqtree.org/) - Phylogenetic tree inference software.
 - [AutoPhy](https://github.com/aortizsax/autophy) - Monophyletic clustering tool.
 - [GRASP](https://github.com/bodenlab/GRASP) - Ancestral sequence reconstruction software.
 
-### Snakemake
-
-Install via pip:
+Snakemake - install via pip:
 
 ```bash
 pip install snakemake
 ```
-### BioPython
-
-Install via pip:
+BioPython - install via pip:
 
 ```bash
 pip install biopython
 ```
+
+
 
