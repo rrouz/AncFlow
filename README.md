@@ -8,7 +8,7 @@ Coming Soon.
 ## Manual Installation
 
 ### Dependencies
-Before running the pipeline, ensure you have the following software installed:
+Before running the pipeline, ensure you have the following software,tools, and libraries installed:
 
 - [Snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) - Workflow management system.
 - [MAFFT](https://mafft.cbrc.jp/alignment/software/) - Multiple sequence alignment tool.
@@ -16,11 +16,6 @@ Before running the pipeline, ensure you have the following software installed:
 - [AutoPhy](https://github.com/aortizsax/autophy) - Monophyletic clustering tool.
 - [GRASP](https://github.com/bodenlab/GRASP) - Ancestral sequence reconstruction software.
 
-Snakemake - install via pip:
-
-```bash
-pip install snakemake
-```
 BioPython - install via pip:
 
 ```bash
