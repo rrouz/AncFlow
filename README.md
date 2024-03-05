@@ -17,7 +17,7 @@ Before running the pipeline, ensure you have the following software,tools, and l
 - [GRASP](https://github.com/bodenlab/GRASP) - Ancestral sequence reconstruction software.
 
 ### First Run
-Once the proper installation of all dependencies has been fulfilled execute the following command to run the pipeline.
+Upon the proper installation of all dependencies, execute the following command to run the pipeline.
 ```bash
 snakemake asr -c4
 ```
