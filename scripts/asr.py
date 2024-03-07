@@ -9,7 +9,7 @@ def run_shell_command(input_aln, input_nwk):
         input_aln (str): Path to the input alignment file (.aln).
         input_nwk (str): Path to the input Newick tree file (.nwk).
     """
-    command = ["java", "-jar", "bnkit.jar", "--aln", input_aln, "--nwk", input_nwk]
+    command = ["java", "-jar", "bnkit.jar", "--aln", input_aln, "--nwk", input_nwk, "--nogap"]
     subprocess.run(command)
 
 def main():
