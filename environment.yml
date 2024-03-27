@@ -19,3 +19,4 @@ dependencies:
   - pip
   - pip:
     - git+https://github.com/jeetsukumaran/dendropy@development-main
+    - git+https://github.com/aortizsax/autophy@main
