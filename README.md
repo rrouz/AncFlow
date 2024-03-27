@@ -14,7 +14,12 @@ conda env create -f environment.yml
 conda activate ancflow
 ```
 
-4. Navigate to directory containing the Snakefile:
+4. Preform dry run:
+```bash
+snakemake -n
+```
+
+5. Navigate to directory containing Snakefile:
 ```bash
 snakemake asr -j1
 ```
