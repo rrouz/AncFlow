@@ -3,6 +3,9 @@ AncFlow is a comprehensive snakemake driven pipeline designed to perform ancestr
 
 ## Installation
 1. Clone repository
+```bash
+git clone https://github.com/rrouz/AncFlow.git
+```
 
 2. Create conda environment:
 ```bash
