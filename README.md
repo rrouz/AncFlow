@@ -19,7 +19,7 @@ conda activate ancflow
 
 4. Perform dry run:
 ```bash
-snakemake -n
+snakemake asr -n
 ```
 
 5. Navigate to directory containing Snakefile:
