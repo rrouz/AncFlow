@@ -17,7 +17,7 @@ conda env create -f environment.yml
 conda activate ancflow
 ```
 
-4. Preform dry run:
+4. Perform dry run:
 ```bash
 snakemake -n
 ```
