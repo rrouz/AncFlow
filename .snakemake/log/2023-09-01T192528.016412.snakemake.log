@@ -1,6 +1,0 @@
-Building DAG of jobs...
-MissingInputException in rule autophy_msa in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 95:
-Missing input files for rule autophy_msa:
-    output: autophy_msa.fasta
-    affected files:
-        output/2023-08-26_treeautophymonophyleticclustered.tree

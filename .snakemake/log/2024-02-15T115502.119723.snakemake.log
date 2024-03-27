@@ -1,6 +1,0 @@
-Building DAG of jobs...
-MissingInputException in rule seq_prep in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 3:
-Missing input files for rule seq_prep:
-    output: logs/seq_prep_complete.txt
-    affected files:
-        protein_sequences.fasta

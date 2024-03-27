@@ -1,6 +1,0 @@
-Building DAG of jobs...
-MissingInputException in rule convert_auto_to_nex in file /Users/ryinrouzbehani/Documents/SDSU/Research/WF1/Snakefile, line 81:
-Missing input files for rule convert_auto_to_nex:
-    output: RAxML_bestTree.nex
-    affected files:
-        RAxML_bestTree.AUTO

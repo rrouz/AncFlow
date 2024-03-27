@@ -60,7 +60,6 @@ rule autophy:
   shell:
     """
     echo "Running Autophy..."
-    source activate autophy
     autophy -t {input} -id autophy -d monophyletic -o clustered
     touch {output} # Create the success file upon completion
     """

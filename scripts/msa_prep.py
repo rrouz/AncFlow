@@ -4,19 +4,17 @@ def replace_x_with_dash(fasta_file):
     with open(fasta_file, "r+") as file:
         contents = file.readlines()
         file.seek(0)
-        file.truncate()  # Clear existing content
+        file.truncate()
 
         in_header = True
         sequence_index = 0
 
         for line in contents:
             if line.startswith(">"):
-                # Header line: write as is
                 file.write(line)
                 in_header = True
                 sequence_index += 1
             else:
-                # Sequence line: replace "X" with "-"
                 new_line = line.replace("X", "-")
                 if new_line != line:
                     print(f"Replaced 'X' with '-' at position {line.index('X') + 1} in sequence {sequence_index}")

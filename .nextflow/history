@@ -1,6 +1,0 @@
-2024-01-06 15:25:39	1.4s	tiny_almeida	OK	7588c46ffefb4e3c06d4ab32c745c4d5e56cdad8	75db74ee-8788-4c99-94b1-724b172a4516	nextflow run hello
-2024-01-11 13:32:05	-	ridiculous_euclid	-	41576abf755fe493dbf88f3be6c1fa4f	421afdc2-8956-425e-a839-3641fc51a38f	nextflow ProteinSequencePipeline.nf
-2024-01-11 14:30:32	-	condescending_mccarthy	-	41576abf755fe493dbf88f3be6c1fa4f	5552de9b-22fb-46b7-9f1f-6ceb14acccbd	nextflow ProteinSequencePipeline.nf
-2024-01-11 14:31:50	-	deadly_albattani	-	a78b713616f1e00789463e08adf85341	7fb95740-e390-4fe9-b6c6-600a8166202b	nextflow ProteinSequencePipeline.nf
-2024-01-11 14:32:52	-	modest_leavitt	-	de1ab27cb0ea809d07684c3d9a596bbe	43aaf0d3-7e10-44e8-ab36-7fc68b11660c	nextflow ProteinSequencePipeline.nf
-2024-01-11 14:41:32	-	voluminous_payne	-	de1ab27cb0ea809d07684c3d9a596bbe	14f65265-d984-401c-b1a8-77e33cd46e69	nextflow ProteinSequencePipeline.nf

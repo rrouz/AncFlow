@@ -1,0 +1,24 @@
+name: ancflow
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - pip
+  - ete3==3.1.2
+  - biopython==1.81
+  - matplotlib==3.3.4
+  - seaborn==0.11.1
+  - umap-learn==0.5.1
+  - scipy==1.7.2
+  - numpy==1.19.2
+  - pandas==1.3.3
+  - prettytable==2.2.1
+  - scikit-learn==0.24.1
+  - snakemake-minimal=6.3.0
+  - iqtree=1.6.12
+  - mafft
+  - openjdk
+  - pip:
+      - git+https://github.com/jeetsukumaran/dendropy@development-main
+      - git+https://github.com/aortizsax/autophy@main
