@@ -1,10 +1,30 @@
 # AncFlow
-AncFlow is a comprehensive snakemake driven pipeline designed to perform ancestral sequence reconstruction upon the immediate parent nodes of AutoPhy clustered phylogenetic trees. AncFlow is fed protein sequence data which undergo multiple sequence alignment via MAFFT. A phylogenetic tree is then inferred using IQ-TREE. Afterwhich, monophyletic clustering of the previously inferred phylogenetic tree is achieved through the use of Autophy. Size defined cladistic subtrees are then extracted utilized to achieve ancestral sequence reconstruction of immediate parent nodes. To execute this pipeline, users need to install and have proficiency with Snakemake, MAFFT, IQ-TREE, Conda, and Autophy.
+AncFlow is a comprehensive snakemake driven pipeline designed to perform ancestral sequence reconstruction upon the immediate parent nodes of AutoPhy clustered phylogenetic trees. AncFlow is fed protein sequence data which undergo multiple sequence alignment via MAFFT. A phylogenetic tree is then inferred using IQ-TREE. Afterwhich, monophyletic clustering of the previously inferred phylogenetic tree is achieved through the use of AutoPhy. Size defined cladistic subtrees are all extracted and utilized to create the respective ancestral sequence reconstruction of immediate parent nodes.
 
-## Dependencies
-Before running the pipeline, ensure you have the following software installed:
+## Installation
+1. Clone repository
+```bash
+git clone https://github.com/rrouz/AncFlow.git
+```
 
-- [MAFFT](https://mafft.cbrc.jp/alignment/software/) - Multiple sequence alignment tool.
-- [IQ-TREE](http://www.iqtree.org/) - Phylogenetic tree inference software.
-- [Conda](https://conda.io/projects/conda/en/latest/index.html) - Package and environment management system.
-- [AutoPhy](https://github.com/aortizsax/autophy) - Ancestral sequence reconstruction tool.
+2. Create conda environment:
+```bash
+conda env create -f environment.yml
+```
+
+3. Activate conda environment:
+```bash
+conda activate ancflow
+```
+
+4. Perform dry run:
+```bash
+snakemake asr -n
+```
+
+5. Navigate to directory containing Snakefile:
+```bash
+snakemake asr -j1
+```
+
+
