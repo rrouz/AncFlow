@@ -48,7 +48,7 @@ If you encounter difficulties, or error messages in pipeline setup we recommend 
 
 # Basic Usage
 
-**Get Started:**
+**Getting Started:**
 
 * Create a FASTA file containing at least 50 intentionally curated protein sequences. We recommend using sequences from protein families found in Pfam (https://pubmed.ncbi.nlm.nih.gov/26673716/) or UniProt (https://www.uniprot.org/) databases for optimal results.
 * Using custom sequences is possible, however you may encounter parsing errors requiring manual correction.
@@ -56,7 +56,7 @@ If you encounter difficulties, or error messages in pipeline setup we recommend 
 ## AncFlow And Protein Structure Prediction
 AncFlow output ancestral sequences reconstructions are inteded for use by protein model prediction tools, like AlphaFold2, resolving the tertiary  structures of target nodes by their respective ancestral sequences.
 
-![Predicted Ancestral Structures](https://www.dropbox.com/scl/fi/zmz1me9y4dflk4sv1n6ym/asr1.gif)
+![Predicted Ancestral Structures](https://jmp.sh/HarZWYGt)
 
 
 
