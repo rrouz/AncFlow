@@ -1,7 +1,7 @@
 # AncFlow
 AncFlow is a comprehensive snakemake driven pipeline designed to perform ancestral sequence reconstruction upon the immediate parent nodes of AutoPhy clustered phylogenetic trees. AncFlow is fed protein sequence data which undergo multiple sequence alignment via MAFFT. A phylogenetic tree is then inferred using IQ-TREE. Afterwhich, monophyletic clustering of the previously inferred phylogenetic tree is achieved through the use of AutoPhy. Size defined cladistic subtrees are all extracted and utilized to create the respective ancestral sequence reconstruction of immediate parent nodes.
 
-## Installation
+## Installation for Mac/Linux
 1. Clone repository
 ```bash
 git clone https://github.com/rrouz/AncFlow.git
@@ -27,4 +27,9 @@ snakemake asr -n
 snakemake asr -j1
 ```
 
+## Installation for Windows
+Coming soon.
+
+## Troubleshooting
+If you encounter difficulties in creating the Conda environment, ensure that you are using Conda version 24.1.2 or newer.
 
