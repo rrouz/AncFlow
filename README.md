@@ -55,8 +55,8 @@ If you encounter difficulties, or error messages in pipeline setup we recommend 
 
 ## AncFlow And Protein Structure Prediction
 AncFlow output ancestral sequences reconstructions are inteded for use by protein model prediction tools, like AlphaFold2, resolving the tertiary  structures of target nodes by their respective ancestral sequences.
-
-![Predicted Ancestral Structures](https://jmp.sh/HarZWYGt)
-
+<div style="text-align: center;">
+    ![Predicted Ancestral Structures](https://media.giphy.com/media/ObBIrtax6YkhzkKsgN/source.gif)
+</div>
 
 
