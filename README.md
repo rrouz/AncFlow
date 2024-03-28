@@ -7,29 +7,42 @@ AncFlow is a comprehensive snakemake driven pipeline designed to perform ancestr
 git clone https://github.com/rrouz/AncFlow.git
 ```
 
-2. Create conda environment:
+2. Enter directory
+```bash
+cd AncFlow
+```
+
+3. Create conda environment:
 ```bash
 conda env create -f environment.yml
 ```
 
-3. Activate conda environment:
+4. Activate conda environment:
 ```bash
 conda activate ancflow
 ```
 
-4. Perform dry run:
+5. Perform dry run:
 ```bash
 snakemake asr -n
 ```
 
-5. Navigate to directory containing Snakefile:
+6. Navigate to directory containing Snakefile:
 ```bash
 snakemake asr -j1
 ```
 
 ## Installation for Windows
-Coming soon.
+For Windows users, it's recommended to utilize Windows Subsystem for Linux (WSL) along with Miniconda. 
+
+
+1. Install WSL by following the official Microsoft documentation: [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install)
+
+2. Install Miniconda within your WSL environment: [Install Miniconda](https://conda.io/projects/conda/en/latest/user-guide/install/windows.html)
+
+3. Follow the installation steps for Mac/Linux
+
 
 ## Troubleshooting
-If you encounter difficulties in creating the Conda environment, ensure that you are using Conda version 24.1.2 or newer.
+If you encounter difficulties we recommend using miniconda, with a conda version of 24.1.2 or newer.
 
