@@ -50,7 +50,7 @@ If you encounter difficulties, or error messages in pipeline setup we recommend 
 
 **Getting Started:**
 
-Create a FASTA file containing at least 50 intentionally curated protein sequences. We recommend using sequences from protein families found in [Pfam] (https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases for optimal results.
+Create a FASTA file containing at least 50 intentionally curated protein sequences. We recommend using sequences from protein families found in [Pfam](https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases for optimal results.
 * Using custom sequences is possible, however you may encounter parsing errors requiring manual correction.
 For example:
 ```bash
@@ -71,6 +71,10 @@ and so on
 **Interpretting Autophy:**
 
 After IQ-TREE has inferred your phylogeny AutoPhy will attempt to cluster and resolve novel subfamilies and upon successful completion create a 'autophy_tree.nwk' in the output directory made by AncFlow. At this point we recommend analyzing the autophy outputs for clades of interest and to take note of their clade sizes as you will be prompted for the minimum retained clade size (this is a number typically larger than 2).  
+
+For Example:
+* View tree
+![Acyltransferace Sample Tree](https://github.com/rrouz/AncFlow/blob/grasp-based-asr/sample_runs/acyltransferaces/output/2024-02-16_3_EMClust_monophyleticautophy_precomputed_coloredtree.svg)
 
 ADD SAMPLE INTERPRETATION AND EXAMPLE OF CLADE SIZE RETENTION
 
