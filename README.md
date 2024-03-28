@@ -50,8 +50,34 @@ If you encounter difficulties, or error messages in pipeline setup we recommend 
 
 **Getting Started:**
 
-* Create a FASTA file containing at least 50 intentionally curated protein sequences. We recommend using sequences from protein families found in Pfam (https://pubmed.ncbi.nlm.nih.gov/26673716/) or UniProt (https://www.uniprot.org/) databases for optimal results.
+Create a FASTA file containing at least 50 intentionally curated protein sequences. We recommend using sequences from protein families found in [Pfam] (https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases for optimal results.
 * Using custom sequences is possible, however you may encounter parsing errors requiring manual correction.
+For example:
+```bash
+>sp|P45996.1|OMP53_HAEIF RecName: Full=Outer membrane protein P5; Short=OMP P5; AltName: Full=Fimbrin; AltName: Full=Outer membrane porin A; AltName: Full=Outer membrane protein A; Flags: Precursor
+MKKTAIALVVAGLAAASVA
+>sp|P02935.1|OMPA_SHIDY RecName: Full=Outer membrane protein A; AltName: Full=Outer membrane porin A; Flags: Precursor
+MKKTAIAITVALAGFATVA
+>sp|O31101.1|SRPC_PSEPU RecName: Full=Solvent efflux pump outer membrane protein SrpC; Flags: Precursor
+MKFKSLPMFALLMLGGCSL
+>sp|O84879.1|PMPG_CHLTR RecName: Full=Probable outer membrane protein PmpG; AltName: Full=Polymorphic membrane protein G; Flags: Precursor
+MQTSFHKFFLSMILAYSCC
+>sp|P59570.1|OMPK_VIBPA RecName: Full=Outer membrane protein OmpK; Flags: Precursor
+MRKSLLALSLLAATSAPVL
+
+and so on
+```
+
+**Interpretting Autophy:**
+
+After IQ-TREE has inferred your phylogeny AutoPhy will attempt to cluster and resolve novel subfamilies and upon successful completion create a 'autophy_tree.nwk' in the output directory made by AncFlow. At this point we recommend analyzing the autophy outputs for clades of interest and to take note of their clade sizes as you will be prompted for the minimum retained clade size (this is a number typically larger than 2).  
+
+ADD SAMPLE INTERPRETATION AND EXAMPLE OF CLADE SIZE RETENTION
+
+**Ancestral Sequence Reconstruction:**
+
+EXPLAIN WHAT BNKIT IS DOING HOW ITS DOING IT AND WHAT CAN BE DONE WITH THE ASRS
+
 
 ## AncFlow And Protein Structure Prediction
 AncFlow output ancestral sequences reconstructions are inteded for use by protein model prediction tools, like AlphaFold2, resolving the tertiary  structures of target nodes by their respective ancestral sequences.
