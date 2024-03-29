@@ -77,7 +77,9 @@ Example Acyltransferace family tree:
 
 For my purposes clades 11.0, and 31 are of particular interest for downstream ancestral sequence reconstruction therefore I set the minimum prompted clade size to 5.
 
-For Example:
+For example (the colored nodes reflect the ancestral sequences that were used to predict the superimposed structures below):
+![Target Clade](https://i.imgur.com/lMhZzpf.jpeg)
+Therefore:
 ![Retaining Clade Size](https://i.imgur.com/nOqLOMT.jpeg)
 
 **Ancestral Sequence Reconstruction:**
