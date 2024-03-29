@@ -73,7 +73,7 @@ and so on
 After IQ-TREE has inferred the phylogeny of your sequences, AutoPhy will attempt to cluster and resolve novel subfamilies. Upon successful completion AutoPhy will create an output directory with the monophyletically clustered trees. At this point we recommend analyzing the autophy outputs for clades of interest and to take note of their clade sizes as you will be prompted for the minimum retained clade size (this is a number typically larger than 2) for downstream subtree extraction.  
 
 Example Acyltransferace family tree: 
-![Acyltransferace Sample Tree](https://github.com/rrouz/AncFlow/blob/grasp-based-asr/sample_runs/acyltransferaces/output/2024-02-16_3_EMClust_monophyleticautophy_precomputed_coloredtree.svg)
+![Acyltransferace Sample Tree](https://github.com/rrouz/AncFlow/blob/main/sample_runs/acyltransferaces/output/2024-02-16_3_EMClust_monophyleticautophy_precomputed_coloredtree.svg)
 
 For my purposes clades 11.0, and 31 are of particular interest for downstream ancestral sequence reconstruction therefore I set the minimum prompted clade size to 5.
 
