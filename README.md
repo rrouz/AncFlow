@@ -47,6 +47,7 @@ For Windows users, it is recommended to utilize Windows Subsystem for Linux (WSL
 If you encounter difficulties, or error messages in pipeline setup we recommend using miniconda, with a conda version of 24.1.2 or newer. Additionally, when doing so completely remove your existing AncFlow conda environment and re-create a fresh environment after instllation of the newer conda version. 
 
 # Basic Usage
+![Workflow](https://i.imgur.com/Pp7OdYk.jpg)
 
 **Getting Started:**
 
