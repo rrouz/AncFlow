@@ -76,13 +76,9 @@ After IQ-TREE has inferred the phylogeny of your sequences, AutoPhy will attempt
 Example Acyltransferace family tree: 
 ![Acyltransferace Sample Tree](https://github.com/rrouz/AncFlow/blob/main/sample_runs/acyltransferaces/output/2024-02-16_3_EMClust_monophyleticautophy_precomputed_coloredtree.svg)
 
-For my purposes clades 11.0, and 31 are of particular interest for downstream ancestral sequence reconstruction therefore I set the minimum prompted clade size to 5.
-
-For example (the colored nodes reflect the ancestral sequences that were used to predict the superimposed structures below):
+For my purposes, clades 11.0 and 31 are of particular interest for downstream ancestral sequence reconstruction. Therefore, to capture them, I set the minimum prompted clade size to 5. The colored nodes depict the ancestral sequences of these target clades, whose sequences were later derived from the pipeline and used to predict the superimposed structures below.
 ![Target Clade](https://i.imgur.com/lMhZzpf.jpeg)
-
-Therefore:
-![Retaining Clade Size](https://i.imgur.com/nOqLOMT.jpeg)
+![Predicted Ancestral Structures](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzQ1dnlhNGlwaWRnZ2EzajR0c2cwNnEwN3JsYmc0MTU5dTV2eDUzaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LFf30BXqYICQtcy9DX/giphy-downsized-large.gif)
 
 **Ancestral Sequence Reconstruction:**
 
@@ -91,7 +87,6 @@ EXPLAIN WHAT BNKIT IS DOING HOW ITS DOING IT AND WHAT CAN BE DONE WITH THE ASRS
 
 ## AncFlow And Protein Structure Prediction
 AncFlow output ancestral sequences reconstructions are inteded for use by protein model prediction tools, like AlphaFold2, resolving the tertiary  structures of target nodes by their respective ancestral sequences.
-![Predicted Ancestral Structures](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzQ1dnlhNGlwaWRnZ2EzajR0c2cwNnEwN3JsYmc0MTU5dTV2eDUzaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LFf30BXqYICQtcy9DX/giphy-downsized-large.gif)
 
 
 
