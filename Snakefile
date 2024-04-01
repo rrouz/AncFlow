@@ -1,3 +1,7 @@
+rule all:
+    input:
+        "logs/asr_complete.txt"
+
 #Step 1: Prepare Sequences
 rule seq_prep:
   input:
