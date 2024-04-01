@@ -20,9 +20,6 @@ Usage:
     3. Run the script. It will prompt you to enter the minimum clade size to extract.
     4. The script will process each clade, fetch sequences from NCBI GenBank, and save the sequences
        and corresponding subtrees in separate files.
-
-Example:
-    python extract_subtrees.py
 """
 
 import re

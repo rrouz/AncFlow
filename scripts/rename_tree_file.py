@@ -13,7 +13,7 @@ def rename_tree_file(directory):
             os.rename(os.path.join(directory, filename), os.path.join(directory, new_name))
             break
     else:
-        print("No .tree files found in the specified directory.")
+        print("No tree files found in the specified directory.")
 
 directory = 'output'
 rename_tree_file(directory)
