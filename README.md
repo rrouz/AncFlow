@@ -70,7 +70,7 @@ Acyltransferace family tree colored and clustered by AutoPhy:
 
 For example, clades 11.0 and 31 are of particular interest for downstream ancestral sequence reconstruction. Therefore, to capture them, the minimum prompted clade size should be set to a value less than or equal to 5. The colored nodes depict the ancestral sequences of these target clades, whose sequences were later derived from the pipeline and used to predict the superimposed structures below.
 ![Target Clade](https://i.imgur.com/lMhZzpf.jpeg)
-![Predicted Ancestral Structures](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTNldDRmbGFobHF1ZnZrZGZuY3IwbjQ0aDV1Zm5uMWIwMW95MXVwNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QKZyj9yJObTAvboOLo/giphy-downsized-large.gif)
+![Predicted Ancestral Structures](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzQ1dnlhNGlwaWRnZ2EzajR0c2cwNnEwN3JsYmc0MTU5dTV2eDUzaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LFf30BXqYICQtcy9DX/giphy-downsized-large.gif)
 
 **Ancestral Sequence Reconstruction:**
 
