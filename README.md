@@ -51,23 +51,16 @@ If you encounter difficulties, or error messages in pipeline setup we recommend 
 
 **Getting Started:**
 
-Create a FASTA file containing at least 50 intentionally curated protein sequences. We recommend using Swiss-Prot sequences of protein families found in the [Pfam](https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases.
-* Using custom sequences is possible, however you may encounter parsing errors requiring manual correction.
-![Header_Format](https://i.imgur.com/I1Gqbz1.jpeg)
-For example:
+Create a FASTA file containing at least 50 intentionally curated protein sequences. For a seamless run use Swiss-Prot sequences of protein families found in the [Pfam](https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases that follow the following header format: 
+* Using custom sequences is possible, however you may encounter parsing errors requiring manual correction of the sequence headers.
 ```bash
 >sp|P45996.1|OMP53_HAEIF RecName: Full=Outer membrane protein P5; Short=OMP P5; AltName: Full=Fimbrin; AltName: Full=Outer membrane porin A; AltName: Full=Outer membrane protein A; Flags: Precursor
-MKKTAIALVVAGLAAASVA
->sp|P02935.1|OMPA_SHIDY RecName: Full=Outer membrane protein A; AltName: Full=Outer membrane porin A; Flags: Precursor
-MKKTAIAITVALAGFATVA
->sp|O31101.1|SRPC_PSEPU RecName: Full=Solvent efflux pump outer membrane protein SrpC; Flags: Precursor
-MKFKSLPMFALLMLGGCSL
->sp|O84879.1|PMPG_CHLTR RecName: Full=Probable outer membrane protein PmpG; AltName: Full=Polymorphic membrane protein G; Flags: Precursor
-MQTSFHKFFLSMILAYSCC
->sp|P59570.1|OMPK_VIBPA RecName: Full=Outer membrane protein OmpK; Flags: Precursor
-MRKSLLALSLLAATSAPVL
 
-and so on
+Database Source: Swiss-Prot (sp)
+Accession Number: Sequence identifier (P45996.1)
+Identifier: Often the protein name or shorthand (OMP53_HAEIF)
+
+It is critical that the sequence headers follow pipe delimited structure above.
 ```
 
 **Interpretting Autophy:**
