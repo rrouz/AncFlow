@@ -51,8 +51,9 @@ If you encounter difficulties, or error messages in pipeline setup we recommend 
 
 **Getting Started:**
 
-Create a FASTA file containing at least 50 intentionally curated protein sequences. We recommend using sequences from protein families found in the [Pfam](https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases for optimal results.
+Create a FASTA file containing at least 50 intentionally curated protein sequences. We recommend using Swiss-Prot sequences of protein families found in the [Pfam](https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases.
 * Using custom sequences is possible, however you may encounter parsing errors requiring manual correction.
+![Header_Format](https://i.imgur.com/I1Gqbz1.jpeg)
 For example:
 ```bash
 >sp|P45996.1|OMP53_HAEIF RecName: Full=Outer membrane protein P5; Short=OMP P5; AltName: Full=Fimbrin; AltName: Full=Outer membrane porin A; AltName: Full=Outer membrane protein A; Flags: Precursor
@@ -73,10 +74,10 @@ and so on
 
 After IQ-TREE has inferred the phylogeny of your sequences, AutoPhy will attempt to cluster and resolve novel subfamilies. Upon successful completion AutoPhy will create an output directory with the monophyletically clustered trees. At this point we recommend analyzing the autophy outputs for clades of interest and to take note of their clade sizes as you will be prompted for the minimum retained clade size (this is a number typically larger than 2) for downstream subtree extraction.  
 
-Example Acyltransferace family tree: 
+Acyltransferace family tree colored and clustered by AutoPhy: 
 ![Acyltransferace Sample Tree](https://github.com/rrouz/AncFlow/blob/main/sample_runs/acyltransferaces/output/2024-02-16_3_EMClust_monophyleticautophy_precomputed_coloredtree.svg)
 
-For my purposes, clades 11.0 and 31 are of particular interest for downstream ancestral sequence reconstruction. Therefore, to capture them, I set the minimum prompted clade size to less than or equal to 5. The colored nodes depict the ancestral sequences of these target clades, whose sequences were later derived from the pipeline and used to predict the superimposed structures below.
+For example, clades 11.0 and 31 are of particular interest for downstream ancestral sequence reconstruction. Therefore, to capture them, the minimum prompted clade size should be set to a value less than or equal to 5. The colored nodes depict the ancestral sequences of these target clades, whose sequences were later derived from the pipeline and used to predict the superimposed structures below.
 ![Target Clade](https://i.imgur.com/lMhZzpf.jpeg)
 ![Predicted Ancestral Structures](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzQ1dnlhNGlwaWRnZ2EzajR0c2cwNnEwN3JsYmc0MTU5dTV2eDUzaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LFf30BXqYICQtcy9DX/giphy-downsized-large.gif)
 
@@ -85,8 +86,8 @@ For my purposes, clades 11.0 and 31 are of particular interest for downstream an
 The extracted subtree and respective MSA are used as input for GRASP via BNKIT. GRASP employs statistical models and maximum likelihood approaches to infer the most likely ancestral sequences at internal nodes of the subtree.
 
 
-## AncFlow And Protein Structure Prediction
-AncFlow output ancestral sequences reconstructions are inteded for use by protein model prediction tools, like AlphaFold2, resolving the tertiary  structures of target nodes by their respective ancestral sequences.
+## AncFlow and Protein Structure Prediction
+Ancestral sequences reconstructions can be use by protein model prediction tools, like AlphaFold2, to approximate the tertiary structures of target nodes by their derived sequences.
 
 
 
