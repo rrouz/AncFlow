@@ -51,7 +51,7 @@ If you encounter difficulties, or error messages in pipeline setup we recommend 
 
 **Getting Started:**
 
-Create a FASTA file containing at least 50 intentionally curated protein sequences. For a seamless run use Swiss-Prot sequences of protein families found in the [Pfam](https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases that follow the following header format: 
+Create a FASTA file containing at least 50 intentionally curated protein sequences. For a seamless run use Swiss-Prot sequences of protein families found in the [Pfam](https://pubmed.ncbi.nlm.nih.gov/26673716/) or [UniProt](https://www.uniprot.org/) databases. It is critical that the sequence headers follow the pipe delimited format below: 
 * Using custom sequences is possible, however you may encounter parsing errors requiring manual correction of the sequence headers.
 ```bash
 >sp|P45996.1|OMP53_HAEIF RecName: Full=Outer membrane protein P5; Short=OMP P5; AltName: Full=Fimbrin; AltName: Full=Outer membrane porin A; AltName: Full=Outer membrane protein A; Flags: Precursor
@@ -59,8 +59,6 @@ Create a FASTA file containing at least 50 intentionally curated protein sequenc
 Database Source: Swiss-Prot (sp)
 Accession Number: Sequence identifier (P45996.1)
 Identifier: Often the protein name or shorthand (OMP53_HAEIF)
-
-It is critical that the sequence headers follow pipe delimited structure above.
 ```
 
 **Interpretting Autophy:**
